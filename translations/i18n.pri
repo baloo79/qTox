@@ -1,22 +1,48 @@
 # For autocompiling qm-files.
 
-TRANSLATIONS = translations/es.ts \
-               translations/bg.ts \
-               translations/de.ts \
-               translations/fi.ts \
-               translations/fr.ts \
-               translations/hu.ts \
-               translations/it.ts \
-               translations/nl.ts \
-               translations/lt.ts \
-               translations/mannol.ts \
-               translations/pirate.ts \
-               translations/pl.ts \
-               translations/ru.ts \
-               translations/sv.ts \
-               translations/uk.ts \
-               translations/zh.ts \
-               translations/pt.ts
+TRANSLATIONS = \
+    translations/ar.ts \
+    translations/be.ts \
+    translations/bg.ts \
+    translations/cs.ts \
+    translations/da.ts \
+    translations/de.ts \
+    translations/el.ts \
+    translations/eo.ts \
+    translations/es.ts \
+    translations/et.ts \
+    translations/fa.ts \
+    translations/fi.ts \
+    translations/fr.ts \
+    translations/he.ts \
+    translations/hr.ts \
+    translations/hu.ts \
+    translations/it.ts \
+    translations/ja.ts \
+    translations/jbo.ts \
+    translations/ko.ts \
+    translations/mk.ts \
+    translations/nl.ts \
+    translations/no_nb.ts \
+    translations/lt.ts \
+    translations/pl.ts \
+    translations/pr.ts \
+    translations/pt.ts \
+    translations/pt_BR.ts \
+    translations/ro.ts \
+    translations/ru.ts \
+    translations/sk.ts \
+    translations/sl.ts \
+    translations/sr.ts \
+    translations/sr_Latn.ts \
+    translations/sv.ts \
+    translations/sw.ts \
+    translations/ta.ts \
+    translations/tr.ts \
+    translations/ug.ts \
+    translations/uk.ts \
+    translations/zh_CN.ts \
+    translations/zh_TW.ts
 
 #rules to generate ts
 isEmpty(QMAKE_LUPDATE) {

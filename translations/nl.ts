@@ -1,494 +1,740 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.0" language="nl_NL">
 <context>
     <name>AVForm</name>
     <message>
-        <location filename="../src/widget/form/settings/avform.cpp" line="35"/>
         <source>Audio/Video</source>
-        <translation>Audio/Video</translation>
+        <translation>Audio/video</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avform.cpp" line="77"/>
-        <source>Initializing Camera...</source>
-        <translation>Camera initialiseren...</translation>
+        <source>Default resolution</source>
+        <translation>Standaardresolutie</translation>
     </message>
-</context>
-<context>
-    <name>AVSettings</name>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="41"/>
+        <source>Disabled</source>
+        <translation>Uitgeschakeld</translation>
+    </message>
+    <message>
+        <source>Select region</source>
+        <translation>Selecteer regio</translation>
+    </message>
+    <message>
+        <source>Screen %1</source>
+        <translation>Scherm %1</translation>
+    </message>
+    <message>
         <source>Audio Settings</source>
-        <translation>Audio Instellingen</translation>
+        <translation>Audio-instellingen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="47"/>
-        <source>Microphone</source>
-        <translation>Microfoonvolume</translation>
+        <source>Gain</source>
+        <translation>Versterking</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="54"/>
-        <source>Playback</source>
-        <translation>Afspeelvolume</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="64"/>
-        <source>Use slider to set volume of your speakers.</source>
-        <translation>Gebruik de slider om het volume van de speakers in te stellen.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="74"/>
-        <source>Use slider to set volume of your microphone.
-WARNING: slider is not supposed to work yet.</source>
-        <translation>Gebruik de slider om de volume van je microfoon in te stellen
-LET OP: deze slider hoort nog niet te werken.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="82"/>
         <source>Playback device</source>
         <translation>Afspeelapparaat</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="89"/>
+        <source>Use slider to set volume of your speakers.</source>
+        <translation>Gebruik de schuifbalk om het volume van je speakers in te stellen.</translation>
+    </message>
+    <message>
         <source>Capture device</source>
-        <translation>Microfoon</translation>
+        <translation>Opnameapparaat</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="102"/>
-        <source>Rescan audio devices</source>
-        <translation>Zoek audio apparaten</translation>
+        <source>Volume</source>
+        <translation>Volume</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="109"/>
-        <source>Filter audio</source>
-        <translation>Filter audio</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="112"/>
-        <source>Filter sound from your microphone, so that people hearing you would get better sound.</source>
-        <translation>Filter het geluid van je microfoon, zo dat anderen je beter kunnen horen.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="122"/>
         <source>Video Settings</source>
-        <translation>Video Instellingen</translation>
+        <translation>Video-instellingen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="133"/>
-        <source>Resolution</source>
-        <translation>Resolutie</translation>
+        <source>Video device</source>
+        <translation>Video-apparaat</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="136"/>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="153"/>
         <source>Set resolution of your camera.
 The higher values, the better video quality your friends may get.
 Note though that with better video quality there is needed better internet connection.
 Sometimes your connection may not be good enough to handle higher video quality,
 which may lead to problems with video calls.</source>
         <translation>Stel de resolutie van je camera in.
-Hoe hoger de resolutie, des de beter de video kwaliteit die je vrienden te zijn krijgen.
-Let er echter op dat een hogere resolutie meer bandbreedte gebruikt.
-Het kan mogelijk zijn dat je internetverbinding niet snel genoeg is om een hogere video kwaliteit te ondersteunen,
+Hoe hoger de resolutie, des te beter de videokwaliteit die je vrienden te zien krijgen.
+Let er echter op dat je voor een hogere resolutie ook een betere internetverbinding nodig hebt.
+Het is mogelijk dat je internetverbinding niet snel genoeg is om een hogere videokwaliteit te ondersteunen,
 wat tot problemen kan leiden met videogesprekken.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="164"/>
-        <source>Hue</source>
-        <translation>Tint</translation>
+        <source>Resolution</source>
+        <translation>Resolutie</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="178"/>
-        <source>Brightness</source>
-        <translation>Helderheid</translation>
+        <source>Rescan devices</source>
+        <translation>Apparaten opnieuw scannen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="192"/>
-        <source>Saturation</source>
-        <translation>Verzadiging</translation>
+        <source>Test Sound</source>
+        <translation>Testgeluid</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="206"/>
-        <source>Contrast</source>
-        <translation>Contrast</translation>
+        <source>Enables the experimental audio backend with echo cancelling support, needs qTox restart to take effect.</source>
+        <translation>Schakelt de experimentele audioback-end met ondersteuning voor echo-onderdrukking in. qTox moet opnieuw worden opgestart om de wijziging van kracht te laten gaan.</translation>
+    </message>
+    <message>
+        <source>Enable experimental audio backend</source>
+        <translation>Experimentele audioback-end inschakelen</translation>
+    </message>
+    <message>
+        <source>Audio quality</source>
+        <translation>Audiokwaliteit</translation>
+    </message>
+    <message>
+        <source>Transmitted audio quality. Lower this setting if your bandwidth is not high enough or if you want to lower the internet usage.</source>
+        <translation>Kwaliteit van verstuurde audio. Verlaag deze instelling als je te weinig bandbreedte hebt, of als je je internetverbruik wilt beperken.</translation>
+    </message>
+    <message>
+        <source>High (64 kbps)</source>
+        <translation>Hoog (64 kbps)</translation>
+    </message>
+    <message>
+        <source>Medium (32 kbps)</source>
+        <translation>Gemiddeld (32 kbps)</translation>
+    </message>
+    <message>
+        <source>Low (16 kbps)</source>
+        <translation>Laag (16 kbps)</translation>
+    </message>
+    <message>
+        <source>Very low (8 kbps)</source>
+        <translation>Zeer laag (8 kbps)</translation>
+    </message>
+    <message>
+        <source>Threshold</source>
+        <translation>Drempelwaarde</translation>
+    </message>
+</context>
+<context>
+    <name>AboutForm</name>
+    <message>
+        <source>About</source>
+        <translation>Over</translation>
+    </message>
+    <message>
+        <source>Original author: %1</source>
+        <translation>Oorspronkelijke auteur: %1</translation>
+    </message>
+    <message>
+        <source>You are using qTox version %1.</source>
+        <translation>Je gebruikt qTox-versie %1.</translation>
+    </message>
+    <message>
+        <source>Commit hash: %1</source>
+        <translation>Commit-hash: %1</translation>
+    </message>
+    <message>
+        <source>toxcore version: %1</source>
+        <translation>toxcore-versie: %1</translation>
+    </message>
+    <message>
+        <source>Qt version: %1</source>
+        <translation>Qt-versie: %1</translation>
+    </message>
+    <message>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <comment>`%1` is replaced by translation of `bug tracker`
+`%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
+        <translation>Een lijst van bekende problemen kun je vinden op onze %1 op GitHub. Als je een probleem of beveiligingsfout in qTox tegenkomt, gelieve deze dan te melden volgens de richtlijnen in ons wiki-artikel %2.</translation>
+    </message>
+    <message>
+        <source>Click here to report a bug.</source>
+        <translation>Klik hier om een probleem te melden.</translation>
+    </message>
+    <message>
+        <source>See a full list of %1 at Github</source>
+        <comment>`%1` is replaced with translation of word `contributors`</comment>
+        <translation>Bekijk een volledige lijst van %1 op GitHub</translation>
+    </message>
+    <message>
+        <source>bug-tracker</source>
+        <comment>Replaces `%1` in the `A list of all knownâ¦`</comment>
+        <translation>bugtracker</translation>
+    </message>
+    <message>
+        <source>Writing Useful Bug Reports</source>
+        <comment>Replaces `%2` in the `A list of all knownâ¦`</comment>
+        <translation>Nuttige probleemmeldingen schrijven</translation>
+    </message>
+    <message>
+        <source>contributors</source>
+        <comment>Replaces `%1` in `See a full list ofâ¦`</comment>
+        <translation>bijdragers</translation>
+    </message>
+</context>
+<context>
+    <name>AboutFriendForm</name>
+    <message>
+        <source>Dialog</source>
+        <translation>Dialoogvenster</translation>
+    </message>
+    <message>
+        <source>username</source>
+        <translation>gebruikersnaam</translation>
+    </message>
+    <message>
+        <source>status message</source>
+        <translation>statusbericht</translation>
+    </message>
+    <message>
+        <source>Used aliases:</source>
+        <translation>Gebruikte aliassen:</translation>
+    </message>
+    <message>
+        <source>HISTORY OF ALIASES</source>
+        <translation>ALIASGESCHIEDENIS</translation>
+    </message>
+    <message>
+        <source>Automatically accept files from contact if set</source>
+        <translation>Indien ingesteld automatisch bestanden van dit contact aanvaarden</translation>
+    </message>
+    <message>
+        <source>Auto accept files</source>
+        <translation>Bestanden automatisch aanvaarden</translation>
+    </message>
+    <message>
+        <source>Default directory to save files:</source>
+        <translation>Standaardlocatie om bestanden op te slaan:</translation>
+    </message>
+    <message>
+        <source>Auto accept for this contact is disabled</source>
+        <translation>Automatisch aanvaarden is uitgeschakeld voor dit contact</translation>
+    </message>
+    <message>
+        <source>Auto accept call:</source>
+        <translation>Oproep automatisch aanvaarden:</translation>
+    </message>
+    <message>
+        <source>Manual</source>
+        <translation>Handmatig</translation>
+    </message>
+    <message>
+        <source>Audio</source>
+        <translation>Audio</translation>
+    </message>
+    <message>
+        <source>Audio + Video</source>
+        <translation>Audio + video</translation>
+    </message>
+    <message>
+        <source>Automatically accept group chat invitations from this contact if set.</source>
+        <translation>Indien ingesteld groepsgespreksuitnodigingen van dit contact automatisch aanvaarden.</translation>
+    </message>
+    <message>
+        <source>Auto accept group invites</source>
+        <translation>Groepsuitnodigingen automatisch aanvaarden</translation>
+    </message>
+    <message>
+        <source>Remove history (operation can not be undone!)</source>
+        <translation>Geschiedenis verwijderen (kan niet ongedaan gemaakt worden!)</translation>
+    </message>
+    <message>
+        <source>Notes</source>
+        <translation>Notities</translation>
+    </message>
+    <message>
+        <source>Input field for notes about the contact</source>
+        <translation>Invoerveld voor notities over het contact</translation>
+    </message>
+    <message>
+        <source>You can save comment about this contact here.</source>
+        <translation>Hier kun je commentaren over dit contact opslaan.</translation>
+    </message>
+    <message>
+        <source>History removed</source>
+        <translation>Geschiedenis verwijderd</translation>
+    </message>
+    <message>
+        <source>Choose an auto accept directory</source>
+        <extracomment>popup title</extracomment>
+        <translation>Kies een map om automatisch aanvaarde bestanden op te slaan</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is the public key of your friend, use it to verify their identity via another channel. You can not send this to other people so they can add this contact.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dit is de publieke sleutel van jouw vriend, gebruik het om zijn/haar identiteit te bevestigen over een ander kanaal. Je kan dit niet naar andere mensen sturen om dit contact toe te voegen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Public key (not ToxID):</source>
+        <translation>Publieke sleutel (geen ToxID):</translation>
+    </message>
+    <message>
+        <source>Confirmation</source>
+        <translation>Bevestiging</translation>
+    </message>
+    <message>
+        <source>Are you sure to remove %1 chat history?</source>
+        <translation>Weet je zeker dat je %1 gespreksgeschiedenis wilt verwijderen?</translation>
+    </message>
+    <message>
+        <source>Failed to remove chat history with %1!</source>
+        <translation>Kon chatgeschiedenis met %1 niet verwijderen!</translation>
+    </message>
+</context>
+<context>
+    <name>AboutSettings</name>
+    <message>
+        <source>Version</source>
+        <translation>Versie</translation>
+    </message>
+    <message>
+        <source>License</source>
+        <translation>Licentie</translation>
+    </message>
+    <message>
+        <source>Authors</source>
+        <translation>Auteurs</translation>
+    </message>
+    <message>
+        <source>Known Issues</source>
+        <translation>Bekende problemen</translation>
+    </message>
+    <message>
+        <source>Open update download link</source>
+        <translation>Update-downloadlink openen</translation>
+    </message>
+    <message>
+        <source>Update available</source>
+        <translation>Nieuwe versie beschikbaar</translation>
+    </message>
+    <message utf8="true">
+        <source>qTox is up to date ✓</source>
+        <translation type="unfinished">deze qTox versie is actueel ✓</translation>
     </message>
 </context>
 <context>
     <name>AddFriendForm</name>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="35"/>
         <source>Add Friends</source>
-        <translation>Voeg vrienden toe</translation>
+        <translation>Vrienden toevoegen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="38"/>
-        <source>Tox ID</source>
-        <comment>Tox ID of the person you&apos;re sending a friend request to</comment>
-        <translation>Tox ID</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="39"/>
-        <source>Message</source>
-        <comment>The message you send in friend requests</comment>
-        <translation>Bericht</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="40"/>
         <source>Send friend request</source>
-        <translation>Verstuur vriend verzoek</translation>
+        <translation>Vriendschapsverzoek sturen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="87"/>
-        <source>%1 here! Tox me maybe?</source>
-        <comment>Default message in friend requests if the field is left blank. Write something appropriate!</comment>
-        <translation>%1 hier! Tox met me!</translation>
+        <source>Couldn&apos;t add friend</source>
+        <translation>Kon vriend niet toevoegen</translation>
     </message>
     <message>
-        <source>Tox me maybe?</source>
-        <comment>Default message in friend requests if the field is left blank. Write something appropriate!</comment>
-        <translation type="obsolete">Tox met me!</translation>
+        <source>Invalid Tox ID format</source>
+        <translation>Ongeldige Tox-ID</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="95"/>
-        <source>Please fill in a valid Tox ID</source>
-        <comment>Tox ID of the friend you&apos;re sending a friend request to</comment>
-        <translation>Vul alstublieft een geldig Tox ID in</translation>
+        <source>Add a friend</source>
+        <translation>Vriend toevoegen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="98"/>
+        <source>Friend requests</source>
+        <translation>Vriendschapsverzoeken</translation>
+    </message>
+    <message>
+        <source>Accept</source>
+        <translation>Aanvaarden</translation>
+    </message>
+    <message>
+        <source>Reject</source>
+        <translation>Weigeren</translation>
+    </message>
+    <message>
+        <source>Tox ID, either 76 hexadecimal characters or name@example.com</source>
+        <translation>Tox-ID, ofwel 76 hexadecimale tekens, ofwel naam@voorbeeld.be</translation>
+    </message>
+    <message>
+        <source>Type in Tox ID of your friend</source>
+        <translation>Voer de Tox-ID van je vriend in</translation>
+    </message>
+    <message>
+        <source>Friend request message</source>
+        <translation>Bericht voor vriendschapsverzoek</translation>
+    </message>
+    <message>
+        <source>Type message to send with the friend request or leave empty to send a default message</source>
+        <translation>Voer een bericht in om samen met het vriendschapsverzoek te sturen, of laat leeg om een standaardbericht te sturen</translation>
+    </message>
+    <message>
+        <source>%1 Tox ID is invalid or does not exist</source>
+        <comment>Toxme error</comment>
+        <translation>%1 Tox-ID is ongeldig of bestaat niet</translation>
+    </message>
+    <message>
         <source>You can&apos;t add yourself as a friend!</source>
-        <comment>When trying to add your own Tox ID as friend</comment>
+        <extracomment>When trying to add your own Tox ID as friend</extracomment>
         <translation>Je kunt jezelf niet als vriend toevoegen!</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="106"/>
-        <source>qTox needs to use the Tox DNS, but can&apos;t do it through a proxy.
-Ignore the proxy and connect to the Internet directly?</source>
-        <translation>qTox moet gebruik maken van Tox DNS, maar kan dit niet via een proxy doen.
-Proxy omzeilen en een directe internetverbinding gebruiken?</translation>
+        <source>Open contact list</source>
+        <translation>Contactlijst openen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="116"/>
-        <source>This Tox ID does not exist</source>
-        <comment>DNS error</comment>
-        <translation>Deze Tox ID bestaat niet</translation>
+        <source>Couldn&apos;t open file</source>
+        <translation>Kon bestand niet openen</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t open the contact file</source>
+        <extracomment>Error message when trying to open a contact list file to import</extracomment>
+        <translation>Kon het contactbestand niet openen</translation>
+    </message>
+    <message>
+        <source>Invalid file</source>
+        <translation>Ongeldig bestand</translation>
+    </message>
+    <message>
+        <source>We couldn&apos;t find any contacts to import in this file!</source>
+        <translation>We konden in dit bestand geen contacten vinden om te importeren!</translation>
+    </message>
+    <message>
+        <source>Tox ID</source>
+        <extracomment>Tox ID of the person you&apos;re sending a friend request to</extracomment>
+        <translation>Tox-ID</translation>
+    </message>
+    <message>
+        <source>either 76 hexadecimal characters or name@example.com</source>
+        <extracomment>Tox ID format description</extracomment>
+        <translation>ofwel 76 hexadecimale tekens, ofwel naam@voorbeeld.be</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <extracomment>The message you send in friend requests</extracomment>
+        <translation>Bericht</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <extracomment>Button to choose a file with a list of contacts to import</extracomment>
+        <translation>Openen</translation>
+    </message>
+    <message>
+        <source>Send friend requests</source>
+        <translation>Vriendschapsverzoeken sturen</translation>
+    </message>
+    <message>
+        <source>%1 here! Tox me maybe?</source>
+        <extracomment>Default message in friend requests if the field is left blank. Write something appropriate!</extracomment>
+        <translation>%1 hier! Tox met me!</translation>
+    </message>
+    <message>
+        <source>Import a list of contacts, one Tox ID per line</source>
+        <translation>Importeer een lijst van contacten, één Tox-ID per regel</translation>
+    </message>
+    <message numerus="yes">
+        <source>Ready to import %n contact(s), click send to confirm</source>
+        <extracomment>Shows the number of contacts we&apos;re about to import from a file (at least one)</extracomment>
+        <translation>
+            <numerusform>Klaar om %n contact te importeren, klik om te bevestigen</numerusform>
+            <numerusform>Klaar om %n contacten te importeren, klik om te bevestigen</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Import contacts</source>
+        <translation>Contacten importeren</translation>
     </message>
 </context>
 <context>
     <name>AdvancedForm</name>
     <message>
-        <location filename="../src/widget/form/settings/advancedform.cpp" line="25"/>
         <source>Advanced</source>
-        <translation>Gevorderd</translation>
+        <translation>Geavanceerd</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedform.cpp" line="35"/>
-        <source>FULL - very safe, slowest (recommended)</source>
-        <translation>VOLLEDIG - zeer veilig, het langzaamst (aangeraden)</translation>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.</source>
+        <translation>Tenzij je %1 weet wat je doet, wijzig je hier best %2. Wijzigingen die je hier doorvoert kunnen tot problemen met qTox leiden, en zelfs tot verlies van je gegevens, bijvoorbeeld je geschiedenis.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedform.cpp" line="36"/>
-        <source>NORMAL - almost as safe as FULL, about 20% faster than FULL</source>
-        <translation>NORMAAL - bijna zo veilig als VOLLEDIG, ongeveer 20% sneller dan VOLLEDIG</translation>
+        <source>really</source>
+        <translation>écht</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedform.cpp" line="37"/>
-        <source>OFF - disables all safety, when something goes wrong your history may be lost, fastest (not recommended)</source>
-        <translation>UIT - schakeld alle veiligheid uit, als iets mis gaat kan de complete geschiedenis verloren gaan, het snelste (niet aangeraden)</translation>
+        <source>not</source>
+        <translation>niets</translation>
+    </message>
+    <message>
+        <source>IMPORTANT NOTE</source>
+        <translation>BELANGRIJKE OPMERKING</translation>
+    </message>
+    <message>
+        <source>Reset settings</source>
+        <translation>Instellingen herstellen</translation>
+    </message>
+    <message>
+        <source>All settings will be reset to default. Are you sure?</source>
+        <translation>Alle instellingen zullen teruggebracht worden naar de standaardinstellingen. Weet je het zeker?</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Ja</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Nee</translation>
+    </message>
+    <message>
+        <source>Call active</source>
+        <comment>popup title</comment>
+        <translation>In gesprek</translation>
+    </message>
+    <message>
+        <source>You can&apos;t disconnect while a call is active!</source>
+        <comment>popup text</comment>
+        <translation>Je kan niet offline gaan terwijl je in een gesprek zit!</translation>
+    </message>
+    <message>
+        <source>Save File</source>
+        <translation>Bestand opslaan</translation>
+    </message>
+    <message>
+        <source>Logs (*.log)</source>
+        <translation>Logboeken (*.log)</translation>
     </message>
 </context>
 <context>
     <name>AdvancedSettings</name>
     <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="14"/>
-        <source>Form</source>
-        <translation>Formulier</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="35"/>
         <source>Save settings to the working directory instead of the usual conf dir</source>
         <extracomment>describes makeToxPortable checkbox</extracomment>
         <translation>Sla instellingen op in de map waarin qTox draait in plaats van de normale configuratielocatie</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="38"/>
         <source>Make Tox portable</source>
-        <translation>Maak Tox draagbaar</translation>
+        <translation>Tox portabel maken</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="45"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;IMPORTANT NOTE&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;Unless you &lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;really&lt;/span&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt; know what you are doing, please do &lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;not&lt;/span&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt; change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;ody&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;BELANGRIJKE MELDING&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;Tenzij je &lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;echt&lt;/span&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt; weet wat je doet, verander hier alsjeblieft &lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;geen&lt;/span&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt; instellingen. Veranderingen hier kunnen tot problemen met qTox leiden of zelfs tot dataverlies van bijvoorbeeld chatgeschiedenis.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="61"/>
         <source>Reset to default settings</source>
-        <translation>Herstel standaardinstellingen</translation>
+        <translation>Standaardinstellingen herstellen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="68"/>
-        <source>Chat history</source>
-        <translation>Chatgeschiedenis</translation>
+        <source>Portable</source>
+        <translation>Portabel</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="76"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://www.sqlite.org/pragma.html#pragma_synchronous&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Synchronous writing to DB&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://www.sqlite.org/pragma.html#pragma_synchronous&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Synchroon schrijven naar de database&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>Android</name>
-    <message>
-        <location filename="../src/android.ui" line="14"/>
-        <source>Form</source>
-        <translation>Formulier</translation>
+        <source>Connection Settings</source>
+        <translation>Verbindingsinstellingen</translation>
     </message>
     <message>
-        <location filename="../src/android.ui" line="252"/>
-        <source>qTox</source>
-        <translation>qTox</translation>
+        <source>Enable IPv6 (recommended)</source>
+        <extracomment>Text on a checkbox to enable IPv6</extracomment>
+        <translation>Gebruik IPv6 (aanbevolen)</translation>
     </message>
     <message>
-        <location filename="../src/android.ui" line="343"/>
-        <source>Someone</source>
-        <translation>Iemand</translation>
+        <source>Disabling this allows, e.g., toxing over Tor. It adds load to the Tox network however, so uncheck only when necessary.</source>
+        <extracomment>force tcp checkbox tooltip</extracomment>
+        <translation>Door dit uit te schakelen kun je bijvoorbeeld Tox via Tor gebruiken. Het is wel zwaarder voor het Tox-netwerk, dus schakel dit alleen uit indien noodzakelijk.</translation>
     </message>
     <message>
-        <location filename="../src/android.ui" line="348"/>
-        <source>Someone else</source>
-        <translation>Iemand anders</translation>
+        <source>Enable UDP (recommended)</source>
+        <extracomment>Text on checkbox to disable UDP</extracomment>
+        <translation>Gebruik UDP (aanbevolen)</translation>
     </message>
     <message>
-        <location filename="../src/android.ui" line="353"/>
-        <source>Groupbot</source>
-        <translation>Groupbot</translation>
+        <source>Proxy type:</source>
+        <translation>Proxy-type:</translation>
     </message>
     <message>
-        <location filename="../src/android.ui" line="358"/>
-        <source>That guy who I don&apos;t remember adding</source>
-        <translation>Degene die ik me niet kan herinneren toegevoegd te hebben</translation>
+        <source>Address:</source>
+        <extracomment>Text on proxy addr label</extracomment>
+        <translation>Adres:</translation>
     </message>
     <message>
-        <location filename="../src/android.ui" line="363"/>
-        <source>NASA manager</source>
-        <translation>NASA manager</translation>
+        <source>Port:</source>
+        <extracomment>Text on proxy port label</extracomment>
+        <translation>Poort:</translation>
     </message>
     <message>
-        <location filename="../src/android.ui" line="368"/>
-        <source>Lorem</source>
-        <translation>Lorem</translation>
+        <source>None</source>
+        <translation>Geen</translation>
     </message>
     <message>
-        <location filename="../src/android.ui" line="373"/>
-        <source>Ipsum</source>
-        <translation>Ipsum</translation>
+        <source>SOCKS5</source>
+        <translation>SOCKS5</translation>
     </message>
     <message>
-        <location filename="../src/android.ui" line="378"/>
-        <source>Dolor</source>
-        <translation>Dolor</translation>
+        <source>HTTP</source>
+        <translation>HTTP</translation>
     </message>
     <message>
-        <source>Your name</source>
-        <translation type="obsolete">Naam</translation>
+        <source>Reconnect</source>
+        <comment>reconnect button</comment>
+        <translation>Opnieuw verbinden</translation>
     </message>
     <message>
-        <source>Your status</source>
-        <translation type="obsolete">Status</translation>
+        <source>Debug</source>
+        <translation>Debug</translation>
     </message>
     <message>
-        <source>Add friends</source>
-        <translation type="obsolete">Voeg vrienden toe</translation>
+        <source>Export Debug Log</source>
+        <translation>Debuglogboek exporteren</translation>
     </message>
     <message>
-        <source>Create a group chat</source>
-        <translation type="obsolete">Maak een groepsgesprek aan</translation>
+        <source>Copy Debug Log</source>
+        <translation>Debuglogboek kopiëren</translation>
     </message>
     <message>
-        <source>View completed file transfers</source>
-        <translation type="obsolete">Bekijk voltooide bestandsoverdrachten</translation>
-    </message>
-    <message>
-        <source>Change your settings</source>
-        <translation type="obsolete">Verander je instellingen</translation>
-    </message>
-</context>
-<context>
-    <name>AndroidGUI</name>
-    <message>
-        <source>Online</source>
-        <comment>Button to set your status to &apos;Online&apos;</comment>
-        <translation type="obsolete">Online</translation>
-    </message>
-    <message>
-        <source>Away</source>
-        <comment>Button to set your status to &apos;Away&apos;</comment>
-        <translation type="obsolete">Afwezig</translation>
-    </message>
-    <message>
-        <source>Busy</source>
-        <comment>Button to set your status to &apos;Busy&apos;</comment>
-        <translation type="obsolete">Bezet</translation>
+        <source>Enable LAN discovery</source>
+        <translation>LAN-herkenning aanzetten</translation>
     </message>
 </context>
 <context>
     <name>ChatForm</name>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="78"/>
-        <source>Load chat history...</source>
-        <translation>Laad chatgeschiedenis...</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="177"/>
         <source>Send a file</source>
-        <translation>Verstuur een bestand</translation>
+        <translation>Bestand versturen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="185"/>
-        <location filename="../src/widget/form/chatform.cpp" line="767"/>
-        <source>File not read</source>
-        <translation>Bestand niet gelezen</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="185"/>
-        <location filename="../src/widget/form/chatform.cpp" line="767"/>
         <source>qTox wasn&apos;t able to open %1</source>
-        <translation>qTox kan %1 niet openen</translation>
+        <translation>qTox kon %1 niet openen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="190"/>
-        <location filename="../src/widget/form/chatform.cpp" line="772"/>
-        <source>Bad Idea</source>
-        <translation>Slecht idee</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="190"/>
-        <location filename="../src/widget/form/chatform.cpp" line="772"/>
-        <source>You&apos;re trying to send a special (sequential) file, that&apos;s not going to work!</source>
-        <translation>Je probeert een speciaal (sequentieel) bestand te versturen, dat zal niet werken!</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="277"/>
-        <source>Accept video call</source>
-        <translation>Accepteer videogesprek</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="289"/>
-        <source>Accept audio call</source>
-        <translation>Accepteer audiogesprek</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="297"/>
         <source>%1 calling</source>
         <translation>%1 belt</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="326"/>
-        <location filename="../src/widget/form/chatform.cpp" line="445"/>
-        <source>End video call</source>
-        <translation>Beëindig videogesprek</translation>
+        <source>Unable to open</source>
+        <translation>Openen mislukt</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="335"/>
-        <location filename="../src/widget/form/chatform.cpp" line="454"/>
-        <source>End audio call</source>
-        <translation>Beëindig audiogesprek</translation>
+        <source>Bad idea</source>
+        <translation>Slecht idee</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="346"/>
-        <location filename="../src/widget/form/chatform.cpp" line="702"/>
-        <source>Mute microphone</source>
-        <translation>Schakel microfoon uit</translation>
+        <source>Failed to open temporary file</source>
+        <comment>Temporary file for screenshot</comment>
+        <translation>Kon tijdelijk bestand niet openen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="349"/>
-        <location filename="../src/widget/form/chatform.cpp" line="722"/>
-        <source>Mute call</source>
-        <translation>Maak gesprek stil</translation>
+        <source>qTox wasn&apos;t able to save the screenshot</source>
+        <translation>qTox kon de schermafdruk niet opslaan</translation>
     </message>
     <message>
-        <source>%1 is calling</source>
-        <translation type="obsolete">%1 belt je</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="374"/>
-        <source>%1 stopped calling</source>
-        <translation>%1 heeft opgelegd</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="410"/>
-        <source>Cancel video call</source>
-        <translation>Annuleer het starten van een videogesprek</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="418"/>
-        <source>Cancel audio call</source>
-        <translation>Annuleer het starten van een audiogesprek</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="426"/>
-        <source>Calling to %1</source>
-        <translation>%1 bellen</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="524"/>
-        <source>Call rejected</source>
-        <translation>Gesprek geweigerd</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="679"/>
-        <source>Start audio call</source>
-        <translation>Start audiogesprek</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="682"/>
-        <source>Start video call</source>
-        <translation>Start videogesprek</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="707"/>
-        <source>Unmute microphone</source>
-        <translation>Schakel microfoon in</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="727"/>
-        <source>Unmute call</source>
-        <translation>Maak gesprek hoorbaar</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="739"/>
-        <source>Failed to send file &quot;%1&quot;</source>
-        <translation>Kon bestand %1 niet verzenden</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="903"/>
         <source>Call with %1 ended. %2</source>
         <translation>Gesprek met %1 beëindigd. %2</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="922"/>
         <source>Call duration: </source>
-        <translation>Gesprekstijd: </translation>
+        <translation>Gespreksduur: </translation>
     </message>
     <message>
-        <source>is typing...</source>
-        <translation type="obsolete">is aan het typen...</translation>
+        <source>Calling %1</source>
+        <translation>%1 bellen</translation>
+    </message>
+    <message>
+        <source>%1 is typing</source>
+        <translation>%1 is aan het typen</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Kopiëren</translation>
+    </message>
+    <message>
+        <source>You&apos;re trying to send a sequential file, which is not going to work!</source>
+        <translation>Je probeert een sequentieel bestand te sturen, maar dat kan niet!</translation>
+    </message>
+    <message>
+        <source>%1 is now %2</source>
+        <comment>e.g. &quot;Dubslow is now online&quot;</comment>
+        <translation>%1 is nu %2</translation>
+    </message>
+    <message>
+        <source>Call with %1 ended unexpectedly. %2</source>
+        <translation>Gesprek met %1 is onverwacht beëindigd. %2</translation>
+    </message>
+    <message>
+        <source>Filename contained illegal characters</source>
+        <translation>Bestandsnaam bevatte niet-toegestane tekens</translation>
+    </message>
+    <message>
+        <source>Illegal characters have been changed to _ 
+so you can save the file on windows.</source>
+        <translation>Niet-toegestane tekens zijn vervangen door _
+zodat je het bestand op kunt slaan in windows.</translation>
+    </message>
+</context>
+<context>
+    <name>ChatFormHeader</name>
+    <message>
+        <source>Can&apos;t start audio call</source>
+        <translation>Kan audiogesprek niet starten</translation>
+    </message>
+    <message>
+        <source>Start audio call</source>
+        <translation>Audiogesprek starten</translation>
+    </message>
+    <message>
+        <source>End audio call</source>
+        <translation>Audiogesprek beëindigen</translation>
+    </message>
+    <message>
+        <source>Cancel audio call</source>
+        <translation>Audiogesprek annuleren</translation>
+    </message>
+    <message>
+        <source>Accept audio call</source>
+        <translation>Audiogesprek aanvaarden</translation>
+    </message>
+    <message>
+        <source>Can&apos;t start video call</source>
+        <translation>Kan videogesprek niet starten</translation>
+    </message>
+    <message>
+        <source>Start video call</source>
+        <translation>Videogesprek starten</translation>
+    </message>
+    <message>
+        <source>End video call</source>
+        <translation>Videogesprek beëindigen</translation>
+    </message>
+    <message>
+        <source>Cancel video call</source>
+        <translation>Videogesprek annuleren</translation>
+    </message>
+    <message>
+        <source>Accept video call</source>
+        <translation>Videogesprek aanvaarden</translation>
+    </message>
+    <message>
+        <source>Sound can be disabled only during a call</source>
+        <translation>Geluid kan enkel uitgeschakeld worden tijdens een gesprek</translation>
+    </message>
+    <message>
+        <source>Unmute call</source>
+        <translation>Gesprek niet meer dempen</translation>
+    </message>
+    <message>
+        <source>Mute call</source>
+        <translation>Gesprek dempen</translation>
+    </message>
+    <message>
+        <source>Microphone can be muted only during a call</source>
+        <translation>Microfoon kan enkel gedempt worden tijdens een gesprek</translation>
+    </message>
+    <message>
+        <source>Unmute microphone</source>
+        <translation>Microfoon ontdempen</translation>
+    </message>
+    <message>
+        <source>Mute microphone</source>
+        <translation>Microfoon dempen</translation>
     </message>
 </context>
 <context>
     <name>ChatLog</name>
     <message>
-        <location filename="../src/chatlog/chatlog.cpp" line="66"/>
         <source>Copy</source>
-        <translation>Kopieëren</translation>
+        <translation>Kopiëren</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/chatlog.cpp" line="81"/>
         <source>Select all</source>
         <translation>Alles selecteren</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/chatlog.cpp" line="501"/>
         <source>pending</source>
         <translation>wachtend</translation>
     </message>
@@ -496,421 +742,374 @@ Proxy omzeilen en een directe internetverbinding gebruiken?</translation>
 <context>
     <name>ChatTextEdit</name>
     <message>
-        <location filename="../src/widget/tool/chattextedit.cpp" line="23"/>
         <source>Type your message here...</source>
-        <translation>Typ je bericht hier...</translation>
+        <translation>Typ hier je bericht…</translation>
+    </message>
+</context>
+<context>
+    <name>CircleWidget</name>
+    <message>
+        <source>Rename circle</source>
+        <comment>Menu for renaming a circle</comment>
+        <translation>Cirkel hernoemen</translation>
+    </message>
+    <message>
+        <source>Remove circle</source>
+        <comment>Menu for removing a circle</comment>
+        <translation>Cirkel verwijderen</translation>
+    </message>
+    <message>
+        <source>Open all in new window</source>
+        <translation>Alles openen in nieuw venster</translation>
     </message>
 </context>
 <context>
     <name>Core</name>
     <message>
-        <location filename="../src/core.cpp" line="260"/>
-        <source>Toxing on qTox</source>
-        <translation>Toxt met qTox</translation>
+        <source>/me offers friendship, &quot;%1&quot;</source>
+        <translation>/me biedt vriendschap aan, ‘%1’</translation>
     </message>
     <message>
-        <location filename="../src/core.cpp" line="261"/>
-        <source>qTox User</source>
-        <translation>qTox gebruiker</translation>
+        <source>Invalid Tox ID</source>
+        <comment>Error while sending friendship request</comment>
+        <translation>Ongeldige Tox-ID</translation>
     </message>
     <message>
-        <location filename="../src/core.cpp" line="763"/>
+        <source>You need to write a message with your request</source>
+        <comment>Error while sending friendship request</comment>
+        <translation>Je vriendschapsverzoek moet een bericht bevatten</translation>
+    </message>
+    <message>
+        <source>Your message is too long!</source>
+        <comment>Error while sending friendship request</comment>
+        <translation>Je bericht is te lang!</translation>
+    </message>
+    <message>
         <source>Friend is already added</source>
+        <comment>Error while sending friendship request</comment>
         <translation>Vriend is al toegevoegd</translation>
     </message>
     <message>
-        <location filename="../src/core.cpp" line="779"/>
-        <source>/me offers friendship.</source>
-        <translation>/me bied vriendschap aan.</translation>
-    </message>
-    <message>
-        <location filename="../src/core.cpp" line="781"/>
-        <source>/me offers friendship, &quot;%1&quot;</source>
-        <translation>/me bied vriendschap aap, &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="168"/>
-        <source>Encryption error</source>
-        <translation>Versleutelingsfout</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="168"/>
-        <source>The .tox file is encrypted, but encryption was not checked, continuing regardless.</source>
-        <translatorcomment>FIXME: Likely broken translation.</translatorcomment>
-        <translation>Het .tox bestand is versleuteld, maar de versleutel optie staat niet aan, we gaan toch door.</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="171"/>
-        <source>Please enter the password for the %1 profile.</source>
-        <comment>used in load() when no pw is already set</comment>
-        <translation>Gelieve het wachtwoord voor profiel %1 in te voeren.</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="172"/>
-        <location filename="../src/coreencryption.cpp" line="227"/>
-        <source>The previous password is incorrect; please try again:</source>
-        <comment>used on retries in load()</comment>
-        <translation>Het vorige wachtwoord was incorrect; probeer het alsjeblieft opnieuw:</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="183"/>
-        <source>The profile password failed. Please try another?</source>
-        <comment>used only when pw set before load() doesn&apos;t work</comment>
-        <translatorcomment>FIXME: Weird translation</translatorcomment>
-        <translation>Het profiel wachtwoord is fout. Gelieve een ander wachtwoord te proberen.</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="193"/>
-        <source>Change profile</source>
-        <translation>Profiel wijzigen</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="219"/>
-        <source>Encrypted chat history</source>
-        <translation>Versleutelde chatgeschiedenis</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="219"/>
-        <source>No encrypted chat history file found, or it was corrupted.
-History will be disabled!</source>
-        <translation>Er kon geen versleutelde chatgeschiedenis gevonden worden, of deze is corrupt geraakt.
-Chatgeschiedenis zal uitgeschakeld worden!</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="226"/>
-        <source>Please enter the password for the chat history for the %1 profile.</source>
-        <comment>used in load() when no hist pw set</comment>
-        <translation>Gelieve het wachtwoord voor de chatgeschiedenis van het %1 profiel in te voeren.</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="228"/>
-        <source>
-Disabling chat history now will leave the encrypted history intact (but not usable); if you later remember the password, you may re-enable encryption from the Privacy tab with the correct password to use the history.</source>
-        <comment>part of history password dialog</comment>
-        <translation>
-Het uitschakelen van de chatgeschiedenis zal de versleutelde geschiedenis bewaren maar onbruikbaar maken. Indien je je het wachtwoord later weer herinnerd, kun je versluiteling opnieuw aanzetten in het Privacy tabblad met het correcte wachtwoord om deze geschiedenis te herstellen.</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="235"/>
-        <source>The chat history password failed. Please try another?</source>
-        <comment>used only when pw set before load() doesn&apos;t work</comment>
-        <translation>Het wachtwoord voor de versleuteling van chatgeschiedenis was incorrect. Gelieve een ander wachtwoord te proberen.</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="255"/>
-        <source>Disable chat history</source>
-        <translation>Chatgeschiedenis uitschakelen</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="306"/>
-        <source>NO Password</source>
-        <translation>Geen wachtwoord</translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="306"/>
-        <source>Encryption is enabled, but there is no password! Encryption will be disabled.</source>
-        <translation>Versleuteling is ingeschakeld, maar er is geen wachtwoord! Versleuteling zal uitgeschakeld worden.</translation>
+        <source>Groupchat %1</source>
+        <translation>Groepschat %1</translation>
     </message>
 </context>
 <context>
-    <name>FileTransferInstance</name>
+    <name>DesktopNotify</name>
     <message>
-        <source>Save a file</source>
-        <comment>Title of the file saving dialog</comment>
-        <translation type="obsolete">Sla een bestand op</translation>
+        <source>New message</source>
+        <translation>Nieuw bericht</translation>
     </message>
     <message>
-        <source>Location not writable</source>
-        <comment>Title of permissions popup</comment>
-        <translation type="obsolete">Locatie niet schrijfbaar</translation>
+        <source>Incoming file transfer</source>
+        <translation>Inkomende bestandsoverdracht</translation>
     </message>
     <message>
-        <source>You do not have permission to write that location. Choose another, or cancel the save dialog.</source>
-        <comment>text of permissions popup</comment>
-        <translation type="obsolete">Je hebt geen toepassing om een bestand op deze locatie op te slaan. Kies een andere locatie of annuleer het opslaan.</translation>
+        <source>Friend request received</source>
+        <translation>Vriendschapsverzoek ontvangen</translation>
     </message>
     <message>
-        <source>ETA</source>
-        <translatorcomment>NOTE: I couldn&apos;t think of a short Dutch word for this. Do we have one?</translatorcomment>
-        <translation type="obsolete">ETA</translation>
+        <source>New group message</source>
+        <translation>Nieuw groepsbericht</translation>
+    </message>
+    <message>
+        <source>Group invite received</source>
+        <translation>Groepsuitnodiging ontvangen</translation>
     </message>
 </context>
 <context>
     <name>FileTransferWidget</name>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.ui" line="14"/>
         <source>Form</source>
         <translation>Formulier</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.ui" line="148"/>
         <source>10Mb</source>
         <translation>10Mb</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.ui" line="164"/>
         <source>0kb/s</source>
         <translation>0kb/s</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.ui" line="180"/>
         <source>ETA:10:10</source>
-        <translation>ETA:10:10</translation>
+        <translation>Verwachte resterende downloadtijd:10:10</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.ui" line="224"/>
         <source>Filename</source>
         <translation>Bestandsnaam</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.ui" line="299"/>
-        <source>[preview]</source>
-        <translation>[voorbeeld]</translation>
-    </message>
-    <message>
-        <location filename="../src/chatlog/content/filetransferwidget.cpp" line="84"/>
         <source>Waiting to send...</source>
         <comment>file transfer widget</comment>
-        <translation>Wachten op gesprekspartner...</translation>
+        <translation>Wachten om te versturen…</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.cpp" line="87"/>
         <source>Accept to receive this file</source>
         <comment>file transfer widget</comment>
-        <translation>Accepteer om dit bestand te ontvangen</translation>
+        <translation>Aanvaard om dit bestand te ontvangen</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.cpp" line="129"/>
         <source>Location not writable</source>
         <comment>Title of permissions popup</comment>
         <translation>Locatie niet schrijfbaar</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.cpp" line="130"/>
         <source>You do not have permission to write that location. Choose another, or cancel the save dialog.</source>
         <comment>text of permissions popup</comment>
-        <translation>Je hebt geen toepassing om een bestand op deze locatie op te slaan. Kies een andere locatie of annuleer het opslaan.</translation>
+        <translation>Je hebt geen toegang om een bestand op deze locatie op te slaan. Kies een andere locatie of annuleer het opslaan.</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.cpp" line="302"/>
-        <source>paused</source>
+        <source>Paused</source>
         <comment>file transfer widget</comment>
-        <translation>gepauzeerd</translation>
+        <translation>Gepauzeerd</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.cpp" line="425"/>
+        <source>Resuming...</source>
+        <comment>file transfer widget</comment>
+        <translation>Hervatten…</translation>
+    </message>
+    <message>
+        <source>Open file</source>
+        <translation>Bestand openen</translation>
+    </message>
+    <message>
+        <source>Open file directory</source>
+        <translation>Bestandsmap openen</translation>
+    </message>
+    <message>
+        <source>Pause transfer</source>
+        <translation>Bestandsoverdracht pauzeren</translation>
+    </message>
+    <message>
+        <source>Cancel transfer</source>
+        <translation>Bestandsoverdracht annuleren</translation>
+    </message>
+    <message>
+        <source>Resume transfer</source>
+        <translation>Bestandsoverdracht hervatten</translation>
+    </message>
+    <message>
+        <source>Accept transfer</source>
+        <translation>Bestandsoverdracht aanvaarden</translation>
+    </message>
+    <message>
         <source>Save a file</source>
         <comment>Title of the file saving dialog</comment>
-        <translation>Sla een bestand op</translation>
+        <translation>Bestand opslaan</translation>
+    </message>
+    <message>
+        <source>Remote Paused</source>
+        <comment>file transfer widget</comment>
+        <translation>Extern onderbroken</translation>
     </message>
 </context>
 <context>
     <name>FilesForm</name>
     <message>
-        <location filename="../src/widget/form/filesform.cpp" line="30"/>
-        <source>Transfered Files</source>
+        <source>Transferred Files</source>
         <comment>&quot;Headline&quot; of the window</comment>
-        <translation>Overgedragen Bestanden</translation>
+        <translation>Overgedragen bestanden</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/filesform.cpp" line="38"/>
         <source>Downloads</source>
         <translation>Downloads</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/filesform.cpp" line="39"/>
         <source>Uploads</source>
         <translation>Uploads</translation>
     </message>
 </context>
 <context>
+    <name>FriendListWidget</name>
+    <message>
+        <source>Today</source>
+        <translation>Vandaag</translation>
+    </message>
+    <message>
+        <source>Yesterday</source>
+        <translation>Gisteren</translation>
+    </message>
+    <message>
+        <source>Last 7 days</source>
+        <translation>Afgelopen 7 dagen</translation>
+    </message>
+    <message>
+        <source>This month</source>
+        <translation>Deze maand</translation>
+    </message>
+    <message>
+        <source>Older than 6 Months</source>
+        <translation>Ouder dan 6 maanden</translation>
+    </message>
+    <message>
+        <source>Never</source>
+        <translation>Nooit</translation>
+    </message>
+</context>
+<context>
     <name>FriendRequestDialog</name>
     <message>
-        <location filename="../src/widget/tool/friendrequestdialog.cpp" line="31"/>
         <source>Friend request</source>
         <comment>Title of the window to aceept/deny a friend request</comment>
-        <translation>Vriendverzoek</translation>
+        <translation>Vriendschapsverzoek</translation>
     </message>
     <message>
-        <location filename="../src/widget/tool/friendrequestdialog.cpp" line="33"/>
         <source>Someone wants to make friends with you</source>
-        <translation>Iemand wil je als vriend toevoegen</translation>
+        <translation>Iemand wil vriendschap met je sluiten</translation>
     </message>
     <message>
-        <location filename="../src/widget/tool/friendrequestdialog.cpp" line="34"/>
         <source>User ID:</source>
-        <translation>Gebruiker ID:</translation>
+        <translation>Gebruikers-ID:</translation>
     </message>
     <message>
-        <location filename="../src/widget/tool/friendrequestdialog.cpp" line="38"/>
         <source>Friend request message:</source>
-        <translation>Vriendverzoeksbericht:</translation>
+        <translation>Bericht voor vriendschapsverzoek:</translation>
     </message>
     <message>
-        <location filename="../src/widget/tool/friendrequestdialog.cpp" line="45"/>
         <source>Accept</source>
         <comment>Accept a friend request</comment>
-        <translation>Accepteren</translation>
+        <translation>Aanvaarden</translation>
     </message>
     <message>
-        <location filename="../src/widget/tool/friendrequestdialog.cpp" line="46"/>
         <source>Reject</source>
         <comment>Reject a friend request</comment>
-        <translation>Afwijzen</translation>
+        <translation>Weigeren</translation>
     </message>
 </context>
 <context>
     <name>FriendWidget</name>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="56"/>
         <source>Invite to group</source>
         <comment>Menu to invite a friend to a groupchat</comment>
-        <translation>Stuur uitnodiging voor groep</translation>
+        <translation>Uitnodigen voor groep</translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="57"/>
-        <source>Copy friend ID</source>
-        <comment>Menu to copy the Tox ID of that friend</comment>
-        <translation>Kopieer vriend ID</translation>
+        <source>Move to circle...</source>
+        <comment>Menu to move a friend into a different circle</comment>
+        <translation>Verplaatsen naar cirkel…</translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="69"/>
+        <source>To new circle</source>
+        <translation>Naar nieuwe cirkel</translation>
+    </message>
+    <message>
+        <source>Remove from circle &apos;%1&apos;</source>
+        <translation>Verwijderen uit cirkel ‘%1’</translation>
+    </message>
+    <message>
+        <source>Move  to circle &quot;%1&quot;</source>
+        <translation>Verplaatsen naar cirkel ‘%1’</translation>
+    </message>
+    <message>
         <source>Set alias...</source>
-        <translation>Stel alias in...</translation>
+        <translation>Alias instellen…</translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="72"/>
         <source>Auto accept files from this friend</source>
         <comment>context menu entry</comment>
-        <translation>Accepteer bestandsoverdrachten van deze vriend automatisch</translation>
+        <translation>Bestanden van deze vriend automatisch aanvaarden</translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="77"/>
         <source>Remove friend</source>
         <comment>Menu to remove the friend from our friendlist</comment>
-        <translation>Verwijder vriend</translation>
+        <translation>Vriend verwijderen</translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="110"/>
         <source>Choose an auto accept directory</source>
         <comment>popup title</comment>
-        <translation>Kies een locatie om automatisch geaccepteerde bestanden op te slaan</translation>
+        <translation>Kies een map om automatisch aanvaarde bestanden op te slaan</translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="249"/>
-        <source>User alias</source>
-        <translation>Gebruikersalias</translation>
+        <source>New message</source>
+        <translation>Nieuw bericht</translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="249"/>
-        <source>You can also set this by clicking the chat form name.
-Alias:</source>
-        <translation>Je kan dit ook instellen door op de naam in het chatvenster te klikken.
-Alias:</translation>
-    </message>
-</context>
-<context>
-    <name>GUI</name>
-    <message>
-        <location filename="../src/widget/gui.cpp" line="247"/>
-        <source>Enter your password</source>
-        <translation>Voer je wachtwoord in</translation>
+        <source>Online</source>
+        <translation>Online</translation>
     </message>
     <message>
-        <location filename="../src/widget/gui.cpp" line="249"/>
-        <source>Decrypt</source>
-        <translation>Ontsleutel</translation>
+        <source>Away</source>
+        <translation>Afwezig</translation>
     </message>
     <message>
-        <location filename="../src/widget/gui.cpp" line="291"/>
-        <source>You must enter a non-empty password:</source>
-        <translation>Je moet een niet leeg wachtwoord invoeren:</translation>
+        <source>Busy</source>
+        <translation>Bezet</translation>
+    </message>
+    <message>
+        <source>Offline</source>
+        <translation>Offline</translation>
+    </message>
+    <message>
+        <source>Open chat in new window</source>
+        <translation>Chat openen in nieuw venster</translation>
+    </message>
+    <message>
+        <source>Remove chat from this window</source>
+        <translation>Chat uit dit venster verwijderen</translation>
+    </message>
+    <message>
+        <source>To new group</source>
+        <translation>Naar nieuwe groep</translation>
+    </message>
+    <message>
+        <source>Invite to group &apos;%1&apos;</source>
+        <translation>Uitnodigen voor groep ‘%1’</translation>
+    </message>
+    <message>
+        <source>Show details</source>
+        <translation>Details tonen</translation>
     </message>
 </context>
 <context>
     <name>GeneralForm</name>
     <message>
-        <location filename="../src/widget/form/settings/generalform.cpp" line="39"/>
         <source>General</source>
         <translation>Algemeen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalform.cpp" line="86"/>
-        <location filename="../src/widget/form/settings/generalform.cpp" line="92"/>
-        <source>None</source>
-        <translation>Geen</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalform.cpp" line="250"/>
         <source>Choose an auto accept directory</source>
         <comment>popup title</comment>
-        <translation>Kies een locatie om automatisch geaccepteerde bestanden op te slaan</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalform.cpp" line="307"/>
-        <source>Call active</source>
-        <comment>popup title</comment>
-        <translation>In gesprek</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalform.cpp" line="308"/>
-        <source>You can&apos;t disconnect while a call is active!</source>
-        <comment>popup text</comment>
-        <translation>Je kan niet offline gaan terwijl je in een gesprek zit!</translation>
+        <translation>Kies een map om automatisch aanvaarde bestanden op te slaan</translation>
     </message>
 </context>
 <context>
     <name>GeneralSettings</name>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="56"/>
         <source>General Settings</source>
-        <translation>Algemene Instellingen</translation>
+        <translation>Algemene instellingen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="64"/>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="80"/>
         <source>The translation may not load until qTox restarts.</source>
-        <translation>De vertaling zal niet laden totdat qTox herstart.</translation>
+        <translation>De vertaling wordt mogelijk pas geladen als qTox opnieuw is opgestart.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="67"/>
         <source>Language:</source>
         <translation>Taal:</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="102"/>
-        <source>System tray</source>
-        <translation>Systeemvak</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="111"/>
         <source>Show system tray icon</source>
-        <translation>Laat icoon in systeemvak zien</translation>
+        <translation>Pictogram tonen in systeemvak</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="118"/>
         <source>Enable light tray icon.</source>
         <comment>toolTip for light icon setting</comment>
-        <translation>Gebruik een licht icoon in het systeemvak.</translation>
+        <translation>Licht systeemvakpictogram inschakelen.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="121"/>
         <source>Light icon</source>
-        <translation>Licht icoon</translation>
+        <translation>Licht pictogram</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="134"/>
         <source>qTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox zal geminimaliseerd naar het systeemvak starten.</translation>
+        <translation>qTox zal geminimaliseerd in het systeemvak starten.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="137"/>
         <source>Start in tray</source>
-        <translation>Start in systeemvak</translation>
+        <translation>In systeemvak starten</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="150"/>
         <source>After pressing close (X) qTox will minimize to tray,
 instead of closing itself.</source>
         <comment>toolTip for close to tray setting</comment>
@@ -918,12 +1117,10 @@ instead of closing itself.</source>
 in plaats van af te sluiten.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="154"/>
         <source>Close to tray</source>
-        <translation>Sluit naar systeemvak</translation>
+        <translation>Naar systeemvak sluiten</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="167"/>
         <source>After pressing minimize (_) qTox will minimize itself to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
@@ -931,1321 +1128,1973 @@ instead of system taskbar.</source>
 in plaats van naar de taakbalk.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="171"/>
         <source>Minimize to tray</source>
-        <translation>Minimaliseer naar systeemvak</translation>
+        <translation>Naar systeemvak minimaliseren</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="196"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start qTox on operating system startup (current profile).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start qTox als het besturingssysteem op start (met het huidige profiel).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>Start automatically</source>
-        <translation type="obsolete">Start automatisch</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="206"/>
-        <source>Check for updates on startup</source>
-        <translation>Zoek naar updates bij start</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="220"/>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="246"/>
         <source>Set where files will be saved.</source>
         <translation>Stel in waar bestanden opgeslagen worden.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="223"/>
-        <source>Save to:</source>
-        <translation>Sla op in:</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="230"/>
         <source>You can set this on a per-friend basis by right clicking them.</source>
         <comment>autoaccept cb tooltip</comment>
         <translation>Je kan dit per vriend instellen door met de rechtermuisknop op een vriend te klikken.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="233"/>
         <source>Autoaccept files</source>
-        <translation>Accepteer bestanden automatisch</translation>
+        <translation>Bestanden automatisch aanvaarden</translation>
     </message>
     <message>
-        <source>PushButton</source>
-        <translatorcomment>NOTE: Does it even make sense to translate this?</translatorcomment>
-        <translation type="obsolete">DrukKnop</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="259"/>
         <source>Set to 0 to disable</source>
-        <translation>Zet naar 0 om uit te schakelen</translation>
+        <translation>Stel in op 0 om uit te schakelen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="265"/>
-        <source> minutes</source>
-        <translation> minuten</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="278"/>
         <source>Your status is changed to Away after set period of inactivity.</source>
-        <translation>Je status zal automatisch naar afwezig gezet worden na een bepaalde periode van inactiviteit.</translation>
+        <translation>Je status zal automatisch op afwezig gezet worden na een bepaalde periode van inactiviteit.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="284"/>
         <source>Auto away after (0 to disable):</source>
         <translation>Automatisch afwezig na (0 om uit te schakelen):</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="296"/>
-        <source>Chat</source>
-        <translation>Chat</translation>
+        <source>Start qTox on operating system startup (current profile).</source>
+        <translation>qTox starten bij opstarten van besturingssysteem (huidige profiel).</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="302"/>
-        <source>Always notify about new messages in groupchats.</source>
-        <comment>toolTip for Group chat always notify</comment>
-        <translation>Stuur altijd een notificatie voor nieuwe berichten in een groepsgesprek.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="305"/>
-        <source>Group chats always notify</source>
-        <translation>Notificatie voor alle berichten in een groepsgesprek</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="312"/>
         <source>Show contacts&apos; status changes</source>
-        <translation>Laat statusverandering van contacten zien</translation>
+        <translation>Statusveranderingen van contacten tonen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="319"/>
-        <source>On new message:</source>
-        <translation>Bij een nieuw bericht:</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="331"/>
-        <source>Show qTox&apos;s window when you receive new message.</source>
-        <comment>tooltip for Show window setting</comment>
-        <translation>Laat qTox&apos; venster zijn bij het ontvangen van een nieuw bericht.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="334"/>
-        <source>Show window</source>
-        <translation>Laat venster zien</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="341"/>
-        <source>Focus qTox when you receive message.</source>
-        <comment>toolTip for Focus window setting</comment>
-        <translation>Focus qTox&apos; venster zijn bij het ontvangen van een nieuw bericht.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="344"/>
-        <source>Focus window</source>
-        <translation>Focus venster</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="366"/>
-        <source>Messages you are trying to send to your friends when they are not online
-will be sent to them when they will appear online to you.</source>
-        <comment>toolTip for Faux offline messaging setting</comment>
-        <translation>Berichten die je probeert te versturen naar vrienden terwijl ze offline zijn
-zullen naar ze verstuurd worden zodra deze online komen.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="370"/>
-        <source>Faux offline messaging</source>
-        <translation>Faux offline berichten</translation>
-    </message>
-    <message>
-        <source>Your contact list will be shown in compact mode.
-qTox&apos;s restart needed.</source>
-        <comment>toolTip for compact layout setting</comment>
-        <translation type="obsolete">De vriendenlist zal in compacte modus getoond worden.
-qTox herstart benodigd.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="199"/>
         <source>Autostart</source>
         <translation>Automatisch starten</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="377"/>
-        <source>Your contact list will be shown in compact mode.</source>
-        <comment>toolTip for compact layout setting</comment>
-        <translation>Je contactlijst zal in een compacte modus getoond worden.</translation>
+        <source>Default directory to save files:</source>
+        <translation>Standaardmap om bestanden op te slaan:</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="380"/>
-        <source>Compact contact list</source>
-        <translation>Compacte vriendenlijst</translation>
+        <source>Check for updates</source>
+        <translation>Op nieuwe versies controleren</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="396"/>
-        <source>Theme</source>
-        <translation>Thema</translation>
+        <source>Spell checking</source>
+        <translation>Spellingscontrole</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="402"/>
-        <source>Use emoticons</source>
-        <translation>Gebruik emoticons</translation>
+        <source>Max autoaccept file size (0 to disable):</source>
+        <translation>Max. grootte automatisch geaccepteerde bestanden (0 om te deactiveren):</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="420"/>
-        <source>Smiley Pack:</source>
-        <extracomment>Text on smiley pack label</extracomment>
-        <translation>Smiley pakket:</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="494"/>
-        <source>Emoticon size:</source>
-        <translation>Emoticon grootte:</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="510"/>
-        <source> px</source>
-        <translation> px</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="526"/>
-        <source>Style:</source>
-        <translation>Stijl:</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="543"/>
-        <source>Theme color:</source>
-        <translation>Themakleur:</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="560"/>
-        <source>Timestamp format:</source>
-        <translation>Tijdsaanduiding:</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="582"/>
-        <source>Connection Settings</source>
-        <translation>Verbindingsinstellingen</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="596"/>
-        <source>Disabling this allows, e.g., toxing over Tor. It adds load to the Tox network however, so uncheck only when necessary.</source>
-        <extracomment>force tcp checkbox tooltip</extracomment>
-        <translation>Door dit uit te schakelen kun je bijvoorbeeld Tox via Tor gebruiken. Het is wel zwaarder voor het Tox netwerk, dus schakeld dit alleen uit indeen noodzakelijk.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="599"/>
-        <source>Enable UDP (recommended)</source>
-        <extracomment>Text on checkbox to disable UDP</extracomment>
-        <translation>Gebruik UDP (aanbevolen)</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="606"/>
-        <source>Enable IPv6 (recommended)</source>
-        <extracomment>Text on a checkbox to enable IPv6</extracomment>
-        <translation>Gebruik IPv6 (aanbevolen)</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="640"/>
-        <source>Proxy type:</source>
-        <translation>Proxy type:</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="647"/>
-        <source>Address:</source>
-        <extracomment>Text on proxy addr label</extracomment>
-        <translation>Adres:</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="657"/>
-        <source>Port</source>
-        <extracomment>Text on proxy port label</extracomment>
-        <translation>Poort</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="671"/>
-        <source>None</source>
-        <translation>Geen</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="676"/>
-        <source>SOCKS5</source>
-        <translation>SOCKS5</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="681"/>
-        <source>HTTP</source>
-        <translation>HTTP</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="691"/>
-        <source>Reconnect</source>
-        <comment>reconnect button</comment>
-        <translation>Opnieuw verbinden</translation>
+        <source> MB</source>
+        <translation> MB</translation>
     </message>
 </context>
 <context>
     <name>GenericChatForm</name>
     <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="73"/>
         <source>Send message</source>
-        <translation>Verstuur bericht</translation>
+        <translation>Bericht versturen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="75"/>
         <source>Smileys</source>
         <translation>Smileys</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="79"/>
         <source>Send file(s)</source>
-        <translation>Verstuur bestand(en)</translation>
+        <translation>Bestand(en) versturen</translation>
     </message>
     <message>
-        <source>Audio call: RED means you&apos;re on a call</source>
-        <translation type="obsolete">Audio gesprek: ROOD betekend in gesprek</translation>
-    </message>
-    <message>
-        <source>Video call: RED means you&apos;re on a call</source>
-        <translation type="obsolete">Video gesprek: ROOD betekend in gesprek</translation>
-    </message>
-    <message>
-        <source>Toggle speakers volume: RED is OFF</source>
-        <translation type="obsolete">Schakel speakers in of uit: ROOD is UIT</translation>
-    </message>
-    <message>
-        <source>Toggle microphone: RED is OFF</source>
-        <translation type="obsolete">Schakel microfoon in of uit: ROOD is UIT</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="82"/>
-        <source>Start an audio call</source>
-        <translation>Start audiogesprek</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="85"/>
-        <source>Start a video call</source>
-        <translation>Start videogesprek</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="165"/>
-        <location filename="../src/widget/form/genericchatform.cpp" line="282"/>
         <source>Save chat log</source>
-        <translation>Sla chatgeschiedenis op</translation>
+        <translation>Chatgeschiedenis opslaan</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="166"/>
+        <source>Send a screenshot</source>
+        <translation>Schermafdruk sturen</translation>
+    </message>
+    <message>
         <source>Clear displayed messages</source>
-        <translation>Verwijder getoonde berichten</translation>
+        <translation>Getoonde berichten wissen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="298"/>
-        <source>Not sent</source>
-        <translation>Niet verstuurd</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="331"/>
         <source>Cleared</source>
         <translatorcomment>FIXME: Weird translation</translatorcomment>
-        <translation>Geleegd</translation>
+        <translation>Gewist</translation>
+    </message>
+    <message>
+        <source>Quote selected text</source>
+        <translation>Geselecteerde tekst citeren</translation>
+    </message>
+    <message>
+        <source>Copy link address</source>
+        <translation>Koppelingsadres kopiëren</translation>
+    </message>
+    <message>
+        <source>Confirmation</source>
+        <translation>Bevestiging</translation>
+    </message>
+    <message>
+        <source>You are sure that you want to clear all displayed messages?</source>
+        <translation>Weet je zeker dat je alle weergegeven berichten wilt wissen?</translation>
+    </message>
+    <message>
+        <source>Search in text</source>
+        <translation>Tekst doorzoeken</translation>
+    </message>
+    <message>
+        <source>Go to current date</source>
+        <translation>Naar huidige datum gaan</translation>
+    </message>
+    <message>
+        <source>Load chat history...</source>
+        <translation>Chatgeschiedenis laden…</translation>
+    </message>
+    <message>
+        <source>Export to file</source>
+        <translation>Naar bestand exporteren</translation>
+    </message>
+</context>
+<context>
+    <name>GenericNetCamView</name>
+    <message>
+        <source>Tox video</source>
+        <translation>Tox-video</translation>
+    </message>
+    <message>
+        <source>Show Messages</source>
+        <translation>Berichten tonen</translation>
+    </message>
+    <message>
+        <source>Hide Messages</source>
+        <translation>Berichten verbergen</translation>
+    </message>
+    <message>
+        <source>Full Screen</source>
+        <translation>Volledig scherm</translation>
+    </message>
+    <message>
+        <source>Toggle video preview</source>
+        <translation>Videovoorbeeld wisselen</translation>
+    </message>
+    <message>
+        <source>Mute audio</source>
+        <translation>Audio dempen</translation>
+    </message>
+    <message>
+        <source>Mute microphone</source>
+        <translation>Microfoon dempen</translation>
+    </message>
+    <message>
+        <source>End video call</source>
+        <translation>Videogesprek beëindigen</translation>
+    </message>
+    <message>
+        <source>Exit full screen</source>
+        <translation>Volledig scherm afsluiten</translation>
     </message>
 </context>
 <context>
     <name>GroupChatForm</name>
     <message>
-        <location filename="../src/widget/form/groupchatform.cpp" line="57"/>
-        <source>%1 users in chat</source>
+        <source>%1 has set the title to %2</source>
+        <translation>%1 heeft de titel gewijzigd naar %2</translation>
+    </message>
+    <message>
+        <source>%1 has joined the group</source>
+        <translation>%1 neemt nu deel aan de groep</translation>
+    </message>
+    <message>
+        <source>%1 is now known as %2</source>
+        <translation>%1 staat nu bekend als %2</translation>
+    </message>
+    <message>
+        <source>%1 has left the group</source>
+        <translation>%1 heeft de groep verlaten</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
-        <translation>%1 gebruikers in de chat</translation>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location filename="../src/widget/form/groupchatform.cpp" line="108"/>
-        <source>%1 users in chat</source>
-        <translation>%1 gebruikers in de chat</translation>
+        <source>mute</source>
+        <translation>dempen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/groupchatform.cpp" line="154"/>
-        <location filename="../src/widget/form/groupchatform.cpp" line="200"/>
-        <source>Mute microphone</source>
-        <translation>Schakel microfoon uit</translation>
+        <source>unmute</source>
+        <translation>ontdempen</translation>
+    </message>
+</context>
+<context>
+    <name>GroupInviteForm</name>
+    <message>
+        <source>Groups</source>
+        <translation>Groepen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/groupchatform.cpp" line="160"/>
-        <source>Unmute microphone</source>
-        <translation>Schakel microfoon in</translation>
+        <source>Create new group</source>
+        <translation>Nieuwe groep aanmaken</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/groupchatform.cpp" line="175"/>
-        <location filename="../src/widget/form/groupchatform.cpp" line="203"/>
-        <source>Mute call</source>
-        <translation>Maak gesprek stil</translation>
+        <source>Group invites</source>
+        <translation>Groepsuitnodigingen</translation>
+    </message>
+</context>
+<context>
+    <name>GroupInviteWidget</name>
+    <message>
+        <source>Invited by %1 on %2 at %3.</source>
+        <translation>Uitgenodigd door %1 op %2 om %3.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/groupchatform.cpp" line="181"/>
-        <source>Unmute call</source>
-        <translation>Maak gesprek hoorbaar</translation>
+        <source>Join</source>
+        <translation>Deelnemen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/groupchatform.cpp" line="197"/>
-        <source>End audio call</source>
-        <translation>Beëindig audiogesprek</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/groupchatform.cpp" line="213"/>
-        <source>Start audio call</source>
-        <translation>Start audiogesprek</translation>
+        <source>Decline</source>
+        <translation>Weigeren</translation>
     </message>
 </context>
 <context>
     <name>GroupWidget</name>
     <message>
-        <location filename="../src/widget/groupwidget.cpp" line="43"/>
-        <location filename="../src/widget/groupwidget.cpp" line="80"/>
-        <source>%1 users in chat</source>
-        <translation>%1 gebruikers in de chat</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/groupwidget.cpp" line="45"/>
-        <location filename="../src/widget/groupwidget.cpp" line="82"/>
-        <source>0 users in chat</source>
-        <translation>0 gebruikers in de chat</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/groupwidget.cpp" line="54"/>
         <source>Set title...</source>
-        <translation>Stel titel in...</translation>
+        <translation>Stel titel in…</translation>
     </message>
     <message>
-        <location filename="../src/widget/groupwidget.cpp" line="55"/>
         <source>Quit group</source>
         <comment>Menu to quit a groupchat</comment>
-        <translation>Verlaat groep</translation>
+        <translation>Groep verlaten</translation>
     </message>
     <message>
-        <location filename="../src/widget/groupwidget.cpp" line="67"/>
-        <source>Group title</source>
-        <translation>Groepstitel</translation>
+        <source>Open chat in new window</source>
+        <translation>Chat openen in nieuw venster</translation>
     </message>
     <message>
-        <location filename="../src/widget/groupwidget.cpp" line="67"/>
-        <source>You can also set this by clicking the chat form name.
-Title:</source>
-        <translation>Je kan dit ook instellen door op de naam in het chatvenster te klikken.
-Titel:</translation>
+        <source>Remove chat from this window</source>
+        <translation>Chat verwijderen uit dit venster</translation>
     </message>
-</context>
-<context>
-    <name>IdentityForm</name>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="35"/>
-        <source>Identity</source>
-        <translation>Identiteit</translation>
+    <message numerus="yes">
+        <source>%n user(s) in chat</source>
+        <comment>Number of users in chat</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="136"/>
-        <source>Call active</source>
-        <comment>popup title</comment>
-        <translation>In gesprek</translation>
+        <source>New Message</source>
+        <translation>Nieuw bericht</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="137"/>
-        <source>You can&apos;t switch profiles while a call is active!</source>
-        <comment>popup text</comment>
-        <translation>Je kan niet van profiel wisselen in een gesprek!</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="147"/>
-        <source>Rename &quot;%1&quot;</source>
-        <comment>renaming a profile</comment>
-        <translation>Hernoem &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="155"/>
-        <source>Profile already exists</source>
-        <comment>rename confirm title</comment>
-        <translation>Profiel bestaat al</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="156"/>
-        <source>A profile named &quot;%1&quot; already exists. Do you want to erase it?</source>
-        <comment>rename confirm text</comment>
-        <translation>Er bestaat al een profiel met de naam &quot;%1&quot;. Wil je deze verwijderen?</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="175"/>
-        <source>Export profile</source>
-        <comment>save dialog title</comment>
-        <translation>Exporteer profiel</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="177"/>
-        <source>Tox save file (*.tox)</source>
-        <comment>save dialog filter</comment>
-        <translation>Tox bestand (*.tox)</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="187"/>
-        <source>Failed to remove file</source>
-        <translation>Kon bestand niet verwijderen</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="187"/>
-        <source>The file you chose to overwrite could not be removed first.</source>
-        <translation>Het bestand dat je hebt gekozen kon niet verwijderd worden.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="193"/>
-        <source>Failed to copy file</source>
-        <translation>Kon bestand niet kopieëren</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="193"/>
-        <source>The file you chose could not be written to.</source>
-        <translation>Het bestand dat je hebt gekozen kan niet geschreven worden.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="201"/>
-        <source>Profile currently loaded</source>
-        <comment>current profile deletion warning title</comment>
-        <translation>Profiel is momenteel geladen</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="201"/>
-        <source>This profile is currently in use. Please load a different profile before deleting this one.</source>
-        <comment>current profile deletion warning text</comment>
-        <translation>Dit profiel is momenteel in gebruik. Schakel naar een ander profiel over voordat je deze verwijderd.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="205"/>
-        <source>Deletion imminent!</source>
-        <comment>deletion confirmation title</comment>
-        <translation>Profiel wordt verwijderd!</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="206"/>
-        <source>Are you sure you want to delete this profile?</source>
-        <comment>deletion confirmation text</comment>
-        <translation>Weet je zeker dat je dit profiel wilt verwijderen?</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="225"/>
-        <source>Import profile</source>
-        <comment>import dialog title</comment>
-        <translation>Importeer profiel</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="227"/>
-        <source>Tox save file (*.tox)</source>
-        <comment>import dialog filter</comment>
-        <translation>Tox bestand (*.tox)</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="237"/>
-        <source>Ignoring non-Tox file</source>
-        <comment>popup title</comment>
-        <translation>Niet-Tox bestand wordt genegeerd</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="238"/>
-        <source>Warning: you&apos;ve chosen a file that is not a Tox save file; ignoring.</source>
-        <comment>popup text</comment>
-        <translation>Let op: je hebt een bestand gekozen dat geen Tox bestand is. Dis bestand wordt genegeerd.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="244"/>
-        <source>Profile already exists</source>
-        <comment>import confirm title</comment>
-        <translation>Profiel bestaat al</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="245"/>
-        <source>A profile named &quot;%1&quot; already exists. Do you want to erase it?</source>
-        <comment>import confirm text</comment>
-        <translation>Er bestaat al een profiel met de naam &quot;%1&quot;. Wil je deze verwijderen?</translation>
+        <source>Online</source>
+        <translation>Online</translation>
     </message>
 </context>
 <context>
     <name>IdentitySettings</name>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="53"/>
         <source>Public Information</source>
         <translation>Publieke informatie</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="59"/>
-        <source>Name</source>
-        <translation>Naam</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="69"/>
-        <source>Status</source>
-        <translation>Status</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="82"/>
         <source>Tox ID</source>
-        <translation>Tox ID</translation>
+        <translation>Tox-ID</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="85"/>
         <source>This bunch of characters tells other Tox clients how to contact you.
 Share it with your friends to communicate.</source>
         <comment>Tox ID tooltip</comment>
-        <translation>Deze combinatie van tekens verstallen andere Tox programmas hoe ze contact met je op moeten nemen.
+        <translation>Deze combinatie van tekens vertelt andere Tox-cliënten hoe ze contact met je op moeten nemen.
 Deel dit met je vrienden om te communiceren.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="92"/>
         <source>Your Tox ID (click to copy)</source>
-        <translation>Jouw Tox ID (klik om te kopieëren)</translation>
+        <translation>Jouw Tox-ID (klik om te kopiëren)</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="102"/>
-        <source>Profiles</source>
-        <translation>Profielen</translation>
+        <source>This QR code contains your Tox ID. You may share this with your friends as well.</source>
+        <translation>Deze QR-code bevat je Tox-ID. Je kunt deze met vrienden delen.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="110"/>
-        <source>Available profiles:</source>
-        <translation>Beschikbare profielen:</translation>
+        <source>Save image</source>
+        <translation>Afbeelding opslaan</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="117"/>
-        <source>Currently selected profile.</source>
-        <comment>toolTip for currently set profile</comment>
-        <translation>Momenteel geselecteerd profiel.</translation>
+        <source>Copy image</source>
+        <translation>Afbeelding kopiëren</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="134"/>
-        <source>Load selected profile and switch to it.</source>
-        <comment>tooltip for loading profile button</comment>
-        <translation>Laat geselecteerd profiel en schakel ernaar over.</translation>
+        <source>Profile</source>
+        <translation>Profiel</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="137"/>
-        <source>Load</source>
-        <comment>load profile button</comment>
-        <translation>Laad</translation>
+        <source>Rename profile.</source>
+        <comment>tooltip for renaming profile button</comment>
+        <translation>Profiel hernoemen.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="144"/>
+        <source>Delete profile.</source>
+        <comment>delete profile button tooltip</comment>
+        <translation>Profiel verwijderen.</translation>
+    </message>
+    <message>
+        <source>Go back to the login screen</source>
+        <comment>tooltip for logout button</comment>
+        <translation>Ga terug naar het aanmeldscherm</translation>
+    </message>
+    <message>
+        <source>Logout</source>
+        <comment>import profile button</comment>
+        <translation>Uitloggen</translation>
+    </message>
+    <message>
+        <source>Remove password</source>
+        <translation>Wachtwoord verwijderen</translation>
+    </message>
+    <message>
+        <source>Change password</source>
+        <translation>Wachtwoord wijzigen</translation>
+    </message>
+    <message>
         <source>Rename</source>
         <comment>rename profile button</comment>
-        <translation>Hernoem</translation>
+        <translation>Hernoemen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="147"/>
-        <source>Rename selected profile.</source>
-        <comment>tooltip for renaming profile button</comment>
-        <translation>Hernoem geselecteerd profiel.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="154"/>
         <source>Export</source>
         <comment>export profile button</comment>
-        <translation>Exporteer</translation>
+        <translation>Exporteren</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="157"/>
         <source>Allows you to export your Tox profile to a file.
 Profile does not contain your history.</source>
         <comment>tooltip for profile exporting button</comment>
-        <translation>Exporteer je Tox profiel naar een bestand.
+        <translation>Exporteer je Tox-profiel naar een bestand.
 Dit bestand bevat geen chatgeschiedenis.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="165"/>
-        <source>Delete selected profile.</source>
-        <comment>delete profile button tooltip</comment>
-        <translation>Verwijder geselecteerde profiel.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="168"/>
         <source>Delete</source>
         <comment>delete profile button</comment>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="179"/>
-        <source>Import a profile</source>
-        <comment>import profile button</comment>
-        <translation>Importeer een profiel</translation>
+        <source>Server</source>
+        <translation>Server</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="182"/>
-        <source>Import Tox profile from a .tox file.</source>
-        <comment>tooltip for importing profile button</comment>
-        <translation>Importeer een profiel uit een .tox bestand.</translation>
+        <source>Hide my name from the public list</source>
+        <translation>Mijn naam niet in de openbare lijst opnemen</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="189"/>
-        <source>Create new Tox ID and switch to it.</source>
-        <comment>tooltip for creating new Tox ID button</comment>
-        <translation>Maak nieuw Tox ID en schakel ernaar over.</translation>
+        <source>Register</source>
+        <translation>Registreren</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="192"/>
-        <source>New Tox ID</source>
-        <comment>new profile button</comment>
-        <translation>Nieuw Tox ID</translation>
+        <source>Your password</source>
+        <translation>Je wachtwoord</translation>
+    </message>
+    <message>
+        <source>Update</source>
+        <translation>Bijwerken</translation>
+    </message>
+    <message>
+        <source>Register on ToxMe</source>
+        <translation>Registreren op ToxMe</translation>
+    </message>
+    <message>
+        <source>Name for the ToxMe service.</source>
+        <comment>Tooltip for the `Username` ToxMe field.</comment>
+        <translation>Naam van de ToxMe-dienst.</translation>
+    </message>
+    <message>
+        <source>Optional. Something about you. Or your cat.</source>
+        <comment>Tooltip for the Biography text.</comment>
+        <translation>Optioneel. Iets over jezelf, of over je kat.</translation>
+    </message>
+    <message>
+        <source>Optional. Something about you. Or your cat.</source>
+        <comment>Tooltip for the Biography field.</comment>
+        <translation>Optioneel. Iets over jezelf, of over je kat.</translation>
+    </message>
+    <message>
+        <source>ToxMe service to register on.</source>
+        <translation>ToxMe-dienst om bij te registreren.</translation>
+    </message>
+    <message>
+        <source>If not set, ToxMe entries are publicly visible.</source>
+        <comment>Tooltip for the `Hide my name from public list` ToxMe checkbox.</comment>
+        <translation>Indien niet ingesteld is je naam openbaar zichtbaar op ToxMe.</translation>
+    </message>
+    <message>
+        <source>Remove your password and encryption from your profile.</source>
+        <comment>Tooltip for the `Remove password` button.</comment>
+        <translation>Verwijder je wachtwoord en versleuteling van je profiel.</translation>
+    </message>
+    <message>
+        <source>Name input</source>
+        <translation>Naaminvoer</translation>
+    </message>
+    <message>
+        <source>Name visible to contacts</source>
+        <translation>Naam zichtbaar voor contacten</translation>
+    </message>
+    <message>
+        <source>Status message input</source>
+        <translation>Invoer voor statusbericht</translation>
+    </message>
+    <message>
+        <source>Status message visible to contacts</source>
+        <translation>Statusbericht zichtbaar voor contacten</translation>
+    </message>
+    <message>
+        <source>Your Tox ID</source>
+        <translation>Je Tox-ID</translation>
+    </message>
+    <message>
+        <source>Save QR image as file</source>
+        <translation>QR-afbeelding opslaan als bestand</translation>
+    </message>
+    <message>
+        <source>Copy QR image to clipboard</source>
+        <translation>QR-afbeelding kopiëren naar klembord</translation>
+    </message>
+    <message>
+        <source>ToxMe username to be shown on ToxMe</source>
+        <translation>ToxMe-gebruikersnaam om te tonen op ToxMe</translation>
+    </message>
+    <message>
+        <source>Optional ToxMe biography to be shown on ToxMe</source>
+        <translation>Optionele ToxMe-biografie om te tonen op ToxMe</translation>
+    </message>
+    <message>
+        <source>ToxMe service address</source>
+        <translation>ToxMe-dienstadres</translation>
+    </message>
+    <message>
+        <source>Visibility on the ToxMe service</source>
+        <translation>Zichtbaarheid op de ToxMe-dienst</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation>Wachtwoord</translation>
+    </message>
+    <message>
+        <source>Update ToxMe entry</source>
+        <translation>ToxMe-invoer bijwerken</translation>
+    </message>
+    <message>
+        <source>Rename profile.</source>
+        <translation>Profiel hernoemen.</translation>
+    </message>
+    <message>
+        <source>Delete profile.</source>
+        <translation>Profiel verwijderen.</translation>
+    </message>
+    <message>
+        <source>Export profile</source>
+        <translation>Profiel exporteren</translation>
+    </message>
+    <message>
+        <source>Remove password from profile</source>
+        <translation>Wachtwoord van profiel verwijderen</translation>
+    </message>
+    <message>
+        <source>Change profile password</source>
+        <translation>Wachtwoord van profiel wijzigen</translation>
+    </message>
+    <message>
+        <source>My name:</source>
+        <translation>Mijn naam:</translation>
+    </message>
+    <message>
+        <source>My status:</source>
+        <translation>Mijn status:</translation>
+    </message>
+    <message>
+        <source>My username</source>
+        <translation>Mijn gebruikersnaam</translation>
+    </message>
+    <message>
+        <source>My biography</source>
+        <translation>Mijn biografie</translation>
+    </message>
+    <message>
+        <source>My profile</source>
+        <translation>Mijn profiel</translation>
     </message>
 </context>
 <context>
     <name>LoadHistoryDialog</name>
     <message>
-        <location filename="../src/widget/form/loadhistorydialog.ui" line="14"/>
         <source>Load History Dialog</source>
         <translation>Geschiedenis laden</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/loadhistorydialog.ui" line="23"/>
-        <source>Load history from:</source>
-        <translation>Laad geschiedenis van:</translation>
+        <source>Load history</source>
+        <translation>Geschiedenis laden</translation>
+    </message>
+    <message>
+        <source>from</source>
+        <translation>van</translation>
+    </message>
+    <message>
+        <source>to</source>
+        <translation>tot</translation>
+    </message>
+    <message>
+        <source>(about 100 messages are loaded)</source>
+        <translation>(er zijn ongeveer 100 berichten geladen)</translation>
+    </message>
+    <message>
+        <source>Select Date Dialog</source>
+        <translation>Dialoogvenster datum selecteren</translation>
+    </message>
+    <message>
+        <source>Select a date</source>
+        <translation>Selecteer een datum</translation>
+    </message>
+</context>
+<context>
+    <name>LoginScreen</name>
+    <message>
+        <source>Username:</source>
+        <translation>Gebruikersnaam:</translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation>Wachtwoord:</translation>
+    </message>
+    <message>
+        <source>Confirm:</source>
+        <translation>Bevestig:</translation>
+    </message>
+    <message>
+        <source>Password strength: %p%</source>
+        <translation>Wachtwoordsterkte: %p%</translation>
+    </message>
+    <message>
+        <source>Create Profile</source>
+        <translation>Profiel aanmaken</translation>
+    </message>
+    <message>
+        <source>If the profile does not have a password, qTox can skip the login screen</source>
+        <translation>Als het profiel geen wachtwoord heeft kan qTox het aanmeldscherm overslaan</translation>
+    </message>
+    <message>
+        <source>New Profile</source>
+        <translation>Nieuw profiel</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t create a new profile</source>
+        <translation>Kon geen nieuw profiel aanmaken</translation>
+    </message>
+    <message>
+        <source>The username must not be empty.</source>
+        <translation>De gebruikersnaam mag niet leeg zijn.</translation>
+    </message>
+    <message>
+        <source>The password must be at least 6 characters long.</source>
+        <translation>Het wachtwoord moet minstens 6 tekens lang zijn.</translation>
+    </message>
+    <message>
+        <source>The passwords you&apos;ve entered are different.
+Please make sure to enter same password twice.</source>
+        <translation>De wachtwoorden die je hebt ingevoerd komen niet overeen.
+Voer tweemaal hetzelfde wachtwoord in.</translation>
+    </message>
+    <message>
+        <source>A profile with this name already exists.</source>
+        <translation>Er bestaat al een profiel met deze naam.</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t load this profile</source>
+        <translation>Kon dit profiel niet laden</translation>
+    </message>
+    <message>
+        <source>This profile is already in use.</source>
+        <translation>Dit profiel is al in gebruik.</translation>
+    </message>
+    <message>
+        <source>Wrong password.</source>
+        <translation>Verkeerd wachtwoord.</translation>
+    </message>
+    <message>
+        <source>Load automatically</source>
+        <translation>Automatisch laden</translation>
+    </message>
+    <message>
+        <source>Import</source>
+        <translation>Importeren</translation>
+    </message>
+    <message>
+        <source>Load</source>
+        <translation>Laden</translation>
+    </message>
+    <message>
+        <source>Load Profile</source>
+        <translation>Profiel laden</translation>
+    </message>
+    <message>
+        <source>Password protected profiles can&apos;t be automatically loaded.</source>
+        <translation>Profielen beschermd met wachtwoord kunnen niet automatisch geladen worden.</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t load profile</source>
+        <translation>Kon profiel niet laden</translation>
+    </message>
+    <message>
+        <source>There is no selected profile.
+
+You may want to create one.</source>
+        <translation>Er is geen profiel geselecteerd.
+
+Misschien wil je er een maken.</translation>
+    </message>
+    <message>
+        <source>Username input field</source>
+        <translation>Invoerveld voor gebruikersnaam</translation>
+    </message>
+    <message>
+        <source>Password input field, you can leave it empty (no password), or type at least 6 characters</source>
+        <translation>Wachtwoordinvoerveld, je kan dit leeg laten (geen wachtwoord), of minstens 6 tekens invoeren</translation>
+    </message>
+    <message>
+        <source>Password confirmation field</source>
+        <translation>Wachtwoordbevestigingsveld</translation>
+    </message>
+    <message>
+        <source>Create a new profile button</source>
+        <translation>Knop voor aanmaken van nieuw profiel</translation>
+    </message>
+    <message>
+        <source>Profile list</source>
+        <translation>Profiellijst</translation>
+    </message>
+    <message>
+        <source>List of profiles</source>
+        <translation>Lijst van profielen</translation>
+    </message>
+    <message>
+        <source>Password input</source>
+        <translation>Wachtwoordinvoer</translation>
+    </message>
+    <message>
+        <source>Load automatically checkbox</source>
+        <translation>Selectievakje voor automatisch laden</translation>
+    </message>
+    <message>
+        <source>Import profile</source>
+        <translation>Profiel importeren</translation>
+    </message>
+    <message>
+        <source>Load selected profile button</source>
+        <translation>Knop voor laden van geselecteerd profiel</translation>
+    </message>
+    <message>
+        <source>New profile creation page</source>
+        <translation>Pagina voor aanmaken van nieuw profiel</translation>
+    </message>
+    <message>
+        <source>Loading existing profile page</source>
+        <translation>Pagina voor laden van bestaand profiel</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/mainwindow.ui" line="859"/>
         <source>Your name</source>
-        <translation>Naam</translation>
+        <translation>Je naam</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="941"/>
         <source>Your status</source>
+        <translation>Je status</translation>
+    </message>
+    <message>
+        <source>...</source>
+        <translation>…</translation>
+    </message>
+    <message>
+        <source>Add friends</source>
+        <translation>Vrienden toevoegen</translation>
+    </message>
+    <message>
+        <source>Create a group chat</source>
+        <translation>Groepschat aanmaken</translation>
+    </message>
+    <message>
+        <source>View completed file transfers</source>
+        <translation>Voltooide bestandsoverdrachten bekijken</translation>
+    </message>
+    <message>
+        <source>Change your settings</source>
+        <translation>Je instellingen wijzigen</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation>Sluiten</translation>
+    </message>
+    <message>
+        <source>Open profile</source>
+        <translation>Profiel openen</translation>
+    </message>
+    <message>
+        <source>Open profile page when clicked</source>
+        <translation>Profielpagina openen wanneer aangeklikt</translation>
+    </message>
+    <message>
+        <source>Status message input</source>
+        <translation>Invoer voor statusbericht</translation>
+    </message>
+    <message>
+        <source>Set your status message that will be shown to others</source>
+        <translation>Je statusbericht instellen, dat aan anderen getoond zal worden</translation>
+    </message>
+    <message>
+        <source>Status</source>
         <translation>Status</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1096"/>
-        <source>Add friends</source>
-        <translation>Voeg vrienden toe</translation>
+        <source>Set availability status</source>
+        <translation>Beschikbaarheidsstatus instellen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1134"/>
-        <source>Create a group chat</source>
-        <translation>Maak een groepsgesprek aan</translation>
+        <source>Contact search</source>
+        <translation>Contacten doorzoeken</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1169"/>
-        <source>View completed file transfers</source>
-        <translation>Bekijk voltooide bestandsoverdrachten</translation>
+        <source>Contact search input for known friends</source>
+        <translation>Invoer voor zoeken naar bekende vrienden in contacten</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1201"/>
-        <source>Change your settings</source>
-        <translation>Verander je instellingen</translation>
+        <source>Sorting and visibility</source>
+        <translation>Sortering en zichtbaarheid</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1789"/>
-        <source>Close</source>
-        <translation>Sluit</translation>
+        <source>Set friends sorting and visibility</source>
+        <translation>Sortering en zichtbaarheid van vrienden instellen</translation>
     </message>
-</context>
-<context>
-    <name>NetCamView</name>
     <message>
-        <location filename="../src/widget/netcamview.cpp" line="28"/>
-        <source>Tox video</source>
-        <translation>Tox video</translation>
+        <source>Open Add friends page</source>
+        <translation>Pagina voor toevoegen van vrienden openen</translation>
+    </message>
+    <message>
+        <source>Groupchat</source>
+        <translation>Groepschat</translation>
+    </message>
+    <message>
+        <source>Open groupchat management page</source>
+        <translation>Groepschat-beheerpagina openen</translation>
+    </message>
+    <message>
+        <source>File transfers history</source>
+        <translation>Bestandsoverdrachtgeschiedenis</translation>
+    </message>
+    <message>
+        <source>Open File transfers history</source>
+        <translation>Bestandsoverdrachtgeschiedenis openen</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation>Instellingen</translation>
+    </message>
+    <message>
+        <source>Open Settings</source>
+        <translation>Instellingen openen</translation>
     </message>
 </context>
 <context>
     <name>Nexus</name>
     <message>
-        <location filename="../src/nexus.cpp" line="169"/>
+        <source>View</source>
+        <comment>OS X Menu bar</comment>
+        <translation>Weergave</translation>
+    </message>
+    <message>
+        <source>Window</source>
+        <comment>OS X Menu bar</comment>
+        <translation>Venster</translation>
+    </message>
+    <message>
+        <source>Minimize</source>
+        <comment>OS X Menu bar</comment>
+        <translation>Minimaliseren</translation>
+    </message>
+    <message>
+        <source>Bring All to Front</source>
+        <comment>OS X Menu bar</comment>
+        <translation>Alles naar de voorgrond brengen</translation>
+    </message>
+    <message>
+        <source>Exit Fullscreen</source>
+        <translation>Volledig scherm verlaten</translation>
+    </message>
+    <message>
+        <source>Enter Fullscreen</source>
+        <translation>Volledig scherm gebruiken</translation>
+    </message>
+</context>
+<context>
+    <name>NotificationEdgeWidget</name>
+    <message numerus="yes">
+        <source>Unread message(s)</source>
+        <translation>
+            <numerusform>Ongelezen bericht</numerusform>
+            <numerusform>Ongelezen berichten</numerusform>
+        </translation>
+    </message>
+</context>
+<context>
+    <name>PasswordEdit</name>
+    <message>
+        <source>CAPS-LOCK ENABLED</source>
+        <translation>CAPS-LOCK INGESCHAKELD</translation>
+    </message>
+</context>
+<context>
+    <name>PrivacyForm</name>
+    <message>
+        <source>Privacy</source>
+        <translation>Privacy</translation>
+    </message>
+    <message>
+        <source>Confirmation</source>
+        <translation>Bevestiging</translation>
+    </message>
+    <message>
+        <source>Do you want to permanently delete all chat history?</source>
+        <translation>Wil je alle chatsgeschiedenis voorgoed verwijderen?</translation>
+    </message>
+</context>
+<context>
+    <name>PrivacySettings</name>
+    <message>
+        <source>Your friends will be able to see when you are typing.</source>
+        <comment>tooltip for typing notifications setting</comment>
+        <translation>Je vrienden kunnen zien wanneer je typt.</translation>
+    </message>
+    <message>
+        <source>Send typing notifications</source>
+        <translation>Typmeldingen versturen</translation>
+    </message>
+    <message>
+        <source>Keep chat history</source>
+        <translation>Chatgeschiedenis behouden</translation>
+    </message>
+    <message>
+        <source>NoSpam is part of your Tox ID.
+If you are being spammed with friend requests, you should change your NoSpam.
+People will be unable to add you with your old ID, but you will keep your current friends.</source>
+        <comment>toolTip for nospam</comment>
+        <translation>NoSpam is een deel van je Tox-ID.
+Als je gebombardeerd wordt met vriendschapsverzoeken is het verstandig om je NoSpam te veranderen.
+Mensen die je oude Tox-ID hebben kunnen je dan niet meer toevoegen, maar je huidige vriendenlijst wordt behouden.</translation>
+    </message>
+    <message>
+        <source>NoSpam</source>
+        <translation>NoSpam</translation>
+    </message>
+    <message>
+        <source>NoSpam is a part of your ID that can be changed at will.
+If you are getting spammed with friend requests, change the NoSpam.</source>
+        <translation>NoSpam is een deel van je Tox-ID dat veranderd kan worden.
+Verander de NoSpam als je gebombardeerd wordt met vriendschapsverzoeken.</translation>
+    </message>
+    <message>
+        <source>Generate random NoSpam</source>
+        <translation>Willekeurige NoSpam genereren</translation>
+    </message>
+    <message>
+        <source>Chat history keeping is still in development.
+Save format changes are possible, which may result in data loss.</source>
+        <comment>toolTip for Keep History setting</comment>
+        <translation>Het opslaan van chatgeschiedenis is nog in ontwikkeling.
+Het is mogelijk dat er zich veranderingen in het formaat voordoen, wat kan leiden tot gegevensverlies.</translation>
+    </message>
+    <message>
+        <source>Privacy</source>
+        <translation>Privacy</translation>
+    </message>
+    <message>
+        <source>BlackList</source>
+        <translation>Zwarte lijst</translation>
+    </message>
+    <message>
+        <source>Filter group message by group member&apos;s public key. Put public key here, one per line.</source>
+        <translation>Groepsberichten op basis van publieke sleutel van groepslid filteren. Plaats hier één publieke sleutel per regel.</translation>
+    </message>
+</context>
+<context>
+    <name>Profile</name>
+    <message>
+        <source>Failed to derive key from password, the profile won&apos;t use the new password.</source>
+        <translation>Sleutel ophalen van wachtwoord mislukt, het profiel zal het nieuwe wachtwoord niet gebruiken.</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t change password on the database, it might be corrupted or use the old password.</source>
+        <translation>Kon wachtwoord van database niet wijzigen, het is mogelijk beschadigd of gebruikt het oude wachtwoord.</translation>
+    </message>
+    <message>
+        <source>Toxing on qTox</source>
+        <translation>Toxt op qTox</translation>
+    </message>
+</context>
+<context>
+    <name>ProfileForm</name>
+    <message>
+        <source>Current profile: </source>
+        <translation>Huidig profiel: </translation>
+    </message>
+    <message>
+        <source>Choose a profile picture</source>
+        <translation>Kies een profielfoto</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Fout</translation>
+    </message>
+    <message>
+        <source>Unable to open this file.</source>
+        <translation>Kan dit bestand niet openen.</translation>
+    </message>
+    <message>
+        <source>Unable to read this image.</source>
+        <translation>Kan deze afbeelding niet lezen.</translation>
+    </message>
+    <message>
+        <source>The supplied image is too large.
+Please use another image.</source>
+        <translation>De geselecteerde afbeelding is te groot.
+Gebruik een andere afbeelding.</translation>
+    </message>
+    <message>
+        <source>Rename &quot;%1&quot;</source>
+        <comment>renaming a profile</comment>
+        <translation>‘%1’ hernoemen</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t rename the profile to &quot;%1&quot;</source>
+        <translation>Kon het profiel niet hernoemen naar ‘%1’</translation>
+    </message>
+    <message>
+        <source>Location not writable</source>
+        <comment>Title of permissions popup</comment>
+        <translation>Locatie niet schrijfbaar</translation>
+    </message>
+    <message>
+        <source>You do not have permission to write that location. Choose another, or cancel the save dialog.</source>
+        <comment>text of permissions popup</comment>
+        <translation>Je hebt geen toegang om een bestand op deze locatie op te slaan. Kies een andere locatie of annuleer het opslaan.</translation>
+    </message>
+    <message>
+        <source>Failed to copy file</source>
+        <translation>Kopiëren van bestand mislukt</translation>
+    </message>
+    <message>
+        <source>The file you chose could not be written to.</source>
+        <translation>Het bestand dat je hebt gekozen kan niet geschreven worden.</translation>
+    </message>
+    <message>
+        <source>Really delete profile?</source>
+        <comment>deletion confirmation title</comment>
+        <translation>Het profiel echt verwijderen?</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to delete this profile?</source>
+        <comment>deletion confirmation text</comment>
+        <translation>Weet je zeker dat je dit profiel wilt verwijderen?</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <comment>save qr image</comment>
+        <translation>Opslaan</translation>
+    </message>
+    <message>
+        <source>Save QrCode (*.png)</source>
+        <comment>save dialog filter</comment>
+        <translation>QR-code opslaan (*.png)</translation>
+    </message>
+    <message>
+        <source>Nothing to remove</source>
+        <translation>Niets om te verwijderen</translation>
+    </message>
+    <message>
+        <source>Your profile does not have a password!</source>
+        <translation>Je profiel heeft geen wachtwoord!</translation>
+    </message>
+    <message>
+        <source>Really delete password?</source>
+        <comment>deletion confirmation title</comment>
+        <translation>Het wachtwoord echt verwijderen?</translation>
+    </message>
+    <message>
+        <source>Please enter a new password.</source>
+        <translation>Voer een nieuw wachtwoord in.</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Verwijderen</translation>
+    </message>
+    <message>
+        <source>Files could not be deleted!</source>
+        <comment>deletion failed title</comment>
+        <translation>Bestanden konden niet verwijderd worden!</translation>
+    </message>
+    <message>
+        <source>Register (processing)</source>
+        <translation>Registreren (in verwerking)</translation>
+    </message>
+    <message>
+        <source>Update (processing)</source>
+        <translation>Bijwerken (in verwerking)</translation>
+    </message>
+    <message>
+        <source>Done!</source>
+        <translation>Klaar!</translation>
+    </message>
+    <message>
+        <source>Account %1@%2 updated successfully</source>
+        <translation>Account %1@%2 met succes bijgewerkt</translation>
+    </message>
+    <message>
+        <source>Successfully added %1@%2 to the database. Save your password</source>
+        <translation>%1@%2 is met success toegevoegd aan de database. Sla je wachtwoord op</translation>
+    </message>
+    <message>
+        <source>Toxme error</source>
+        <translation>ToxMe-fout</translation>
+    </message>
+    <message>
+        <source>Register</source>
+        <translation>Registreren</translation>
+    </message>
+    <message>
+        <source>Update</source>
+        <translation>Bijwerken</translation>
+    </message>
+    <message>
+        <source>Change password</source>
+        <comment>button text</comment>
+        <translation>Wachtwoord wijzigen</translation>
+    </message>
+    <message>
+        <source>Set profile password</source>
+        <comment>button text</comment>
+        <translation>Profielwachtwoord instellen</translation>
+    </message>
+    <message>
+        <source>Current profile location: %1</source>
+        <translation>Huidige profiellocatie: %1</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t change password</source>
+        <translation>Kon wachtwoord niet wijzigen</translation>
+    </message>
+    <message>
+        <source>This bunch of characters tells other Tox clients how to contact you.
+Share it with your friends to communicate.
+
+This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
+        <translation>Deze hoop tekens vertelt andere Tox-cliënten hoe ze je moeten contacteren.
+Deel hem met je vrienden om te communiceren.
+
+Deze ID bevat de NoSpam-code (in het blauw) en de controlesom (in het grijs).</translation>
+    </message>
+    <message>
+        <source>Empty path is unavaliable</source>
+        <translation>Leeg pad is niet beschikbaar</translation>
+    </message>
+    <message>
+        <source>Failed to rename</source>
+        <translation>Hernoemen mislukt</translation>
+    </message>
+    <message>
+        <source>Profile already exists</source>
+        <translation>Profiel bestaat al</translation>
+    </message>
+    <message>
+        <source>A profile named &quot;%1&quot; already exists.</source>
+        <translation>Een profiel met de naam ‘%1’ bestaat al.</translation>
+    </message>
+    <message>
+        <source>Empty name</source>
+        <translation>Lege naam</translation>
+    </message>
+    <message>
+        <source>Empty name is unavaliable</source>
+        <translation>Lege naam is niet beschikbaar</translation>
+    </message>
+    <message>
+        <source>Empty path</source>
+        <translation>Leeg pad</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t change password on the database, it might be corrupted or use the old password.</source>
+        <translation>Kon wachtwoord van database niet wijzigen, het is mogelijk beschadigd of gebruikt het oude wachtwoord.</translation>
+    </message>
+    <message>
+        <source>Export profile</source>
+        <translation>Profiel exporteren</translation>
+    </message>
+    <message>
+        <source>Tox save file (*.tox)</source>
+        <extracomment>save dialog filter</extracomment>
+        <translation>Tox-opslagbestand (*.tox)</translation>
+    </message>
+    <message>
+        <source>The following files could not be deleted:</source>
+        <extracomment>deletion failed text part 1</extracomment>
+        <translation>De volgende bestanden konden niet verwijderd worden:</translation>
+    </message>
+    <message>
+        <source>Please manually remove them.</source>
+        <extracomment>deletion failed text part 2</extracomment>
+        <translation>Verwijder ze handmatig.</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to delete your password?</source>
+        <extracomment>deletion confirmation text</extracomment>
+        <translation>Weet je zeker dat je je wachtwoord wilt verwijderen?</translation>
+    </message>
+    <message>
         <source>Images (%1)</source>
         <comment>filetype filter</comment>
         <translation>Afbeeldingen (%1)</translation>
     </message>
 </context>
 <context>
-    <name>PrivacyForm</name>
+    <name>ProfileImporter</name>
     <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="31"/>
-        <source>Privacy</source>
-        <translation>Privacy</translation>
+        <source>Import profile</source>
+        <comment>import dialog title</comment>
+        <translation>Profiel importeren</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="78"/>
-        <source>Please set your new chat history password.</source>
-        <translation>Kies een nieuw wachtwoord voor de chatgeschiedenis.</translation>
+        <source>Tox save file (*.tox)</source>
+        <comment>import dialog filter</comment>
+        <translation>Tox-opslagbestand (*.tox)</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="80"/>
-        <source>It appears you have an unused encrypted chat history; if the password matches, it will be added to your current history.</source>
-        <translatorcomment>FIXME: Weird translation</translatorcomment>
-        <translation>Het lijkt erop dat je een oude versleutelde chat geschiedenis hebt. Indien het wachtwoord overeen komt, zal deze aan je momentele chatgeschiedenis toegevoegd worden.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="83"/>
-        <source>Use data file password</source>
-        <comment>pushbutton text</comment>
-        <translation>Gebruik wachtwoord voor databestand</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="110"/>
-        <source>Successfully decrypted old chat history</source>
-        <comment>popup title</comment>
-        <translation>Oude chatgeschiedenis succesvol ontsleuteld</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="110"/>
-        <source>You have succesfully decrypted the old chat history, and it has been added to your current history and re-encrypted.</source>
-        <comment>popup text</comment>
-        <translation>Je heb succesful de oude chatgeschiedenis ontsleuteld. Deze is toegevoegd aan de nieuwe chatgeschiedenis en opnieuw versleuteld.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="117"/>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="118"/>
-        <source>Old encrypted chat history</source>
-        <comment>popup title</comment>
-        <translation>Oude versleutelde chatgeschiedenis</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="117"/>
-        <source>There is currently an unused encrypted chat history, but the password you just entered doesn&apos;t match.
-
-If you don&apos;t care about the old history, you may click Ok to delete it and use the password you just entered.
-Otherwise, hit cancel to try again.</source>
-        <comment>This happens when enabling encryption after previously &quot;Disabling History&quot;</comment>
-        <translation>Er is momenteel een oude versluitelde chatgeschiedenis, maar het ingevulde wachtwoord komt niet overeen.
-
-Indien de oude chatgeschiedenis verloren mag geen, druk op Ok om deze te verwijderen en het nieuwe wachtwoord te gebruiken.
-Druk anders op annuleren om het opnieuw te proberen.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="118"/>
-        <source>Are you absolutely sure you want to lose the unused encrypted chat history?</source>
-        <comment>secondary popup</comment>
-        <translation>Weet je absoluut zeker dat je de oude versleutelde chatgeschiedenis wilt verwijderen?</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="147"/>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="164"/>
-        <source>Old encrypted chat history</source>
-        <comment>title</comment>
-        <translation>Oude versleutelde chatgeschiedenis</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="148"/>
-        <source>Would you like to decrypt your chat history?
-Otherwise it will be deleted.</source>
-        <translation>Wil je de chatgeschiedenis ontsleutelen?
-Anders zal deze worden verwijderd.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="165"/>
-        <source>Are you sure you want to lose your entire chat history?</source>
-        <translation>Weet je zeker dat je de oude chatgeschiedenis wilt verwijderen?</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="197"/>
-        <source>Please set your new data file password.</source>
-        <translation>Kies een nieuw wachtwoord voor de chatgeschiedenis.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="199"/>
-        <source>Use chat history password</source>
-        <comment>pushbutton text</comment>
-        <translation>Gebruik wachtwoord voor chatgeschiedenis</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="242"/>
-        <source>Decrypt your data file</source>
-        <comment>title</comment>
-        <translation>Ontsleutel je databestand</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="242"/>
-        <source>Would you like to decrypt your data file?</source>
-        <translation>Wil je je databestand ontsleutelen?</translation>
-    </message>
-</context>
-<context>
-    <name>PrivacySettings</name>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="47"/>
-        <source>Your friends will be able to see when you are typing.</source>
-        <comment>tooltip for typing notifications setting</comment>
-        <translation>Je vrienden kunnen zien wanneer je typt.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="50"/>
-        <source>Send Typing Notifications</source>
-        <translation>Verstuur typ notificaties</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="57"/>
-        <source>Chat history keeping is still in development.
-Save format changes are possible, which may result in data loss.</source>
-        <comment>toolTip for Keep History setting</comment>
-        <translation>Het opslaan van chatgeschiedenis is nog in ontwikkeling.
-Veranderingen in het formaat om op te slaan zijn mogelijk, welke tot dataverlies kunnen leiden.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="61"/>
-        <source>Keep chat history (mostly stable)</source>
-        <translation>Sla chatgeschiedenis op (grotendeels stabiel)</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="71"/>
-        <source>Local file encryption</source>
-        <translation>Locale bestandsversleuteling</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="77"/>
-        <source>All Tox communications over the internet are encrypted, and this cannot be disabled. However, you may optionally password protect your local Tox files.</source>
-        <translation>Alle online Tox communicatie is versleuteld, en dit kan niet uitgeschakeld worden. Echter, je kan optioneel je locale Tox bestanden met een wachtwoord beschermen.</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="92"/>
-        <source>Encrypt Tox data file</source>
-        <translation>Versleutel Tox databestand</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="99"/>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="123"/>
-        <source>Change password</source>
-        <translation>Verander wachtwoord</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="113"/>
-        <source>Encrypt chat history</source>
-        <translation>Versleutel chatgeschiedenis</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="135"/>
-        <source>Nospam</source>
-        <translation>Nospam</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="138"/>
-        <source>Nospam is part of your Tox ID.
-It is there to help you change your Tox ID when you feel like you are getting too much spam friend requests.
-When you change nospam, your current contacts still can communicate with you,
-but new contacts need to know your new Tox ID to be able to add you.</source>
-        <comment>toolTip for nospam</comment>
-        <translation>Nospam is deel van je Tox ID.
-Het heeft als doel het veranderen van je Tox ID als je gespamt wordt met vriendverzoeken.
-Wanneer je nospam veranderd, kunnen huidige vrienden nog met je communiceren,
-maar nieuwe vrienden zullen je nieuwe Tox ID moeten wete om te toe te kunnen voegen.</translation>
-    </message>
-    <message>
-        <source>HHHHHHHH</source>
-        <translatorcomment>Note: WHAT?!</translatorcomment>
-        <translation type="obsolete">HHHHHHHH</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="156"/>
-        <source>Generate random nospam</source>
-        <translation>Genereer willekeurige nospam</translation>
-    </message>
-</context>
-<context>
-    <name>QObject</name>
-    <message>
-        <location filename="../src/autoupdate.cpp" line="498"/>
-        <source>Update</source>
-        <comment>The title of a message box</comment>
-        <translation>Update</translation>
-    </message>
-    <message>
-        <location filename="../src/autoupdate.cpp" line="499"/>
-        <source>An update is available, do you want to download it now?
-It will be installed when qTox restarts.</source>
-        <translation>Een update is beschikbaar, wil je deze nu downloaden?
-Deze zal geïnstalleerd worden wanneer qTox herstart.</translation>
-    </message>
-    <message>
-        <location filename="../src/main.cpp" line="71"/>
-        <source>Tox URI to parse</source>
-        <translation>Tox URI om te ontleden</translation>
-    </message>
-    <message>
-        <location filename="../src/main.cpp" line="72"/>
-        <source>Starts new instance and loads specified profile.</source>
-        <translation>Start nieuwe instantie en laad specifiek profiel.</translation>
-    </message>
-    <message>
-        <location filename="../src/main.cpp" line="72"/>
-        <source>profile</source>
-        <translation>profiel</translation>
-    </message>
-    <message>
-        <location filename="../src/misc/style.cpp" line="69"/>
-        <source>Default</source>
-        <translation>Standaard</translation>
-    </message>
-    <message>
-        <location filename="../src/misc/style.cpp" line="69"/>
-        <source>Blue</source>
-        <translation>Blauw</translation>
-    </message>
-    <message>
-        <location filename="../src/misc/style.cpp" line="69"/>
-        <source>Olive</source>
-        <translation>Olijf</translation>
-    </message>
-    <message>
-        <location filename="../src/misc/style.cpp" line="69"/>
-        <source>Red</source>
-        <translation>Rood</translation>
-    </message>
-    <message>
-        <location filename="../src/misc/style.cpp" line="69"/>
-        <source>Violet</source>
-        <translation>Violet</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/callconfirmwidget.cpp" line="28"/>
-        <source>Incoming call...</source>
-        <translation>Incomend gesprek...</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/toxsave.cpp" line="56"/>
         <source>Ignoring non-Tox file</source>
         <comment>popup title</comment>
-        <translation>Niet-Tox bestand wordt genegeerd</translation>
+        <translation>Niet-Tox-bestand wordt genegeerd</translation>
     </message>
     <message>
-        <location filename="../src/widget/toxsave.cpp" line="57"/>
-        <source>Warning: you&apos;ve chosen a file that is not a Tox save file; ignoring.</source>
+        <source>Warning: You have chosen a file that is not a Tox save file; ignoring.</source>
         <comment>popup text</comment>
-        <translation>Let op: je hebt een bestand gekozen dat geen Tox bestand is. Dis bestand wordt genegeerd.</translation>
+        <translation>Waarschuwing: het door jou gekozen bestand is geen Tox-opslagbestand; het wordt genegeerd.</translation>
     </message>
     <message>
-        <location filename="../src/widget/toxsave.cpp" line="63"/>
         <source>Profile already exists</source>
         <comment>import confirm title</comment>
         <translation>Profiel bestaat al</translation>
     </message>
     <message>
-        <location filename="../src/widget/toxsave.cpp" line="64"/>
         <source>A profile named &quot;%1&quot; already exists. Do you want to erase it?</source>
         <comment>import confirm text</comment>
-        <translation>Er bestaat al een profiel met de naam &quot;%1&quot;. Wil je deze verwijderen?</translation>
+        <translation>Er bestaat al een profiel met de naam ‘%1’. Wil je het wissen?</translation>
     </message>
     <message>
-        <location filename="../src/widget/toxsave.cpp" line="70"/>
+        <source>File doesn&apos;t exist</source>
+        <translation>Bestand bestaat niet</translation>
+    </message>
+    <message>
+        <source>Profile doesn&apos;t exist</source>
+        <translation>Profiel bestaat niet</translation>
+    </message>
+    <message>
         <source>Profile imported</source>
         <translation>Profiel geïmporteerd</translation>
     </message>
     <message>
-        <location filename="../src/widget/toxsave.cpp" line="70"/>
         <source>%1.tox was successfully imported</source>
-        <translation>%1.tox was succesvol geïmporteerd</translation>
+        <translation>%1.tox is met succes geïmporteerd</translation>
+    </message>
+</context>
+<context>
+    <name>QApplication</name>
+    <message>
+        <source>Ok</source>
+        <translation>Oké</translation>
     </message>
     <message>
-        <source>Tox me maybe?</source>
-        <comment>Default message in Tox URI friend requests. Write something appropriate!</comment>
-        <translation type="obsolete">Tox met me!</translation>
+        <source>Cancel</source>
+        <translation>Annuleren</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/chatmessage.cpp" line="126"/>
-        <source>Busy...</source>
-        <translation>Bezig...</translation>
+        <source>Yes</source>
+        <translation>Ja</translation>
     </message>
     <message>
-        <location filename="../src/widget/toxuri.cpp" line="71"/>
+        <source>No</source>
+        <translation>Nee</translation>
+    </message>
+    <message>
+        <source>LTR</source>
+        <comment>Translate this string to the string &apos;RTL&apos; in right-to-left languages (for example Hebrew and Arabic) to get proper widget layout</comment>
+        <translation>LTR</translation>
+    </message>
+</context>
+<context>
+    <name>QMessageBox</name>
+    <message>
+        <source>Couldn&apos;t add friend</source>
+        <translation>Kon vriend niet toevoegen</translation>
+    </message>
+    <message>
+        <source>%1 is not a valid Toxme address.</source>
+        <translation>%1 is geen geldig ToxMe-adres.</translation>
+    </message>
+    <message>
+        <source>You can&apos;t add yourself as a friend!</source>
+        <comment>When trying to add your own Tox ID as friend</comment>
+        <translation>Je kunt jezelf niet als vriend toevoegen!</translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <source>Tox URI to parse</source>
+        <translation>Te verwerken Tox-URI</translation>
+    </message>
+    <message>
+        <source>Starts new instance and loads specified profile.</source>
+        <translation>Start nieuwe instantie en laadt specifiek profiel.</translation>
+    </message>
+    <message>
+        <source>profile</source>
+        <translation>profiel</translation>
+    </message>
+    <message>
+        <source>Default</source>
+        <translation>Standaard</translation>
+    </message>
+    <message>
+        <source>Blue</source>
+        <translation>Blauw</translation>
+    </message>
+    <message>
+        <source>Olive</source>
+        <translation>Olijfgroen</translation>
+    </message>
+    <message>
+        <source>Red</source>
+        <translation>Rood</translation>
+    </message>
+    <message>
+        <source>Violet</source>
+        <translation>Violet</translation>
+    </message>
+    <message>
+        <source>Incoming call...</source>
+        <translation>Inkomende oproep…</translation>
+    </message>
+    <message>
         <source>%1 here! Tox me maybe?</source>
         <comment>Default message in Tox URI friend requests. Write something appropriate!</comment>
         <translation>%1 hier! Tox met me!</translation>
     </message>
-</context>
-<context>
-    <name>SetPasswordDialog</name>
     <message>
-        <location filename="../src/widget/form/setpassworddialog.ui" line="14"/>
-        <source>Set your password</source>
-        <translation>Wachtwoord instellen</translation>
+        <source>Server doesn&apos;t support Toxme</source>
+        <translation>Server biedt geen ondersteuning voor ToxMe</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/setpassworddialog.ui" line="31"/>
-        <source>Repeat password</source>
-        <translation>Herhaal wachtwoord</translation>
+        <source>You&apos;re making too many requests. Wait an hour and try again</source>
+        <translation>Je doet te veel verzoeken. Wacht een uur en probeer het opnieuw</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/setpassworddialog.ui" line="41"/>
-        <source>Type password</source>
-        <translation>Typ wachtword</translation>
+        <source>This name is already in use</source>
+        <translation>Deze naam is al in gebruik</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/setpassworddialog.ui" line="65"/>
-        <source>Password strength</source>
-        <translation>Wachtwoordsterkte</translation>
+        <source>This Tox ID is already registered under another name</source>
+        <translation>Deze Tox-ID is al geregistreerd onder een andere naam</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/setpassworddialog.cpp" line="33"/>
-        <location filename="../src/widget/form/setpassworddialog.cpp" line="61"/>
-        <source>The passwords don&apos;t match.</source>
-        <translation>De wachtwoorden komen niet overeen.</translation>
-    </message>
-</context>
-<context>
-    <name>Settings</name>
-    <message>
-        <location filename="../src/misc/settings.cpp" line="124"/>
-        <source>Choose a profile</source>
-        <translation>Kies een profiel</translation>
+        <source>Please don&apos;t use a space in your name</source>
+        <translation>Je naam mag geen spaties bevatten</translation>
     </message>
     <message>
-        <location filename="../src/misc/settings.cpp" line="125"/>
-        <source>Please choose which identity to use</source>
-        <translation>Kies een identiteit om te gebruiken</translation>
-    </message>
-</context>
-<context>
-    <name>ToxDNS</name>
-    <message>
-        <location filename="../src/toxdns.cpp" line="64"/>
-        <source>The connection timed out</source>
-        <comment>The DNS gives the Tox ID associated to toxme.se addresses</comment>
-        <translation>De verbinding kreeg een time-out</translation>
+        <source>Password incorrect</source>
+        <translation>Wachtwoord onjuist</translation>
     </message>
     <message>
-        <location filename="../src/toxdns.cpp" line="70"/>
-        <source>This address does not exist</source>
-        <comment>The DNS gives the Tox ID associated to toxme.se addresses</comment>
-        <translation>Dit adres bestaat niet</translation>
+        <source>You can&apos;t use this name</source>
+        <translation>Deze naam kun je niet gebruiken</translation>
     </message>
     <message>
-        <location filename="../src/toxdns.cpp" line="75"/>
-        <source>Error while looking up DNS</source>
-        <comment>The DNS gives the Tox ID associated to toxme.se addresses</comment>
-        <translation>Fout tijdens het opzoeken via DNS</translation>
+        <source>Name not found</source>
+        <translation>Naam niet gevonden</translation>
     </message>
     <message>
-        <location filename="../src/toxdns.cpp" line="82"/>
-        <source>No text record found</source>
-        <comment>Error with the DNS</comment>
-        <translation>Geen text records gevonden</translation>
+        <source>Tox ID not sent</source>
+        <translation>Tox-ID niet verstuurd</translation>
     </message>
     <message>
-        <location filename="../src/toxdns.cpp" line="89"/>
-        <source>Unexpected number of values in text record</source>
-        <comment>Error with the DNS</comment>
-        <translation>Onverwachte hoeveelheid waarden in text record</translation>
+        <source>That user does not exist</source>
+        <translation>Die gebruiker bestaat niet</translation>
     </message>
     <message>
-        <location filename="../src/toxdns.cpp" line="116"/>
-        <source>The version of Tox DNS used by this server is not supported</source>
-        <comment>Error with the DNS</comment>
-        <translation>De versie van Tox DNS die door deze server gebruikt wordt niet ondersteund</translation>
-    </message>
-    <message>
-        <location filename="../src/toxdns.cpp" line="126"/>
-        <source>The DNS lookup does not contain any Tox ID</source>
-        <comment>Error with the DNS</comment>
-        <translation>De DNS zoekopdracht gaf geen Tox ID terug</translation>
-    </message>
-    <message>
-        <location filename="../src/toxdns.cpp" line="133"/>
-        <location filename="../src/toxdns.cpp" line="140"/>
-        <source>The DNS lookup does not contain a valid Tox ID</source>
-        <comment>Error with the DNS</comment>
-        <translation>De DNS zoekopdracht gaf geen correct Tox ID terug</translation>
-    </message>
-    <message>
-        <location filename="../src/toxdns.cpp" line="223"/>
-        <location filename="../src/toxdns.cpp" line="269"/>
-        <source>It appears that qTox has to use the old tox1 protocol to access DNS record of your friend&apos;s Tox ID.
-Unfortunately tox1 is not secure, and you are at risk of someone hijacking what is sent between you and ToxDNS service.
-Should tox1 be used anyway?
-If unsure, press âNoâ, so that request to ToxDNS service will not be made using unsecure protocol.</source>
-        <translation>Het lijkt erop dat qTox gebruik moet maken van het oude tox1 protocol om het DNS record van je vriend&apos;s Tox ID op te halen.
-Helaas is tox1 niet veilig, en het risico bestaat dat iemand je verkeerde informatie door zal sturen.
-Moet tox1 toch gebruikt worden?
-Indien onzeker, druk op &quot;Nee&quot;, zo dat er geen onveilig verzoek naar de Tox DNS service wordt gedaan.</translation>
-    </message>
-</context>
-<context>
-    <name>ToxURIDialog</name>
-    <message>
-        <location filename="../src/widget/toxuri.cpp" line="81"/>
-        <source>Add a friend</source>
-        <comment>Title of the window to add a friend through Tox URI</comment>
-        <translation>Voeg een vriend toe</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/toxuri.cpp" line="83"/>
-        <source>Do you want to add %1 as a friend?</source>
-        <translation>Wil je %1 als vriend toevoegen?</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/toxuri.cpp" line="84"/>
-        <source>User ID:</source>
-        <translation>Gebruiker ID:</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/toxuri.cpp" line="88"/>
-        <source>Friend request message:</source>
-        <translation>Vriendverzoeksbericht:</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/toxuri.cpp" line="93"/>
-        <source>Send</source>
-        <comment>Send a friend request</comment>
-        <translation>Verstuur</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/toxuri.cpp" line="94"/>
-        <source>Cancel</source>
-        <comment>Don&apos;t send a friend request</comment>
-        <translation>Annuleer</translation>
-    </message>
-</context>
-<context>
-    <name>Widget</name>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="107"/>
-        <source>Online</source>
-        <comment>Button to set your status to &apos;Online&apos;</comment>
-        <translation>Online</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="110"/>
-        <source>Away</source>
-        <comment>Button to set your status to &apos;Away&apos;</comment>
-        <translation>Afwezig</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="113"/>
-        <source>Busy</source>
-        <comment>Button to set your status to &apos;Busy&apos;</comment>
-        <translation>Bezet</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="123"/>
-        <source>&amp;Quit</source>
-        <translatorcomment>NOTE: Can this be safely translated like this?</translatorcomment>
-        <translation>&amp;Sluit</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="352"/>
-        <source>Choose a profile picture</source>
-        <translation>Kies een profielfoto</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="361"/>
-        <location filename="../src/widget/widget.cpp" line="368"/>
-        <location filename="../src/widget/widget.cpp" line="389"/>
         <source>Error</source>
         <translation>Fout</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="361"/>
-        <source>Unable to open this file</source>
-        <translation>Kon dit bestand niet openen</translation>
+        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>qTox kon je gespreksgeschiedenis niet openen, deze zal uitgeschakeld worden.</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="368"/>
-        <source>Unable to read this image</source>
-        <translation>Kon deze afbeelding niet lezen</translation>
+        <source>None</source>
+        <comment>No camera device set</comment>
+        <translation>Geen</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="389"/>
-        <source>This image is too big</source>
-        <translation>Deze afbeelding is te groot</translation>
+        <source>Desktop</source>
+        <comment>Desktop as a camera input for screen sharing</comment>
+        <translation>Bureaublad</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="429"/>
-        <source>Toxcore failed to start, the application will terminate after you close this message.</source>
-        <translation>Toxcore kon niet opstarten, de applicatie zal afsluiten nadat dit bericht wordt gesloten.</translation>
+        <source>Problem with HTTPS connection</source>
+        <translation>Probleem met HTTPS-verbinding</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="438"/>
-        <source>toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
-        <comment>popup text</comment>
-        <translation>Toxcore kon niet opstarten met deze proxyinstellingen. Hierdoor kan qTox niet starten. Verander je instellingen en herstart.</translation>
+        <source>Internal ToxMe error</source>
+        <translation>Interne ToxMe-fout</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="487"/>
-        <source>Add friend</source>
-        <translation>Voeg vriend toe</translation>
+        <source>Reformatting text in progress..</source>
+        <translation>Tekst wordt opnieuw geformatteerd…</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="499"/>
-        <source>File transfers</source>
-        <translation>Bestandsoverdrachten</translation>
+        <source>Starts new instance and opens the login screen.</source>
+        <translation>Start nieuwe instantie en opent aanmeldscherm.</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="509"/>
-        <source>Executable file</source>
-        <comment>popup title</comment>
-        <translation>Uitvoerbaar bestand</translation>
+        <source>Dark</source>
+        <translation>Donker</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="509"/>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
-        <comment>popup text</comment>
-        <translation>Je hebt qTox gevraagd een uitvoerbaar bestand te openen. Uitvoerbare bestanden kunnen schade toebrengen aan je computer. Weet je zeker dat je dit bestand wilt openen?</translation>
+        <source>Dark blue</source>
+        <translation>Donkerblauw</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="565"/>
-        <source>Settings</source>
-        <translation>Instellingen</translation>
+        <source>Dark olive</source>
+        <translation>Donkerolijfgroen</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="674"/>
-        <source>Couldn&apos;t request friendship</source>
-        <translation>Kon geen vriendschapsverzoek maken</translation>
+        <source>Dark red</source>
+        <translation>Donkerrood</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="702"/>
-        <source>away</source>
-        <comment>contact status</comment>
-        <translation>afwezig</translation>
+        <source>Dark violet</source>
+        <translation>Donkerviolet</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="704"/>
-        <source>busy</source>
-        <comment>contact status</comment>
-        <translation>bezet</translation>
+        <source>Failed to load profile automatically.</source>
+        <translation>Kon profiel niet automatisch laden.</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="706"/>
-        <source>offline</source>
-        <comment>contact status</comment>
-        <translation>offline</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="710"/>
         <source>online</source>
         <comment>contact status</comment>
         <translation>online</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="713"/>
-        <source>%1 is now %2</source>
-        <comment>e.g. &quot;Dubslow is now online&quot;</comment>
-        <translation>%1 is nu %2</translation>
+        <source>away</source>
+        <comment>contact status</comment>
+        <translation>afwezig</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="889"/>
-        <source>Group invite</source>
-        <comment>popup title</comment>
-        <translation>Uitnodiging tot groepsgesprek</translation>
+        <source>busy</source>
+        <comment>contact status</comment>
+        <translation>bezet</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="889"/>
-        <source>%1 has invited you to a groupchat. Would you like to join?</source>
+        <source>offline</source>
+        <comment>contact status</comment>
+        <translation>offline</translation>
+    </message>
+    <message>
+        <source>blocked</source>
+        <comment>contact status</comment>
+        <translation>geblokkeerd</translation>
+    </message>
+</context>
+<context>
+    <name>RemoveFriendDialog</name>
+    <message>
+        <source>Remove friend</source>
+        <translation>Vriend verwijderen</translation>
+    </message>
+    <message>
+        <source>Also remove chat history</source>
+        <translation>Gespreksgeschiedenis ook verwijderen</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Verwijderen</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to remove %1 from your contacts list?</source>
+        <translation>Weet je zeker dat je %1 uit je contactenlijst wil verwijderen?</translation>
+    </message>
+    <message>
+        <source>Remove all chat history with the friend if set</source>
+        <translation>Indien ingesteld alle gespreksgeschiedenis met de vriend verwijderen</translation>
+    </message>
+</context>
+<context>
+    <name>ScreenshotGrabber</name>
+    <message>
+        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <comment>Help text shown when no region has been selected yet</comment>
+        <translation>Klik en sleep om een gebied te selecteren. Druk op %1 om het qTox-venster te verbergen/herstellen, of %2 om te annuleren.</translation>
+    </message>
+    <message>
+        <source>Space</source>
+        <comment>[Space] key on the keyboard</comment>
+        <translation>Spatie</translation>
+    </message>
+    <message>
+        <source>Escape</source>
+        <comment>[Escape] key on the keyboard</comment>
+        <translation>Escape</translation>
+    </message>
+    <message>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <comment>Help text shown when a region has been selected</comment>
+        <translation>Druk op %1 om een schermafdruk van de selectie te versturen, op %2 om het qTox-scherm te verbergen/herstellen, of op %3 om te annuleren.</translation>
+    </message>
+    <message>
+        <source>Enter</source>
+        <comment>[Enter] key on the keyboard</comment>
+        <translation>Enter</translation>
+    </message>
+</context>
+<context>
+    <name>SearchForm</name>
+    <message>
+        <source>The text could not be found.</source>
+        <translation>De tekst kon niet gevonden worden.</translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation>Start</translation>
+    </message>
+</context>
+<context>
+    <name>SearchSettingsForm</name>
+    <message>
+        <source>Form</source>
+        <translation>Formulier</translation>
+    </message>
+    <message>
+        <source>Start search:</source>
+        <translation>Zoekopdracht starten:</translation>
+    </message>
+    <message>
+        <source>from the end</source>
+        <translation>vanaf het einde</translation>
+    </message>
+    <message>
+        <source>from the beginning</source>
+        <translation>vanaf het begin</translation>
+    </message>
+    <message>
+        <source>after date</source>
+        <translation>na datum</translation>
+    </message>
+    <message>
+        <source>before date</source>
+        <translation>vóór datum</translation>
+    </message>
+    <message>
+        <source>00.00.0000</source>
+        <translation>00.00.0000</translation>
+    </message>
+    <message>
+        <source>Case sensitive</source>
+        <translation>Hoofdlettergevoelig</translation>
+    </message>
+    <message>
+        <source>Whole words only</source>
+        <translation>Alleen hele woorden</translation>
+    </message>
+    <message>
+        <source>Use regular expressions</source>
+        <translation>Reguliere expressies gebruiken</translation>
+    </message>
+</context>
+<context>
+    <name>SetPasswordDialog</name>
+    <message>
+        <source>Set your password</source>
+        <translation>Je wachtwoord instellen</translation>
+    </message>
+    <message>
+        <source>The password is too short</source>
+        <translation>Het wachtwoord is te kort</translation>
+    </message>
+    <message>
+        <source>The password doesn&apos;t match.</source>
+        <translation>Het wachtwoord komt niet overeen.</translation>
+    </message>
+    <message>
+        <source>Confirm:</source>
+        <translation>Bevestig:</translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation>Wachtwoord:</translation>
+    </message>
+    <message>
+        <source>Password strength: %p%</source>
+        <translation>Wachtwoordsterkte: %p%</translation>
+    </message>
+    <message>
+        <source>Confirm password</source>
+        <translation>Wachtwoord bevestigen</translation>
+    </message>
+    <message>
+        <source>Confirm password input</source>
+        <translation>Invoer voor bevestigen van wachtwoord</translation>
+    </message>
+    <message>
+        <source>Password input</source>
+        <translation>Wachtwoordinvoer</translation>
+    </message>
+    <message>
+        <source>Password input field, minimum 6 characters long</source>
+        <translation>Wachtwoordinvoerveld, minimaal 6 tekens</translation>
+    </message>
+</context>
+<context>
+    <name>Settings</name>
+    <message>
+        <source>Circle #%1</source>
+        <translation>Cirkel #%1</translation>
+    </message>
+</context>
+<context>
+    <name>ToxURIDialog</name>
+    <message>
+        <source>Add a friend</source>
+        <comment>Title of the window to add a friend through Tox URI</comment>
+        <translation>Vriend toevoegen</translation>
+    </message>
+    <message>
+        <source>Do you want to add %1 as a friend?</source>
+        <translation>Wil je %1 als vriend toevoegen?</translation>
+    </message>
+    <message>
+        <source>User ID:</source>
+        <translation>Gebruikers-ID:</translation>
+    </message>
+    <message>
+        <source>Friend request message:</source>
+        <translation>Bericht voor vriendschapsverzoek:</translation>
+    </message>
+    <message>
+        <source>Send</source>
+        <comment>Send a friend request</comment>
+        <translation>Versturen</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <comment>Don&apos;t send a friend request</comment>
+        <translation>Annuleren</translation>
+    </message>
+</context>
+<context>
+    <name>UserInterfaceForm</name>
+    <message>
+        <source>None</source>
+        <translation>Geen</translation>
+    </message>
+    <message>
+        <source>User Interface</source>
+        <translation>Gebruikersinterface</translation>
+    </message>
+</context>
+<context>
+    <name>UserInterfaceSettings</name>
+    <message>
+        <source>Chat</source>
+        <translation>Chat</translation>
+    </message>
+    <message>
+        <source>Base font:</source>
+        <translation>Basislettertype:</translation>
+    </message>
+    <message>
+        <source>px</source>
+        <translation>px</translation>
+    </message>
+    <message>
+        <source>Size: </source>
+        <translation>Grootte: </translation>
+    </message>
+    <message>
+        <source>New text styling preference may not load until qTox restarts.</source>
+        <translation>De nieuwe tekststijlvoorkeur wordt mogelijk niet geladen totdat qTox opnieuw is opgestart.</translation>
+    </message>
+    <message>
+        <source>Text Style format:</source>
+        <translation>Tekststijlformaat:</translation>
+    </message>
+    <message>
+        <source>Select text styling preference.</source>
+        <translation>Selecteer een tekststijlvoorkeur.</translation>
+    </message>
+    <message>
+        <source>Plaintext</source>
+        <translation>Platte tekst</translation>
+    </message>
+    <message>
+        <source>Show formatting characters</source>
+        <translation>Formatteringstekens tonen</translation>
+    </message>
+    <message>
+        <source>Don&apos;t show formatting characters</source>
+        <translation>Formatteringstekens niet tonen</translation>
+    </message>
+    <message>
+        <source>New message</source>
+        <translation>Nieuw bericht</translation>
+    </message>
+    <message>
+        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <comment>tooltip for Show window setting</comment>
+        <translation>qTox-venster openen wanneer je een bericht ontvangt en er nog geen venster open is.</translation>
+    </message>
+    <message>
+        <source>Open window</source>
+        <translation>Venster openen</translation>
+    </message>
+    <message>
+        <source>Contact list</source>
+        <translation>Contactlijst</translation>
+    </message>
+    <message>
+        <source>If checked, groupchats will be placed at the top of the friends list, otherwise, they&apos;ll be placed below online friends.</source>
+        <comment>toolTip for groupchat positioning</comment>
+        <translation>Indien geselecteerd zullen groepsgesprekken bovenaan de vriendenlijst gezet worden, anders komen ze onder online vrienden.</translation>
+    </message>
+    <message>
+        <source>Place groupchats at top of friend list</source>
+        <translation>Groepsgesprekken bovenaan vriendenlijst plaatsen</translation>
+    </message>
+    <message>
+        <source>Your contact list will be shown in compact mode.</source>
+        <comment>toolTip for compact layout setting</comment>
+        <translation>Je contactlijst zal in compacte modus getoond worden.</translation>
+    </message>
+    <message>
+        <source>Compact contact list</source>
+        <translation>Compacte contactenlijst</translation>
+    </message>
+    <message>
+        <source>Multiple windows mode</source>
+        <translation>Meerderevenstersmodus</translation>
+    </message>
+    <message>
+        <source>Open each chat in an individual window</source>
+        <translation>Elke chat openen in een apart venster</translation>
+    </message>
+    <message>
+        <source>Emoticons</source>
+        <translation>Emoticons</translation>
+    </message>
+    <message>
+        <source>Use emoticons</source>
+        <translation>Emoticons gebruiken</translation>
+    </message>
+    <message>
+        <source>Smiley Pack:</source>
+        <extracomment>Text on smiley pack label</extracomment>
+        <translation>Smileypakket:</translation>
+    </message>
+    <message>
+        <source>Emoticon size:</source>
+        <translation>Emoticongrootte:</translation>
+    </message>
+    <message>
+        <source> px</source>
+        <translation> px</translation>
+    </message>
+    <message>
+        <source>Theme</source>
+        <translation>Thema</translation>
+    </message>
+    <message>
+        <source>Style:</source>
+        <translation>Stijl:</translation>
+    </message>
+    <message>
+        <source>Theme color:</source>
+        <translation>Themakleur:</translation>
+    </message>
+    <message>
+        <source>Timestamp format:</source>
+        <translation>Tijdsaanduiding:</translation>
+    </message>
+    <message>
+        <source>Date format:</source>
+        <translation>Datumformaat:</translation>
+    </message>
+    <message>
+        <source>If enabled every contact without an avatar set will have a generated avatar based on their Tox ID instead of a default picture. Requires restart to apply.</source>
+        <comment>toolTip for show identicons</comment>
+        <translation>Indien ingeschakeld krijgt elk contact zonder profielfoto een automatisch gegenereerde afbeelding gebaseerd op zijn/haar Tox-ID, in plaats van een standaardfoto. Toepassen vereist een herstart.</translation>
+    </message>
+    <message>
+        <source>Use identicons instead of empty avatars</source>
+        <translation>Identicons gebruiken in plaats van lege avatars</translation>
+    </message>
+    <message>
+        <source>Use colored nicknames in chats</source>
+        <translation>Gekleurde bijnamen in chats gebruiken</translation>
+    </message>
+    <message>
+        <source>Show a notification when you receive a new message and the window is not selected.</source>
+        <comment>tooltip for Notify setting</comment>
+        <translation>Toon een notificatie wanneer je een nieuw bericht ontvangt en het venster niet geselecteerd is.</translation>
+    </message>
+    <message>
+        <source>Notify</source>
+        <translation>Melden</translation>
+    </message>
+    <message>
+        <source>Onlys notify about new messages in groupchats when mentioned.</source>
+        <comment>toolTip for Group chats only notify when mentioned</comment>
+        <translation>Nieuwe berichten in groepschats alleen melden als je genoemd wordt.</translation>
+    </message>
+    <message>
+        <source>Group chats only notify when mentioned</source>
+        <translation>Groepchats alleen melden als je genoemd wordt</translation>
+    </message>
+    <message>
+        <source>Play sound</source>
+        <translation>Geluid afspelen</translation>
+    </message>
+    <message>
+        <source>Play sound while Busy</source>
+        <translation>Geluid afspelen indien Bezet</translation>
+    </message>
+    <message>
+        <source>Notify via desktop notifications</source>
+        <translation>Via bureaubladmeldingen melden</translation>
+    </message>
+    <message>
+        <source>Hide message sender and contents</source>
+        <translation>Afzender en berichtinhoud verbergen</translation>
+    </message>
+</context>
+<context>
+    <name>Widget</name>
+    <message>
+        <source>Online</source>
+        <comment>Button to set your status to &apos;Online&apos;</comment>
+        <translation>Online</translation>
+    </message>
+    <message>
+        <source>Away</source>
+        <comment>Button to set your status to &apos;Away&apos;</comment>
+        <translation>Afwezig</translation>
+    </message>
+    <message>
+        <source>Busy</source>
+        <comment>Button to set your status to &apos;Busy&apos;</comment>
+        <translation>Bezet</translation>
+    </message>
+    <message>
+        <source>toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
-        <translation>%1 nodigd je uit tot een groepsgesprek. Wil je binnentreden?</translation>
+        <translation>Toxcore kon niet opstarten met deze proxyinstellingen. Hierdoor kan qTox niet starten. Verander je instellingen en herstart.</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="944"/>
-        <source>&lt;Unknown&gt;</source>
-        <comment>Placeholder when we don&apos;t know someone&apos;s name in a group chat</comment>
-        <translation>&lt;Onbekend&gt;</translation>
+        <source>File</source>
+        <translation>Bestand</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="970"/>
-        <source>%1 has set the title to %2</source>
-        <translation>%1 heeft de titel naar %2 gezet</translation>
+        <source>Edit Profile</source>
+        <translation>Profiel bewerken</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="1127"/>
+        <source>Change Status</source>
+        <translation>Status wijzigen</translation>
+    </message>
+    <message>
+        <source>Log out</source>
+        <translation>Uitloggen</translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation>Bewerken</translation>
+    </message>
+    <message>
+        <source>Filter...</source>
+        <translation>Filteren…</translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation>Contacten</translation>
+    </message>
+    <message>
+        <source>Add Contact...</source>
+        <translation>Contact toevoegen…</translation>
+    </message>
+    <message>
+        <source>Next Conversation</source>
+        <translation>Volgend gesprek</translation>
+    </message>
+    <message>
+        <source>Previous Conversation</source>
+        <translation>Vorig gesprek</translation>
+    </message>
+    <message>
+        <source>toxcore failed to start, the application will terminate after you close this message.</source>
+        <translation>toxcore kon niet opstarten, de toepassing zal afsluiten nadat je dit bericht gesloten hebt.</translation>
+    </message>
+    <message>
+        <source>Executable file</source>
+        <comment>popup title</comment>
+        <translation>Uitvoerbaar bestand</translation>
+    </message>
+    <message>
+        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <comment>popup text</comment>
+        <translation>Je hebt qTox gevraagd een uitvoerbaar bestand te openen. Uitvoerbare bestanden kunnen schade toebrengen aan je computer. Weet je zeker dat je dit bestand wilt openen?</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t request friendship</source>
+        <translation>Kon geen vriendschapsverzoek sturen</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Status</translation>
+    </message>
+    <message>
         <source>Message failed to send</source>
         <translation>Bericht kon niet verstuurd worden</translation>
+    </message>
+    <message>
+        <source>Add new circle...</source>
+        <translation>Nieuwe cirkel toevoegen…</translation>
+    </message>
+    <message>
+        <source>By Name</source>
+        <translation>Op naam</translation>
+    </message>
+    <message>
+        <source>By Activity</source>
+        <translation>Op activiteit</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Alle</translation>
+    </message>
+    <message>
+        <source>Online</source>
+        <translation>Online</translation>
+    </message>
+    <message>
+        <source>Offline</source>
+        <translation>Offline</translation>
+    </message>
+    <message>
+        <source>Friends</source>
+        <translation>Vrienden</translation>
+    </message>
+    <message>
+        <source>Groups</source>
+        <translation>Groepen</translation>
+    </message>
+    <message>
+        <source>Search Contacts</source>
+        <translation>Contacten doorzoeken</translation>
+    </message>
+    <message>
+        <source>Your name</source>
+        <translation>Je naam</translation>
+    </message>
+    <message>
+        <source>Groupchat #%1</source>
+        <translation>Groepsgesprek #%1</translation>
+    </message>
+    <message>
+        <source>Create new group...</source>
+        <translation>Nieuwe groep aanmaken…</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n New Friend Request(s)</source>
+        <translation>
+            <numerusform>%n nieuw vriendschapsverzoek</numerusform>
+            <numerusform>%n nieuwe vriendschapsverzoeken</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>%n New Group Invite(s)</source>
+        <translation>
+            <numerusform>%n nieuwe groepsuitnodiging</numerusform>
+            <numerusform>%n nieuwe groepsuitnodigingen</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Logout</source>
+        <comment>Tray action menu to logout user</comment>
+        <translation>Uitloggen</translation>
+    </message>
+    <message>
+        <source>Exit</source>
+        <comment>Tray action menu to exit tox</comment>
+        <translation>Afsluiten</translation>
+    </message>
+    <message>
+        <source>Show</source>
+        <comment>Tray action menu to show qTox window</comment>
+        <translation>Tonen</translation>
+    </message>
+    <message>
+        <source>Add friend</source>
+        <comment>title of the window</comment>
+        <translation>Vriend toevoegen</translation>
+    </message>
+    <message>
+        <source>Group invites</source>
+        <comment>title of the window</comment>
+        <translation>Groepsuitnodigingen</translation>
+    </message>
+    <message>
+        <source>File transfers</source>
+        <comment>title of the window</comment>
+        <translation>Bestandsoverdrachten</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <comment>title of the window</comment>
+        <translation>Instellingen</translation>
+    </message>
+    <message>
+        <source>My profile</source>
+        <comment>title of the window</comment>
+        <translation>Mijn profiel</translation>
+    </message>
+    <message>
+        <source>Failed to send file &quot;%1&quot;</source>
+        <translation>Kon bestand ‘%1’ niet verzenden</translation>
+    </message>
+    <message>
+        <source>File sent</source>
+        <translation>Bestand verzonden</translation>
+    </message>
+    <message>
+        <source> sent you a friend request.</source>
+        <translation> heeft je een vriendschapsverzoek gestuurd.</translation>
+    </message>
+    <message>
+        <source> invites you to join a group.</source>
+        <translation> nodigt je uit om aan een groep deel te nemen.</translation>
     </message>
 </context>
 </TS>

@@ -1,52 +1,70 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #ifndef GROUPWIDGET_H
 #define GROUPWIDGET_H
 
-#include <QLabel>
 #include "genericchatroomwidget.h"
 
-class GroupWidget : public GenericChatroomWidget
+#include "src/model/chatroom/groupchatroom.h"
+#include "src/core/groupid.h"
+
+#include <memory>
+
+class GroupWidget final : public GenericChatroomWidget
 {
     Q_OBJECT
 public:
-    GroupWidget(int GroupId, QString Name);
-    void onUserListChanged();
-    void contextMenuEvent(QContextMenuEvent * event);
-    void setAsInactiveChatroom();
-    void setAsActiveChatroom();
-    void updateStatusLight();
-    void setChatForm(Ui::MainWindow &);
-    void resetEventFlags();
+    GroupWidget(std::shared_ptr<GroupChatroom> chatroom, bool compact);
+    ~GroupWidget();
+   void setAsInactiveChatroom() final;
+    void setAsActiveChatroom() final;
+    void updateStatusLight() final;
+    void resetEventFlags() final;
+    QString getStatusString() const final;
+    Group* getGroup() const final;
+    const Contact* getContact() const final;
     void setName(const QString& name);
+    void editName();
 
 signals:
     void groupWidgetClicked(GroupWidget* widget);
-    void removeGroup(int groupId);
+    void removeGroup(const GroupId& groupId);
 
 protected:
-    // drag & drop
-    void dragEnterEvent(QDragEnterEvent* ev);
-    void dropEvent(QDropEvent* ev);
-    void keyPressEvent(QKeyEvent* ev);
-    void keyReleaseEvent(QKeyEvent* ev);
+    void contextMenuEvent(QContextMenuEvent* event) final;
+    void mousePressEvent(QMouseEvent* event) final;
+    void mouseMoveEvent(QMouseEvent* event) final;
+    void dragEnterEvent(QDragEnterEvent* ev) override;
+    void dragLeaveEvent(QDragLeaveEvent* ev) override;
+    void dropEvent(QDropEvent* ev) override;
+
+private slots:
+    void retranslateUi();
+    void updateTitle(const QString& author, const QString& newName);
+    void updateUserCount(int numPeers);
 
 public:
-    int groupId;
+    GroupId groupId;
+
+private:
+    std::shared_ptr<GroupChatroom> chatroom;
 };
 
 #endif // GROUPWIDGET_H

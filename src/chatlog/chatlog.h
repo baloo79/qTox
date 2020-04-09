@@ -1,28 +1,32 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #ifndef CHATLOG_H
 #define CHATLOG_H
 
-#include <QGraphicsView>
 #include <QDateTime>
+#include <QGraphicsView>
 #include <QMargins>
 
 #include "chatline.h"
 #include "chatmessage.h"
+#include "src/widget/style.h"
 
 class QGraphicsScene;
 class QGraphicsRectItem;
@@ -31,16 +35,19 @@ class QTimer;
 class ChatLineContent;
 struct ToxFile;
 
+static const size_t DEF_NUM_MSG_TO_LOAD = 100;
+
 class ChatLog : public QGraphicsView
 {
     Q_OBJECT
 public:
-    explicit ChatLog(QWidget* parent = 0);
+    explicit ChatLog(QWidget* parent = nullptr);
     virtual ~ChatLog();
 
     void insertChatlineAtBottom(ChatLine::Ptr l);
+    void insertChatlineAtBottom(const QList<ChatLine::Ptr>& newLines);
     void insertChatlineOnTop(ChatLine::Ptr l);
-    void insertChatlineOnTop(const QList<ChatLine::Ptr>& newLines);
+    void insertChatlinesOnTop(const QList<ChatLine::Ptr>& newLines);
     void clearSelection();
     void clear();
     void copySelectedText(bool toSelectionBuffer = false) const;
@@ -49,7 +56,12 @@ public:
     void setTypingNotificationVisible(bool visible);
     void scrollToLine(ChatLine::Ptr line);
     void selectAll();
-    void forceRelayout();
+    void fontChanged(const QFont& font);
+    void reloadTheme();
+    void removeFirsts(const int num);
+    void removeLasts(const int num);
+    void setScroll(const bool scroll);
+    int getNumRemove() const;
 
     QString getSelectedText() const;
 
@@ -58,9 +70,25 @@ public:
 
     ChatLine::Ptr getTypingNotification() const;
     QVector<ChatLine::Ptr> getLines();
+    ChatLine::Ptr getLatestLine() const;
+    ChatLine::Ptr getFirstLine() const;
+    ChatLineContent* getContentFromGlobalPos(QPoint pos) const;
+    const uint repNameAfter = 5 * 60;
 
 signals:
     void selectionChanged();
+    void workerTimeoutFinished();
+    void firstVisibleLineChanged(const ChatLine::Ptr& prevLine, const ChatLine::Ptr& firstLine);
+    void loadHistoryLower();
+    void loadHistoryUpper();
+
+public slots:
+    void forceRelayout();
+
+private slots:
+    void onSelectionTimerTimeout();
+    void onWorkerTimeout();
+    void onMultiClickTimeout();
 
 protected:
     QRectF calculateSceneRect() const;
@@ -75,19 +103,20 @@ protected:
 
     void reposition(int start, int end, qreal deltaY);
     void updateSceneRect();
-    void checkVisibility();
+    void checkVisibility(bool causedWheelEvent = false);
     void scrollToBottom();
-    void startResizeWorker();
+    void startResizeWorker(bool stick, ChatLine::Ptr anchorLine = nullptr);
 
-    virtual void mouseDoubleClickEvent(QMouseEvent* ev);
-    virtual void mousePressEvent(QMouseEvent* ev);
-    virtual void mouseReleaseEvent(QMouseEvent* ev);
-    virtual void mouseMoveEvent(QMouseEvent* ev);
-    virtual void scrollContentsBy(int dx, int dy);
-    virtual void resizeEvent(QResizeEvent* ev);
-    virtual void showEvent(QShowEvent*);
-    virtual void focusInEvent(QFocusEvent* ev);
-    virtual void focusOutEvent(QFocusEvent* ev);
+    void mouseDoubleClickEvent(QMouseEvent* ev) final;
+    void mousePressEvent(QMouseEvent* ev) final;
+    void mouseReleaseEvent(QMouseEvent* ev) final;
+    void mouseMoveEvent(QMouseEvent* ev) final;
+    void scrollContentsBy(int dx, int dy) final;
+    void resizeEvent(QResizeEvent* ev) final;
+    void showEvent(QShowEvent*) final;
+    void focusInEvent(QFocusEvent* ev) final;
+    void focusOutEvent(QFocusEvent* ev) final;
+    void wheelEvent(QWheelEvent *event) final;
 
     void updateMultiSelectionRect();
     void updateTypingNotification();
@@ -95,24 +124,34 @@ protected:
 
     ChatLine::Ptr findLineByPosY(qreal yPos) const;
 
-private slots:
-    void onSelectionTimerTimeout();
-    void onWorkerTimeout();
+private:
+    void retranslateUi();
+    bool isActiveFileTransfer(ChatLine::Ptr l);
+    void handleMultiClickEvent();
+    void moveSelectionRectUpIfSelected(int offset);
+    void moveSelectionRectDownIfSelected(int offset);
+    void movePreciseSelectionDown(int offset);
+    void movePreciseSelectionUp(int offset);
+    void moveMultiSelectionUp(int offset);
+    void moveMultiSelectionDown(int offset);
 
 private:
-    enum SelectionMode {
+    enum class SelectionMode
+    {
         None,
         Precise,
         Multi,
     };
 
-    enum AutoScrollDirection {
+    enum class AutoScrollDirection
+    {
         NoDirection,
         Up,
         Down,
     };
 
     QAction* copyAction = nullptr;
+    QAction* selectAllAction = nullptr;
     QGraphicsScene* scene = nullptr;
     QGraphicsScene* busyScene = nullptr;
     QVector<ChatLine::Ptr> lines;
@@ -121,27 +160,34 @@ private:
     ChatLine::Ptr busyNotification;
 
     // selection
-    int selClickedRow = -1; //These 4 are only valid while selectionMode != None
+    int selClickedRow = -1; // These 4 are only valid while selectionMode != None
     int selClickedCol = -1;
     int selFirstRow = -1;
     int selLastRow = -1;
-    QColor selectionRectColor = QColor::fromRgbF(0.23, 0.68, 0.91).lighter(150);
-    SelectionMode selectionMode = None;
+    QColor selectionRectColor = Style::getColor(Style::SelectText);
+    SelectionMode selectionMode = SelectionMode::None;
     QPointF clickPos;
     QGraphicsRectItem* selGraphItem = nullptr;
     QTimer* selectionTimer = nullptr;
     QTimer* workerTimer = nullptr;
-    AutoScrollDirection selectionScrollDir = NoDirection;
+    QTimer* multiClickTimer = nullptr;
+    AutoScrollDirection selectionScrollDir = AutoScrollDirection::NoDirection;
+    int clickCount = 0;
+    QPoint lastClickPos;
+    Qt::MouseButton lastClickButton;
+    bool isScroll{true};
 
-    //worker vars
+    // worker vars
     int workerLastIndex = 0;
     bool workerStb = false;
     ChatLine::Ptr workerAnchorLine;
 
     // layout
-    QMargins margins = QMargins(10,10,10,10);
+    QMargins margins = QMargins(10, 10, 10, 10);
     qreal lineSpacing = 5.0f;
 
+    int numRemove{0};
+    const int maxMessages{300};
 };
 
 #endif // CHATLOG_H

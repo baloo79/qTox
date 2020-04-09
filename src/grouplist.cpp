@@ -1,39 +1,47 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "grouplist.h"
-#include "group.h"
-#include <QHash>
+#include "src/core/core.h"
+#include "src/model/group.h"
 #include <QDebug>
+#include <QHash>
 
-QHash<int, Group*> GroupList::groupList;
-
-Group* GroupList::addGroup(int groupId, const QString& name, bool isAvGroupchat)
+QHash<const GroupId, Group*> GroupList::groupList;
+QHash<uint32_t, GroupId> GroupList::id2key;
+Group* GroupList::addGroup(int groupNum, const GroupId& groupId, const QString& name, bool isAvGroupchat,
+                           const QString& selfName)
 {
     auto checker = groupList.find(groupId);
     if (checker != groupList.end())
-        qWarning() << "GroupList::addGroup: groupId already taken";
+        qWarning() << "addGroup: groupId already taken";
 
-    Group* newGroup = new Group(groupId, name, isAvGroupchat);
+    // TODO: Core instance is bad but grouplist is also an instance so we can
+    // deal with this later
+    auto core = Core::getInstance();
+    Group* newGroup = new Group(groupNum, groupId, name, isAvGroupchat, selfName, *core, *core);
     groupList[groupId] = newGroup;
-
+    id2key[groupNum] = groupId;
     return newGroup;
 }
 
-Group* GroupList::findGroup(int groupId)
+Group* GroupList::findGroup(const GroupId& groupId)
 {
     auto g_it = groupList.find(groupId);
     if (g_it != groupList.end())
@@ -42,16 +50,20 @@ Group* GroupList::findGroup(int groupId)
     return nullptr;
 }
 
-void GroupList::removeGroup(int groupId, bool /*fake*/)
+const GroupId& GroupList::id2Key(uint32_t groupNum)
+{
+    return id2key[groupNum];
+}
+
+void GroupList::removeGroup(const GroupId& groupId, bool /*fake*/)
 {
     auto g_it = groupList.find(groupId);
-    if (g_it != groupList.end())
-    {
+    if (g_it != groupList.end()) {
         groupList.erase(g_it);
     }
 }
 
-QList<Group *> GroupList::getAllGroups()
+QList<Group*> GroupList::getAllGroups()
 {
     QList<Group*> res;
 

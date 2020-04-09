@@ -3,14 +3,13 @@
 ###################
 !define APP_NAME "qTox"
 !define COMP_NAME "Tox"
-!define WEB_SITE "https://github.com/tux3/qTox"
+!define WEB_SITE "https://github.com/qTox/qTox"
 !define VERSION "1.0.0.0"
 !define DESCRIPTION "qTox Installer"
 !define COPYRIGHT "The Tox Project"
 !define INSTALLER_NAME "setup-qtox.exe"
 !define MAIN_APP_EXE "bin\qtox.exe"
-!define INSTALL_TYPE "SetShellVarContext current"
-!define REG_ROOT "HKCU"
+!define REG_ROOT "HKLM"
 !define REG_APP_PATH "Software\Microsoft\Windows\CurrentVersion\App Paths\qtox.exe"
 !define UNINSTALL_PATH "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APP_NAME}"
 !define REG_START_MENU "Start Menu Folder"
@@ -225,10 +224,16 @@ FunctionEnd
 !define MUI_FINISHPAGE_SHOWREADME_TEXT "Create Desktop Shortcut"
 !define MUI_FINISHPAGE_SHOWREADME_FUNCTION finishpageaction
 
-!define MUI_FINISHPAGE_RUN "$INSTDIR\${MAIN_APP_EXE}"
+!define MUI_FINISHPAGE_RUN_FUNCTION Launch_qTox_without_Admin
+!define MUI_FINISHPAGE_RUN
 !define MUI_FINISHPAGE_LINK "Find qTox on GitHub"
-!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/tux3/qTox"
+!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/qTox/qTox"
 !insertmacro MUI_PAGE_FINISH
+
+Function Launch_qTox_without_Admin
+   SetOutPath $INSTDIR
+   ShellExecAsUser::ShellExecAsUser "" "$INSTDIR\${MAIN_APP_EXE}" ""
+FunctionEnd
 
 !define MUI_UNABORTWARNING
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
@@ -243,27 +248,23 @@ FunctionEnd
 #INSTALL
 #################
 Section "Install"
+        SetShellVarContext all
 	# Install files
 	${SetOutPath} "$INSTDIR"
 	${WriteUninstaller} "uninstall.exe"
 	
-	${CreateDirectory} "bin"
+	${CreateDirectory} "$INSTDIR\bin"
 	${SetOutPath} "$INSTDIR\bin"
 	${File} "qtox\*.*"
 	
-	${CreateDirectory} "imageformats"
+	${CreateDirectory} "$INSTDIR\bin\imageformats"
 	${SetOutPath} "$INSTDIR\bin\imageformats"
-	${File} "qtox\imageformats\*.*"
+	File /nonfatal "qtox\imageformats\*.*"
 	${SetOutPath} "$INSTDIR\bin"
 	
-	${CreateDirectory} "platforms"
+	${CreateDirectory} "$INSTDIR\bin\platforms"
 	${SetOutPath} "$INSTDIR\bin\platforms"
-	${File} "qtox\platforms\*.*"
-	${SetOutPath} "$INSTDIR\bin"
-	
-	${CreateDirectory} "sqldrivers"
-	${SetOutPath} "$INSTDIR\bin\sqldrivers"
-	${File} "qtox\sqldrivers\*.*"
+	File /nonfatal "qtox\platforms\*.*"
 	${SetOutPath} "$INSTDIR\bin"
 
 	# Create shortcuts
@@ -272,9 +273,14 @@ Section "Install"
 	${CreateShortCut} "$SMPROGRAMS\qTox\Uninstall qTox.lnk" "$INSTDIR\uninstall.exe" "" "" ""
 
 	# Write setup/app info into the registry
+	SetRegView 64
 	${WriteRegStr} "${REG_ROOT}" "${REG_APP_PATH}" "" "$INSTDIR\${MAIN_APP_EXE}"
 	${WriteRegStr} "${REG_ROOT}" "${REG_APP_PATH}" "Path" "$INSTDIR\bin\"
+	${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "DisplayName" "qTox"
+	${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "DisplayVersion" "1.16.3"
+	${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "Publisher" "The qTox Project"
 	${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "UninstallString" "$INSTDIR\uninstall.exe"
+	${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "URLInfoAbout" "https://qtox.github.io"
 
 	# Register the tox: protocol
 	${WriteRegStr} HKCR "tox" "" "URL:tox Protocol"
@@ -294,6 +300,7 @@ SectionEnd
 #UNINSTALL
 ################
 Section Uninstall
+  SetShellVarContext all
   ;If there's no uninstall log, we'll try anyway to clean what we can
   IfFileExists "$INSTDIR\${UninstLog}" +3
     Goto noLog
@@ -348,6 +355,7 @@ Section Uninstall
   RMDir /r /REBOOTOK "$SMPROGRAMS\qTox"
  
   ;Remove registry keys
+  SetRegView 64
   DeleteRegKey ${REG_ROOT} "${REG_APP_PATH}"
   DeleteRegKey ${REG_ROOT} "${UNINSTALL_PATH}"
   DeleteRegKey HKCR "Applications\qtox.exe"

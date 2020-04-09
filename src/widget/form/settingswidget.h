@@ -1,17 +1,20 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #ifndef SETTINGSWIDGET_H
@@ -21,38 +24,48 @@
 #include <QPushButton>
 #include <QStyleFactory>
 
+#include <array>
+#include <memory>
+
 class Camera;
 class GenericForm;
 class GeneralForm;
-class IdentityForm;
+class IAudioControl;
 class PrivacyForm;
 class AVForm;
 class QLabel;
 class QTabWidget;
-
-namespace Ui {class MainWindow;}
+class ContentLayout;
+class UpdateCheck;
+class Widget;
 
 class SettingsWidget : public QWidget
 {
     Q_OBJECT
 public:
-    SettingsWidget(QWidget* parent = nullptr);
+    SettingsWidget(UpdateCheck* updateCheck, IAudioControl& audio, Widget* parent = nullptr);
     ~SettingsWidget();
 
-    void show(Ui::MainWindow &ui);
+    bool isShown() const;
+    void show(ContentLayout* contentLayout);
     void setBodyHeadStyle(QString style);
 
-signals:
-    void setShowSystemTray(bool newValue);
-    void compactToggled(bool compact);
+    void showAbout();
+
+public slots:
+    void onUpdateAvailable(void);
 
 private slots:
     void onTabChanged(int);
 
 private:
-    QWidget *head, *body;
-    QTabWidget *settingsWidgets;
-    QLabel *nameLabel, *imgLabel;
+    void retranslateUi();
+
+private:
+    std::unique_ptr<QVBoxLayout> bodyLayout;
+    std::unique_ptr<QTabWidget> settingsWidgets;
+    std::array<std::unique_ptr<GenericForm>, 6> cfgForms;
+    int currentIndex;
 };
 
 #endif // SETTINGSWIDGET_H

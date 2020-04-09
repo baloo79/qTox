@@ -1,36 +1,40 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "emoticonswidget.h"
-#include "src/misc/smileypack.h"
-#include "src/misc/style.h"
+#include "src/persistence/settings.h"
+#include "src/persistence/smileypack.h"
+#include "src/widget/style.h"
 
+#include <QFile>
+#include <QGridLayout>
+#include <QLayout>
+#include <QMouseEvent>
 #include <QPushButton>
 #include <QRadioButton>
-#include <QFile>
-#include <QLayout>
-#include <QGridLayout>
-#include <QMouseEvent>
 
 #include <math.h>
 
-EmoticonsWidget::EmoticonsWidget(QWidget *parent) :
-    QMenu(parent)
+EmoticonsWidget::EmoticonsWidget(QWidget* parent)
+    : QMenu(parent)
 {
-    setStyleSheet(Style::getStylesheet(":/ui/emoticonWidget/emoticonWidget.css"));
+    setStyleSheet(Style::getStylesheet("emoticonWidget/emoticonWidget.css"));
     setLayout(&layout);
     layout.addWidget(&stack);
 
@@ -52,21 +56,25 @@ EmoticonsWidget::EmoticonsWidget(QWidget *parent) :
     int row = 0;
     int col = 0;
 
+    // respect configured emoticon size
+    const int px = Settings::getInstance().getEmojiFontPointSize();
+    const QSize size(px, px);
+
     // create pages
     buttonLayout->addStretch();
-    for (int i = 0; i < pageCount; i++)
-    {
+    for (int i = 0; i < pageCount; ++i) {
         QGridLayout* pageLayout = new QGridLayout;
-        pageLayout->addItem(new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding), maxRows, 0);
-        pageLayout->addItem(new QSpacerItem(0, 0, QSizePolicy::Expanding, QSizePolicy::Minimum), 0, maxCols);
+        pageLayout->addItem(new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding),
+                            maxRows, 0);
+        pageLayout->addItem(new QSpacerItem(0, 0, QSizePolicy::Expanding, QSizePolicy::Minimum), 0,
+                            maxCols);
 
         QWidget* page = new QWidget;
         page->setLayout(pageLayout);
         stack.addWidget(page);
 
         // page buttons are only needed if there is more than 1 page
-        if (pageCount > 1)
-        {
+        if (pageCount > 1) {
             QRadioButton* pageButton = new QRadioButton;
             pageButton->setProperty("pageIndex", i);
             pageButton->setCursor(Qt::PointingHandCursor);
@@ -78,35 +86,37 @@ EmoticonsWidget::EmoticonsWidget(QWidget *parent) :
     }
     buttonLayout->addStretch();
 
-    for (const QStringList& set : emoticons)
-    {
+    SmileyPack& smileyPack = SmileyPack::getInstance();
+    for (const QStringList& set : emoticons) {
         QPushButton* button = new QPushButton;
-        button->setIcon(SmileyPack::getInstance().getAsIcon(set[0]).pixmap(QSize(24,24)));
+        std::shared_ptr<QIcon> icon = smileyPack.getAsIcon(set[0]);
+        emoticonsIcons.append(icon);
+        button->setIcon(icon->pixmap(size));
         button->setToolTip(set.join(" "));
         button->setProperty("sequence", set[0]);
         button->setCursor(Qt::PointingHandCursor);
         button->setFlat(true);
+        button->setIconSize(size);
+        button->setFixedSize(size);
 
         connect(button, &QPushButton::clicked, this, &EmoticonsWidget::onSmileyClicked);
 
         qobject_cast<QGridLayout*>(stack.widget(currPage)->layout())->addWidget(button, row, col);
 
-        col++;
-        currItem++;
+        ++col;
+        ++currItem;
 
         // next row
-        if (col >= maxCols)
-        {
+        if (col >= maxCols) {
             col = 0;
-            row++;
+            ++row;
         }
 
         // next page
-        if (currItem >= itemsPerPage)
-        {
+        if (currItem >= itemsPerPage) {
             row = 0;
             currItem = 0;
-            currPage++;
+            ++currPage;
         }
     }
 
@@ -116,20 +126,19 @@ EmoticonsWidget::EmoticonsWidget(QWidget *parent) :
 
 void EmoticonsWidget::onSmileyClicked()
 {
-    // hide the QMenu
-    hide();
-
     // emit insert emoticon
     QWidget* sender = qobject_cast<QWidget*>(QObject::sender());
-    if (sender)
-        emit insertEmoticon(' ' + sender->property("sequence").toString() + ' ');
+    if (sender) {
+        QString sequence =
+            sender->property("sequence").toString().replace("&lt;", "<").replace("&gt;", ">");
+        emit insertEmoticon(sequence);
+    }
 }
 
 void EmoticonsWidget::onPageButtonClicked()
 {
     QWidget* sender = qobject_cast<QRadioButton*>(QObject::sender());
-    if (sender)
-    {
+    if (sender) {
         int page = sender->property("pageIndex").toInt();
         stack.setCurrentIndex(page);
     }
@@ -140,7 +149,7 @@ QSize EmoticonsWidget::sizeHint() const
     return layout.sizeHint();
 }
 
-void EmoticonsWidget::mouseReleaseEvent(QMouseEvent *ev)
+void EmoticonsWidget::mouseReleaseEvent(QMouseEvent* ev)
 {
     if (!rect().contains(ev->pos()))
         hide();
@@ -148,4 +157,41 @@ void EmoticonsWidget::mouseReleaseEvent(QMouseEvent *ev)
 
 void EmoticonsWidget::mousePressEvent(QMouseEvent*)
 {
+}
+
+void EmoticonsWidget::wheelEvent(QWheelEvent* e)
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
+    const bool vertical = qAbs(e->angleDelta().y()) >= qAbs(e->angleDelta().x());
+    const int delta = vertical ? e->angleDelta().y() : e->angleDelta().x();
+
+    if (vertical) {
+        if (delta < 0) {
+#else
+    if (e->orientation() == Qt::Vertical) {
+        if (e->delta() < 0) {
+#endif
+            stack.setCurrentIndex(stack.currentIndex() + 1);
+        } else {
+            stack.setCurrentIndex(stack.currentIndex() - 1);
+        }
+        emit PageButtonsUpdate();
+    }
+}
+
+void EmoticonsWidget::PageButtonsUpdate()
+{
+    QList<QRadioButton*> pageButtons = this->findChildren<QRadioButton*>(QString());
+    foreach (QRadioButton* t_pageButton, pageButtons) {
+        if (t_pageButton->property("pageIndex").toInt() == stack.currentIndex())
+            t_pageButton->setChecked(true);
+        else
+            t_pageButton->setChecked(false);
+    }
+}
+
+void EmoticonsWidget::keyPressEvent(QKeyEvent* e)
+{
+    Q_UNUSED(e)
+    hide();
 }

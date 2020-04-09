@@ -1,93 +1,138 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "settingswidget.h"
-#include "src/widget/widget.h"
-#include "ui_mainwindow.h"
-#include "src/video/camera.h"
-#include "src/widget/form/settings/generalform.h"
-#include "src/widget/form/settings/identityform.h"
-#include "src/widget/form/settings/privacyform.h"
-#include "src/widget/form/settings/avform.h"
+
+#include "src/audio/audio.h"
+#include "src/core/core.h"
+#include "src/core/coreav.h"
+#include "src/net/updatecheck.h"
+#include "src/persistence/settings.h"
+#include "src/video/camerasource.h"
+#include "src/widget/contentlayout.h"
+#include "src/widget/form/settings/aboutform.h"
 #include "src/widget/form/settings/advancedform.h"
+#include "src/widget/form/settings/avform.h"
+#include "src/widget/form/settings/generalform.h"
+#include "src/widget/form/settings/privacyform.h"
+#include "src/widget/form/settings/userinterfaceform.h"
+#include "src/widget/translator.h"
+#include "src/widget/widget.h"
+
+#include <QLabel>
 #include <QTabWidget>
+#include <QWindow>
 
-SettingsWidget::SettingsWidget(QWidget* parent)
-    : QWidget(parent)
+#include <memory>
+
+SettingsWidget::SettingsWidget(UpdateCheck* updateCheck, IAudioControl& audio, Widget* parent)
+    : QWidget(parent, Qt::Window)
 {
-    body = new QWidget(this);
-    QVBoxLayout* bodyLayout = new QVBoxLayout();
-    body->setLayout(bodyLayout);
+    CoreAV* coreAV = Core::getInstance()->getAv();
+    IAudioSettings* audioSettings = &Settings::getInstance();
+    IVideoSettings* videoSettings = &Settings::getInstance();
+    CameraSource& camera = CameraSource::getInstance();
 
-    head = new QWidget(this);
-    QHBoxLayout* headLayout = new QHBoxLayout();
-    head->setLayout(headLayout);
+    setAttribute(Qt::WA_DeleteOnClose);
 
-    imgLabel = new QLabel();
-    headLayout->addWidget(imgLabel);
+    bodyLayout = std::unique_ptr<QVBoxLayout>(new QVBoxLayout());
 
-    nameLabel = new QLabel();
-    QFont bold;
-    bold.setBold(true);
-    nameLabel->setFont(bold);
-    headLayout->addWidget(nameLabel);
-    headLayout->addStretch(1);
+    settingsWidgets = std::unique_ptr<QTabWidget>(new QTabWidget(this));
+    settingsWidgets->setTabPosition(QTabWidget::North);
+    bodyLayout->addWidget(settingsWidgets.get());
 
-    settingsWidgets = new QTabWidget(this);
-    settingsWidgets->setTabPosition(QTabWidget::South);
+    std::unique_ptr<GeneralForm> gfrm(new GeneralForm(this));
+    connect(gfrm.get(), &GeneralForm::updateIcons, parent, &Widget::updateIcons);
 
-    bodyLayout->addWidget(settingsWidgets);
+    std::unique_ptr<UserInterfaceForm> uifrm(new UserInterfaceForm(this));
+    std::unique_ptr<PrivacyForm> pfrm(new PrivacyForm());
+    connect(pfrm.get(), &PrivacyForm::clearAllReceipts, parent, &Widget::clearAllReceipts);
 
-    GeneralForm* gfrm = new GeneralForm(this);
-    IdentityForm* ifrm = new IdentityForm;
-    PrivacyForm* pfrm = new PrivacyForm;
-    AVForm* avfrm = new AVForm;
-    AdvancedForm *expfrm = new AdvancedForm;
+    AVForm* rawAvfrm = new AVForm(audio, coreAV, camera, audioSettings, videoSettings);
+    std::unique_ptr<AVForm> avfrm(rawAvfrm);
+    std::unique_ptr<AdvancedForm> expfrm(new AdvancedForm());
+    std::unique_ptr<AboutForm> abtfrm(new AboutForm(updateCheck));
 
-    GenericForm* cfgForms[] = { gfrm, ifrm, pfrm, avfrm, expfrm };
-    for (GenericForm* cfgForm : cfgForms)
-        settingsWidgets->addTab(cfgForm, cfgForm->getFormIcon(), cfgForm->getFormName());
+#if UPDATE_CHECK_ENABLED
+    if (updateCheck != nullptr) {
+        connect(updateCheck, &UpdateCheck::updateAvailable, this, &SettingsWidget::onUpdateAvailable);
+    } else {
+        qWarning() << "SettingsWidget passed null UpdateCheck!";
+    }
+#endif
 
-    connect(settingsWidgets, &QTabWidget::currentChanged, this, &SettingsWidget::onTabChanged);
+    cfgForms = {{std::move(gfrm), std::move(uifrm), std::move(pfrm), std::move(avfrm),
+                 std::move(expfrm), std::move(abtfrm)}};
+    for (auto& cfgForm : cfgForms)
+        settingsWidgets->addTab(cfgForm.get(), cfgForm->getFormIcon(), cfgForm->getFormName());
+
+    connect(settingsWidgets.get(), &QTabWidget::currentChanged, this, &SettingsWidget::onTabChanged);
+
+    Translator::registerHandler(std::bind(&SettingsWidget::retranslateUi, this), this);
 }
 
 SettingsWidget::~SettingsWidget()
 {
+    Translator::unregister(this);
 }
 
 void SettingsWidget::setBodyHeadStyle(QString style)
 {
-    head->setStyle(QStyleFactory::create(style));    
-    body->setStyle(QStyleFactory::create(style));
+    settingsWidgets->setStyle(QStyleFactory::create(style));
 }
 
-void SettingsWidget::show(Ui::MainWindow& ui)
+void SettingsWidget::showAbout()
 {
-    ui.mainContent->layout()->addWidget(body);
-    ui.mainHead->layout()->addWidget(head);
-    body->show();
-    head->show();
+    onTabChanged(settingsWidgets->count() - 1);
+}
+
+bool SettingsWidget::isShown() const
+{
+    if (settingsWidgets->isVisible()) {
+        settingsWidgets->window()->windowHandle()->alert(0);
+        return true;
+    }
+
+    return false;
+}
+
+void SettingsWidget::show(ContentLayout* contentLayout)
+{
+    contentLayout->mainContent->layout()->addWidget(settingsWidgets.get());
+    settingsWidgets->show();
     onTabChanged(settingsWidgets->currentIndex());
 }
 
 void SettingsWidget::onTabChanged(int index)
 {
-    this->settingsWidgets->setCurrentIndex(index);
-    GenericForm* currentWidget = static_cast<GenericForm*>(this->settingsWidgets->widget(index));
-    currentWidget->present();
-    nameLabel->setText(currentWidget->getFormName());
-    imgLabel->setPixmap(currentWidget->getFormIcon().scaledToHeight(40, Qt::SmoothTransformation));
+    settingsWidgets->setCurrentIndex(index);
+}
+
+void SettingsWidget::onUpdateAvailable(void)
+{
+    settingsWidgets->tabBar()->setProperty("update-available", true);
+    settingsWidgets->tabBar()->style()->unpolish(settingsWidgets->tabBar());
+    settingsWidgets->tabBar()->style()->polish(settingsWidgets->tabBar());
+}
+
+void SettingsWidget::retranslateUi()
+{
+    for (size_t i = 0; i < cfgForms.size(); ++i)
+        settingsWidgets->setTabText(i, cfgForms[i]->getFormName());
 }

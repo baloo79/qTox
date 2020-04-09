@@ -1,35 +1,38 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "spinner.h"
 #include "../pixmapcache.h"
 
-#include <QPainter>
+#include <QDebug>
 #include <QGraphicsScene>
+#include <QPainter>
 #include <QTime>
 #include <QVariantAnimation>
-#include <QDebug>
 
-Spinner::Spinner(const QString &img, QSize Size, qreal speed)
+Spinner::Spinner(const QString& img, QSize Size, qreal speed)
     : size(Size)
     , rotSpeed(speed)
 {
     pmap = PixmapCache::getInstance().get(img, size);
 
-    timer.setInterval(1000/30); // 30Hz
+    timer.setInterval(1000 / 30); // 30Hz
     timer.setSingleShot(false);
 
     blendAnimation = new QVariantAnimation(this);
@@ -38,7 +41,8 @@ Spinner::Spinner(const QString &img, QSize Size, qreal speed)
     blendAnimation->setDuration(350);
     blendAnimation->setEasingCurve(QEasingCurve::InCubic);
     blendAnimation->start(QAbstractAnimation::DeleteWhenStopped);
-    connect(blendAnimation, &QVariantAnimation::valueChanged, this, [this](const QVariant& val) { alpha = val.toDouble(); });
+    connect(blendAnimation, &QVariantAnimation::valueChanged, this,
+            [this](const QVariant& val) { alpha = val.toDouble(); });
 
     QObject::connect(&timer, &QTimer::timeout, this, &Spinner::timeout);
 }
@@ -52,8 +56,9 @@ void Spinner::paint(QPainter* painter, const QStyleOptionGraphicsItem* option, Q
 {
     painter->setClipRect(boundingRect());
 
-    QTransform trans = QTransform().rotate(QTime::currentTime().msecsSinceStartOfDay() / 1000.0 * rotSpeed)
-                                    .translate(-size.width()/2.0, -size.height()/2.0);
+    QTransform trans = QTransform()
+                           .rotate(QTime::currentTime().msecsSinceStartOfDay() / 1000.0 * rotSpeed)
+                           .translate(-size.width() / 2.0, -size.height() / 2.0);
     painter->setOpacity(alpha);
     painter->setTransform(trans, true);
     painter->setRenderHint(QPainter::SmoothPixmapTransform);
@@ -70,7 +75,7 @@ void Spinner::setWidth(qreal width)
 
 void Spinner::visibilityChanged(bool visible)
 {
-    if(visible)
+    if (visible)
         timer.start();
     else
         timer.stop();
@@ -83,6 +88,6 @@ qreal Spinner::getAscent() const
 
 void Spinner::timeout()
 {
-    if(scene())
+    if (scene())
         scene()->invalidate(sceneBoundingRect());
 }

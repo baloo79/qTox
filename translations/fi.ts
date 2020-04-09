@@ -4,705 +4,973 @@
 <context>
     <name>AVForm</name>
     <message>
-        <location filename="../src/widget/form/settings/avform.cpp" line="35"/>
         <source>Audio/Video</source>
-        <translation type="unfinished">Audio/Video</translation>
+        <translation>Ääni/Video</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avform.cpp" line="77"/>
-        <source>Initializing Camera...</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>AVPage</name>
-    <message>
-        <source>Video Settings</source>
-        <translation type="obsolete">Videoasetukset</translation>
+        <source>Default resolution</source>
+        <translation>Oletustarkkuus</translation>
     </message>
     <message>
-        <source>Show video preview</source>
-        <comment>On a button</comment>
-        <translation type="obsolete">Videon esikatselu</translation>
+        <source>Disabled</source>
+        <translation>Pois käytöstä</translation>
     </message>
     <message>
-        <source>Hide video preview</source>
-        <comment>On a button</comment>
-        <translation type="obsolete">Lopeta esikatselu</translation>
-    </message>
-</context>
-<context>
-    <name>AVSettings</name>
-    <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="54"/>
-        <source>Playback</source>
-        <translation type="unfinished"></translation>
+        <source>Select region</source>
+        <translation>Valitse alue</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="47"/>
-        <source>Microphone</source>
-        <translation type="unfinished"></translation>
+        <source>Screen %1</source>
+        <translation>Näyttö %1</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="41"/>
         <source>Audio Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ääniasetukset</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="64"/>
-        <source>Use slider to set volume of your speakers.</source>
-        <translation type="unfinished"></translation>
+        <source>Gain</source>
+        <translation>Teho</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="74"/>
-        <source>Use slider to set volume of your microphone.
-WARNING: slider is not supposed to work yet.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="82"/>
         <source>Playback device</source>
-        <translation type="unfinished"></translation>
+        <translation>Toistolaite</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="89"/>
+        <source>Use slider to set volume of your speakers.</source>
+        <translation>Aseta kaiuttimien äänenvoimakkuus liukusäätimellä.</translation>
+    </message>
+    <message>
         <source>Capture device</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallennuslaite</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="102"/>
-        <source>Rescan audio devices</source>
-        <translation type="unfinished"></translation>
+        <source>Volume</source>
+        <translation>Äänenvoimakkuus</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="109"/>
-        <source>Filter audio</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="112"/>
-        <source>Filter sound from your microphone, so that people hearing you would get better sound.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="122"/>
         <source>Video Settings</source>
-        <translation type="unfinished">Videoasetukset</translation>
+        <translation>Videoasetukset</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="133"/>
-        <source>Resolution</source>
-        <translation type="unfinished"></translation>
+        <source>Video device</source>
+        <translation>Videolaite</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="136"/>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="153"/>
         <source>Set resolution of your camera.
 The higher values, the better video quality your friends may get.
 Note though that with better video quality there is needed better internet connection.
 Sometimes your connection may not be good enough to handle higher video quality,
 which may lead to problems with video calls.</source>
+        <translation>Aseta kamerasi tarkkuus.
+Korkeammilla arvoilla ystäväsi saavat paremman kuvanlaadun.
+Korkeampi kuvanlaatu vaatii kuitennii paremman internet-yhteyden.
+Joskus yhteytesi ei välttämättä ole tarpeeksi hyvä korkeaa kuvanlaatua varten,
+jolloin videopuheluissa saattaa ilmetä ongelmia.</translation>
+    </message>
+    <message>
+        <source>Resolution</source>
+        <translation>Tarkkuus</translation>
+    </message>
+    <message>
+        <source>Rescan devices</source>
+        <translation>Uudelleenhae laitteet</translation>
+    </message>
+    <message>
+        <source>Test Sound</source>
+        <translation>Testiääni</translation>
+    </message>
+    <message>
+        <source>Enables the experimental audio backend with echo cancelling support, needs qTox restart to take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="164"/>
-        <source>Hue</source>
+        <source>Enable experimental audio backend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="178"/>
-        <source>Brightness</source>
+        <source>Audio quality</source>
+        <translation>Äänenlaatu</translation>
+    </message>
+    <message>
+        <source>Transmitted audio quality. Lower this setting if your bandwidth is not high enough or if you want to lower the internet usage.</source>
+        <translation>Välitetty äänenlaatu. Alenna tätä asetusta jos sinun siirtonopeus ei ole tarpeeksi nopea tai jos haluat vähentää internetin käyttöä.</translation>
+    </message>
+    <message>
+        <source>High (64 kbps)</source>
+        <translation>Korkea (64 kbps)</translation>
+    </message>
+    <message>
+        <source>Medium (32 kbps)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="192"/>
-        <source>Saturation</source>
+        <source>Low (16 kbps)</source>
+        <translation>Alhainen (16 kbps)</translation>
+    </message>
+    <message>
+        <source>Very low (8 kbps)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/avsettings.ui" line="206"/>
-        <source>Contrast</source>
+        <source>Threshold</source>
+        <translation>Alaraja</translation>
+    </message>
+</context>
+<context>
+    <name>AboutForm</name>
+    <message>
+        <source>About</source>
+        <translation>Tietoja</translation>
+    </message>
+    <message>
+        <source>Original author: %1</source>
+        <translation>Alkuperäinen julkaisija: %1</translation>
+    </message>
+    <message>
+        <source>You are using qTox version %1.</source>
+        <translation>Käytät qTox versiota %1.</translation>
+    </message>
+    <message>
+        <source>Commit hash: %1</source>
+        <translation>Kommitti: %1</translation>
+    </message>
+    <message>
+        <source>toxcore version: %1</source>
+        <translation>toxcore:n versio: %1</translation>
+    </message>
+    <message>
+        <source>Qt version: %1</source>
+        <translation>Qt versio: %1</translation>
+    </message>
+    <message>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <comment>`%1` is replaced by translation of `bug tracker`
+`%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Click here to report a bug.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>See a full list of %1 at Github</source>
+        <comment>`%1` is replaced with translation of word `contributors`</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bug-tracker</source>
+        <comment>Replaces `%1` in the `A list of all knownâ¦`</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Writing Useful Bug Reports</source>
+        <comment>Replaces `%2` in the `A list of all knownâ¦`</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>contributors</source>
+        <comment>Replaces `%1` in `See a full list ofâ¦`</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>AboutFriendForm</name>
+    <message>
+        <source>Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>username</source>
+        <translation>käyttäjänimi</translation>
+    </message>
+    <message>
+        <source>status message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Used aliases:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HISTORY OF ALIASES</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Automatically accept files from contact if set</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Auto accept files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default directory to save files:</source>
+        <translation type="unfinished">Oletushakemisto tiedostoille:</translation>
+    </message>
+    <message>
+        <source>Auto accept for this contact is disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Auto accept call:</source>
+        <translation>Automaattisesti hyväksy puhelu:</translation>
+    </message>
+    <message>
+        <source>Manual</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio</source>
+        <translation>Ääni</translation>
+    </message>
+    <message>
+        <source>Audio + Video</source>
+        <translation>Ääni + Video</translation>
+    </message>
+    <message>
+        <source>Automatically accept group chat invitations from this contact if set.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Auto accept group invites</source>
+        <translation>Automaattisesti hyväksy ryhmäkutsut</translation>
+    </message>
+    <message>
+        <source>Remove history (operation can not be undone!)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Notes</source>
+        <translation>Muistiinpanot</translation>
+    </message>
+    <message>
+        <source>Input field for notes about the contact</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You can save comment about this contact here.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>History removed</source>
+        <translation type="unfinished">Historia poistettu</translation>
+    </message>
+    <message>
+        <source>Choose an auto accept directory</source>
+        <extracomment>popup title</extracomment>
+        <translation type="unfinished">Valitse hakemisto automaattisesti hyväksyttäville tiedostoille</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is the public key of your friend, use it to verify their identity via another channel. You can not send this to other people so they can add this contact.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Public key (not ToxID):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Confirmation</source>
+        <translation type="unfinished">Vahvistus</translation>
+    </message>
+    <message>
+        <source>Are you sure to remove %1 chat history?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to remove chat history with %1!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>AboutSettings</name>
+    <message>
+        <source>Version</source>
+        <translation>Versio</translation>
+    </message>
+    <message>
+        <source>License</source>
+        <translation>Lisenssi</translation>
+    </message>
+    <message>
+        <source>Authors</source>
+        <translation>Tekijät</translation>
+    </message>
+    <message>
+        <source>Known Issues</source>
+        <translation>Tiedetyt ongelmat</translation>
+    </message>
+    <message>
+        <source>Open update download link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message utf8="true">
+        <source>qTox is up to date ✓</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AddFriendForm</name>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="34"/>
         <source>Add Friends</source>
         <translation>Lisää kontakti</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="37"/>
-        <source>Tox ID</source>
-        <comment>Tox ID of the person you&apos;re sending a friend request to</comment>
-        <translation>Tox ID</translation>
+        <source>Couldn&apos;t add friend</source>
+        <translation>Kontaktin lisääminen epäonnistui</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="38"/>
-        <source>Message</source>
-        <comment>The message you send in friend requests</comment>
-        <translation>Viesti</translation>
+        <source>Invalid Tox ID format</source>
+        <translation>Virheellinen Tox ID</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="39"/>
         <source>Send friend request</source>
         <translation>Lähetä kontaktipyyntö</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="40"/>
-        <source>Tox me maybe?</source>
-        <comment>Default message in friend requests if the field is left blank. Write something appropriate!</comment>
-        <translation>Lisää kontakteihin?</translation>
+        <source>Add a friend</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="89"/>
-        <source>Please fill in a valid Tox ID</source>
-        <comment>Tox ID of the friend you&apos;re sending a friend request to</comment>
-        <translation>Anna kelvollinen Tox ID</translation>
+        <source>Friend requests</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="92"/>
+        <source>Accept</source>
+        <translation>Hyväksy</translation>
+    </message>
+    <message>
+        <source>Reject</source>
+        <translation>Hylkää</translation>
+    </message>
+    <message>
+        <source>Tox ID, either 76 hexadecimal characters or name@example.com</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type in Tox ID of your friend</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Friend request message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type message to send with the friend request or leave empty to send a default message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 Tox ID is invalid or does not exist</source>
+        <comment>Toxme error</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>You can&apos;t add yourself as a friend!</source>
-        <comment>When trying to add your own Tox ID as friend</comment>
-        <translation>Et voi lisätä itseäsi kontaktiksi</translation>
+        <extracomment>When trying to add your own Tox ID as friend</extracomment>
+        <translation type="unfinished">Et voi lisätä itseäsi kaveriksesi!</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="100"/>
-        <source>qTox needs to use the Tox DNS, but can&apos;t do it through a proxy.
-Ignore the proxy and connect to the Internet directly?</source>
+        <source>Open contact list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/addfriendform.cpp" line="110"/>
-        <source>This Tox ID does not exist</source>
-        <comment>DNS error</comment>
+        <source>Couldn&apos;t open file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This address does not exist</source>
-        <comment>The DNS gives the Tox ID associated to toxme.se addresses</comment>
-        <translation type="obsolete">Osoitetta ei ole olemassa</translation>
+        <source>Couldn&apos;t open the contact file</source>
+        <extracomment>Error message when trying to open a contact list file to import</extracomment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Error while looking up DNS</source>
-        <comment>The DNS gives the Tox ID associated to toxme.se addresses</comment>
-        <translation type="obsolete">Virhe DNS pyynnössä</translation>
+        <source>Invalid file</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unexpected number of text records</source>
-        <comment>Error with the DNS</comment>
-        <translation type="obsolete">Virheellinen määrä tekstitietueita</translation>
+        <source>We couldn&apos;t find any contacts to import in this file!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unexpected number of values in text record</source>
-        <comment>Error with the DNS</comment>
-        <translation type="obsolete">Odottamaton määrä tekstitietueita</translation>
+        <source>Tox ID</source>
+        <extracomment>Tox ID of the person you&apos;re sending a friend request to</extracomment>
+        <translation>Tox ID</translation>
     </message>
     <message>
-        <source>The DNS lookup does not contain any Tox ID</source>
-        <comment>Error with the DNS</comment>
-        <translation type="obsolete">DNS vastaus ei sisällä Tox ID:tä</translation>
+        <source>either 76 hexadecimal characters or name@example.com</source>
+        <extracomment>Tox ID format description</extracomment>
+        <translation type="unfinished">joko 76 heksadesimaalimerkkiä tai nimi@esimerkki.com</translation>
     </message>
     <message>
-        <source>The DNS lookup does not contain a valid Tox ID</source>
-        <comment>Error with the DNS</comment>
-        <translation type="obsolete">DNS vastaus ei sisällä kelvollista Tox ID:tä</translation>
+        <source>Message</source>
+        <extracomment>The message you send in friend requests</extracomment>
+        <translation>Viesti</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <extracomment>Button to choose a file with a list of contacts to import</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send friend requests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 here! Tox me maybe?</source>
+        <extracomment>Default message in friend requests if the field is left blank. Write something appropriate!</extracomment>
+        <translation type="unfinished">%1 täällä! Toxaa minun kanssa?</translation>
+    </message>
+    <message>
+        <source>Import a list of contacts, one Tox ID per line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>Ready to import %n contact(s), click send to confirm</source>
+        <extracomment>Shows the number of contacts we&apos;re about to import from a file (at least one)</extracomment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Import contacts</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AdvancedForm</name>
     <message>
-        <location filename="../src/widget/form/settings/advancedform.cpp" line="25"/>
         <source>Advanced</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedform.cpp" line="35"/>
-        <source>FULL - very safe, slowest (recommended)</source>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedform.cpp" line="36"/>
-        <source>NORMAL - almost as safe as FULL, about 20% faster than FULL</source>
+        <source>really</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedform.cpp" line="37"/>
-        <source>OFF - disables all safety, when something goes wrong your history may be lost, fastest (not recommended)</source>
+        <source>not</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>IMPORTANT NOTE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All settings will be reset to default. Are you sure?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Kyllä</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Ei</translation>
+    </message>
+    <message>
+        <source>Call active</source>
+        <comment>popup title</comment>
+        <translation>Puhelu aktiivinen</translation>
+    </message>
+    <message>
+        <source>You can&apos;t disconnect while a call is active!</source>
+        <comment>popup text</comment>
+        <translation>Et voi katkaista yhteyttäsi puhelun aikana!</translation>
+    </message>
+    <message>
+        <source>Save File</source>
+        <translation>Tallenna tiedosto</translation>
+    </message>
+    <message>
+        <source>Logs (*.log)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AdvancedSettings</name>
     <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="14"/>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="35"/>
         <source>Save settings to the working directory instead of the usual conf dir</source>
         <extracomment>describes makeToxPortable checkbox</extracomment>
-        <translation type="unfinished">Tallenna asetukset työhakemistoon normaalin asetushakemiston sijaan.</translation>
+        <translation>Tallenna asetukset työhakemistoon normaalin asetushakemiston sijaan</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="38"/>
         <source>Make Tox portable</source>
-        <translation type="unfinished">Tee ohjelmasta siirrettävä</translation>
+        <translation>Tee ohjelmasta siirrettävä</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="45"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;IMPORTANT NOTE&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;Unless you &lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;really&lt;/span&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt; know what you are doing, please do &lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;not&lt;/span&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt; change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="61"/>
         <source>Reset to default settings</source>
+        <translation>Palauta oletusasetukset</translation>
+    </message>
+    <message>
+        <source>Portable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="68"/>
-        <source>Chat history</source>
+        <source>Connection Settings</source>
+        <translation>Yhteysasetukset</translation>
+    </message>
+    <message>
+        <source>Enable IPv6 (recommended)</source>
+        <extracomment>Text on a checkbox to enable IPv6</extracomment>
+        <translation>Ota käyttöön IPv6 (suositus)</translation>
+    </message>
+    <message>
+        <source>Disabling this allows, e.g., toxing over Tor. It adds load to the Tox network however, so uncheck only when necessary.</source>
+        <extracomment>force tcp checkbox tooltip</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/advancedsettings.ui" line="76"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://www.sqlite.org/pragma.html#pragma_synchronous&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Synchronous writing to DB&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>Enable UDP (recommended)</source>
+        <extracomment>Text on checkbox to disable UDP</extracomment>
+        <translation>Ota käyttöön UDP (suositus)</translation>
+    </message>
+    <message>
+        <source>Proxy type:</source>
+        <translation>Välityspalvelimen tyyppi:</translation>
+    </message>
+    <message>
+        <source>Address:</source>
+        <extracomment>Text on proxy addr label</extracomment>
+        <translation>Osoite:</translation>
+    </message>
+    <message>
+        <source>Port:</source>
+        <extracomment>Text on proxy port label</extracomment>
+        <translation>Portti:</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>Ei mitään</translation>
+    </message>
+    <message>
+        <source>SOCKS5</source>
+        <translation>SOCKS5</translation>
+    </message>
+    <message>
+        <source>HTTP</source>
+        <translation>HTTP</translation>
+    </message>
+    <message>
+        <source>Reconnect</source>
+        <comment>reconnect button</comment>
+        <translation>Yhdistä uudelleen</translation>
+    </message>
+    <message>
+        <source>Debug</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>Android</name>
     <message>
-        <location filename="../src/android.ui" line="14"/>
-        <source>Form</source>
+        <source>Export Debug Log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/android.ui" line="531"/>
-        <source>Your name</source>
+        <source>Copy Debug Log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/android.ui" line="616"/>
-        <source>Your status</source>
+        <source>Enable LAN discovery</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/android.ui" line="767"/>
-        <source>Add friends</source>
-        <translation type="unfinished">Lisää kontakti</translation>
-    </message>
-    <message>
-        <location filename="../src/android.ui" line="805"/>
-        <source>Create a group chat</source>
-        <translation type="unfinished">Luo keskusteluryhmä</translation>
-    </message>
-    <message>
-        <location filename="../src/android.ui" line="840"/>
-        <source>View completed file transfers</source>
-        <translation type="unfinished">Näytä valmiit tiedostojensiirrot</translation>
-    </message>
-    <message>
-        <location filename="../src/android.ui" line="872"/>
-        <source>Change your settings</source>
-        <translation type="unfinished">Muuta asetuksiasi</translation>
-    </message>
-</context>
-<context>
-    <name>AndroidGUI</name>
-    <message>
-        <location filename="../src/widget/androidgui.cpp" line="45"/>
-        <source>Online</source>
-        <comment>Button to set your status to &apos;Online&apos;</comment>
-        <translation type="unfinished">Online</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/androidgui.cpp" line="47"/>
-        <source>Away</source>
-        <comment>Button to set your status to &apos;Away&apos;</comment>
-        <translation type="unfinished">Poissa</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/androidgui.cpp" line="49"/>
-        <source>Busy</source>
-        <comment>Button to set your status to &apos;Busy&apos;</comment>
-        <translation type="unfinished">Kiireinen</translation>
-    </message>
-</context>
-<context>
-    <name>Camera</name>
-    <message>
-        <source>Camera eror</source>
-        <translation type="obsolete">Kamerafehler</translation>
-    </message>
-    <message>
-        <source>Camera format %1 not supported, can&apos;t use the camera</source>
-        <translation type="obsolete">Kameraformat %1 wird nicht unterstützt. Die Kamera kann nicht verwendet werden</translation>
     </message>
 </context>
 <context>
     <name>ChatForm</name>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="78"/>
-        <source>Load chat history...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="177"/>
         <source>Send a file</source>
         <translation>Lähetä tiedosto</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="185"/>
-        <location filename="../src/widget/form/chatform.cpp" line="729"/>
-        <source>File not read</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="185"/>
-        <location filename="../src/widget/form/chatform.cpp" line="729"/>
         <source>qTox wasn&apos;t able to open %1</source>
-        <translation type="unfinished"></translation>
+        <translation>qTox ei pystynyt avaamaan tiedostoa %1</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="190"/>
-        <location filename="../src/widget/form/chatform.cpp" line="734"/>
-        <source>Bad Idea</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="190"/>
-        <location filename="../src/widget/form/chatform.cpp" line="734"/>
-        <source>You&apos;re trying to send a special (sequential) file, that&apos;s not going to work!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/chatform.cpp" line="293"/>
         <source>%1 calling</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 soittaa</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="355"/>
-        <source>%1 stopped calling</source>
-        <translation type="unfinished"></translation>
+        <source>Unable to open</source>
+        <translation>qTox ei pysty avaamaan tiedostoa</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="404"/>
-        <source>Calling to %1</source>
-        <translation type="unfinished"></translation>
+        <source>Bad idea</source>
+        <translation>Huono ajatus</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="497"/>
-        <source>Call rejected</source>
-        <translation type="unfinished"></translation>
+        <source>Calling %1</source>
+        <translation>Soitetaan %1:lle</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="701"/>
-        <source>Failed to send file &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <source>Failed to open temporary file</source>
+        <comment>Temporary file for screenshot</comment>
+        <translation>Väliaikaistiedoston avaaminen epäonnistui</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="865"/>
+        <source>qTox wasn&apos;t able to save the screenshot</source>
+        <translation>Kuvakaappauksen tallennus epäonnistui</translation>
+    </message>
+    <message>
         <source>Call with %1 ended. %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Puhelu %1:n kanssa päättyi. %2</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/chatform.cpp" line="884"/>
         <source>Call duration: </source>
+        <translation>Puhelun kesto: </translation>
+    </message>
+    <message>
+        <source>%1 is typing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save chat log</source>
-        <translation type="obsolete">Chatverlauf speichern</translation>
+        <source>Copy</source>
+        <translation>Kopioi</translation>
+    </message>
+    <message>
+        <source>You&apos;re trying to send a sequential file, which is not going to work!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 is now %2</source>
+        <comment>e.g. &quot;Dubslow is now online&quot;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Call with %1 ended unexpectedly. %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filename contained illegal characters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Illegal characters have been changed to _ 
+so you can save the file on windows.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ChatFormHeader</name>
+    <message>
+        <source>Can&apos;t start audio call</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start audio call</source>
+        <translation type="unfinished">Aloita äänipuhelu</translation>
+    </message>
+    <message>
+        <source>End audio call</source>
+        <translation type="unfinished">Lopeta äänipuhelu</translation>
+    </message>
+    <message>
+        <source>Cancel audio call</source>
+        <translation type="unfinished">Peruuta äänipuhelu</translation>
+    </message>
+    <message>
+        <source>Accept audio call</source>
+        <translation type="unfinished">Hyväksy äänipuhelu</translation>
+    </message>
+    <message>
+        <source>Can&apos;t start video call</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start video call</source>
+        <translation type="unfinished">Aloita videopuhelu</translation>
+    </message>
+    <message>
+        <source>End video call</source>
+        <translation type="unfinished">Lopeta videopuhelu</translation>
+    </message>
+    <message>
+        <source>Cancel video call</source>
+        <translation type="unfinished">Peruuta videopuhelu</translation>
+    </message>
+    <message>
+        <source>Accept video call</source>
+        <translation type="unfinished">Hyväksy videopuhelu</translation>
+    </message>
+    <message>
+        <source>Sound can be disabled only during a call</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unmute call</source>
+        <translation type="unfinished">Poista puhelun mykistys</translation>
+    </message>
+    <message>
+        <source>Mute call</source>
+        <translation type="unfinished">Mykistä puhelu</translation>
+    </message>
+    <message>
+        <source>Microphone can be muted only during a call</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unmute microphone</source>
+        <translation type="unfinished">Poista mikrofonin mykistys</translation>
+    </message>
+    <message>
+        <source>Mute microphone</source>
+        <translation type="unfinished">Mykistä mikrofoni</translation>
     </message>
 </context>
 <context>
     <name>ChatLog</name>
     <message>
-        <location filename="../src/chatlog/chatlog.cpp" line="66"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopieren</translation>
+        <translation>Kopioi</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/chatlog.cpp" line="81"/>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse kaikki</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/chatlog.cpp" line="501"/>
         <source>pending</source>
-        <translation type="unfinished"></translation>
+        <translation>vireillä oleva</translation>
     </message>
 </context>
 <context>
     <name>ChatTextEdit</name>
     <message>
-        <location filename="../src/widget/tool/chattextedit.cpp" line="23"/>
         <source>Type your message here...</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoita viestisi tähän...</translation>
     </message>
 </context>
 <context>
-    <name>CopyableElideLabel</name>
+    <name>CircleWidget</name>
     <message>
-        <source>Copy</source>
-        <translation type="obsolete">Kopieren</translation>
+        <source>Rename circle</source>
+        <comment>Menu for renaming a circle</comment>
+        <translation>Uudelleennimeä piiri</translation>
+    </message>
+    <message>
+        <source>Remove circle</source>
+        <comment>Menu for removing a circle</comment>
+        <translation>Poista piiri</translation>
+    </message>
+    <message>
+        <source>Open all in new window</source>
+        <translation>Avaa kaikki uudessa ikkunassa</translation>
     </message>
 </context>
 <context>
     <name>Core</name>
     <message>
-        <location filename="../src/core.cpp" line="260"/>
-        <source>Toxing on qTox</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/core.cpp" line="261"/>
-        <source>qTox User</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/core.cpp" line="762"/>
-        <source>Friend is already added</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/core.cpp" line="778"/>
-        <source>/me offers friendship.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/core.cpp" line="780"/>
         <source>/me offers friendship, &quot;%1&quot;</source>
+        <translation>/me tarjoaa kaveruutta, &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <source>Invalid Tox ID</source>
+        <comment>Error while sending friendship request</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/coreencryption.cpp" line="168"/>
-        <source>Encryption error</source>
-        <translation type="unfinished"></translation>
+        <source>You need to write a message with your request</source>
+        <comment>Error while sending friendship request</comment>
+        <translation>Sinun täytyy kirjoittaa pyynnön mukaan viesti</translation>
     </message>
     <message>
-        <location filename="../src/coreencryption.cpp" line="168"/>
-        <source>The .tox file is encrypted, but encryption was not checked, continuing regardless.</source>
-        <translation type="unfinished"></translation>
+        <source>Your message is too long!</source>
+        <comment>Error while sending friendship request</comment>
+        <translation>Viestisi on liian pitkä!</translation>
     </message>
     <message>
-        <location filename="../src/coreencryption.cpp" line="171"/>
-        <source>Please enter the password for the %1 profile.</source>
-        <comment>used in load() when no pw is already set</comment>
-        <translation type="unfinished"></translation>
+        <source>Friend is already added</source>
+        <comment>Error while sending friendship request</comment>
+        <translation>Kontakti on jo lisätty</translation>
     </message>
     <message>
-        <location filename="../src/coreencryption.cpp" line="172"/>
-        <location filename="../src/coreencryption.cpp" line="227"/>
-        <source>The previous password is incorrect; please try again:</source>
-        <comment>used on retries in load()</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="183"/>
-        <source>The profile password failed. Please try another?</source>
-        <comment>used only when pw set before load() doesn&apos;t work</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="193"/>
-        <source>Change profile</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="219"/>
-        <source>Encrypted chat history</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="219"/>
-        <source>No encrypted chat history file found, or it was corrupted.
-History will be disabled!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="226"/>
-        <source>Please enter the password for the chat history for the %1 profile.</source>
-        <comment>used in load() when no hist pw set</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="228"/>
-        <source>
-Disabling chat history now will leave the encrypted history intact (but not usable); if you later remember the password, you may re-enable encryption from the Privacy tab with the correct password to use the history.</source>
-        <comment>part of history password dialog</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="235"/>
-        <source>The chat history password failed. Please try another?</source>
-        <comment>used only when pw set before load() doesn&apos;t work</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="255"/>
-        <source>Disable chat history</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="306"/>
-        <source>NO Password</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/coreencryption.cpp" line="306"/>
-        <source>Encryption is enabled, but there is no password! Encryption will be disabled.</source>
+        <source>Groupchat %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>FileTransferInstance</name>
+    <name>DesktopNotify</name>
     <message>
-        <source>Save a file</source>
-        <comment>Title of the file saving dialog</comment>
-        <translation type="obsolete">Tallenna tiedosto</translation>
+        <source>New message</source>
+        <translation type="unfinished">Uusi viesti</translation>
     </message>
     <message>
-        <source>Location not writable</source>
-        <comment>Title of permissions popup</comment>
-        <translation type="obsolete">Kohteeseen ei voi tallentaa</translation>
+        <source>Incoming file transfer</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>You do not have permission to write that location. Choose another, or cancel the save dialog.</source>
-        <comment>text of permissions popup</comment>
-        <translation type="obsolete">Käyttöoikeudet eivät riitä kohteeseen tallentamiseen. Valitse toinen kohde tai peru.</translation>
+        <source>Friend request received</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New group message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group invite received</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>FileTransferWidget</name>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.ui" line="14"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.ui" line="148"/>
         <source>10Mb</source>
-        <translation type="unfinished"></translation>
+        <translation>10Mt</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.ui" line="164"/>
         <source>0kb/s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.ui" line="180"/>
         <source>ETA:10:10</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.ui" line="224"/>
         <source>Filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostonimi</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.ui" line="299"/>
-        <source>[preview]</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/chatlog/content/filetransferwidget.cpp" line="83"/>
         <source>Waiting to send...</source>
         <comment>file transfer widget</comment>
-        <translation type="unfinished"></translation>
+        <translation>Odotetaan lähettämistä...</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.cpp" line="86"/>
         <source>Accept to receive this file</source>
         <comment>file transfer widget</comment>
-        <translation type="unfinished"></translation>
+        <translation>Hyväksy tiedoston vastaanotto</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.cpp" line="128"/>
         <source>Location not writable</source>
         <comment>Title of permissions popup</comment>
-        <translation type="unfinished">Kohteeseen ei voi tallentaa</translation>
+        <translation>Kohteeseen ei voi kirjoittaa</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.cpp" line="129"/>
         <source>You do not have permission to write that location. Choose another, or cancel the save dialog.</source>
         <comment>text of permissions popup</comment>
-        <translation type="unfinished">Käyttöoikeudet eivät riitä kohteeseen tallentamiseen. Valitse toinen kohde tai peru.</translation>
+        <translation>Käyttöoikeudet eivät riitä kohteeseen kirjoittamiseen. Valitse toinen kohde tai peru.</translation>
     </message>
     <message>
-        <location filename="../src/chatlog/content/filetransferwidget.cpp" line="301"/>
-        <source>paused</source>
+        <source>Paused</source>
+        <comment>file transfer widget</comment>
+        <translation>Keskeytetty</translation>
+    </message>
+    <message>
+        <source>Resuming...</source>
+        <comment>file transfer widget</comment>
+        <translation>Jatketaan...</translation>
+    </message>
+    <message>
+        <source>Open file</source>
+        <translation>Avaa tiedosto</translation>
+    </message>
+    <message>
+        <source>Open file directory</source>
+        <translation>Avaa tiedoston hakemisto</translation>
+    </message>
+    <message>
+        <source>Pause transfer</source>
+        <translation>Keskeytä siirto</translation>
+    </message>
+    <message>
+        <source>Cancel transfer</source>
+        <translation>Peru siirto</translation>
+    </message>
+    <message>
+        <source>Resume transfer</source>
+        <translation>Jatka siirtoa</translation>
+    </message>
+    <message>
+        <source>Accept transfer</source>
+        <translation>Hyväksy siirto</translation>
+    </message>
+    <message>
+        <source>Save a file</source>
+        <comment>Title of the file saving dialog</comment>
+        <translation>Tallenna tiedosto</translation>
+    </message>
+    <message>
+        <source>Remote Paused</source>
         <comment>file transfer widget</comment>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/chatlog/content/filetransferwidget.cpp" line="427"/>
-        <source>Save a file</source>
-        <comment>Title of the file saving dialog</comment>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>FileTransfertWidget</name>
-    <message>
-        <source>Save a file</source>
-        <comment>Title of the file saving dialog</comment>
-        <translation type="obsolete">Datei speichern</translation>
     </message>
 </context>
 <context>
     <name>FilesForm</name>
     <message>
-        <location filename="../src/widget/form/filesform.cpp" line="30"/>
-        <source>Transfered Files</source>
+        <source>Transferred Files</source>
         <comment>&quot;Headline&quot; of the window</comment>
-        <translation>Tiedostojen siirrot</translation>
+        <translation>Siirretyt tiedostot</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/filesform.cpp" line="38"/>
         <source>Downloads</source>
         <translation>Ladatut</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/filesform.cpp" line="39"/>
         <source>Uploads</source>
         <translation>Lähetetyt</translation>
     </message>
 </context>
 <context>
+    <name>FriendListWidget</name>
+    <message>
+        <source>Today</source>
+        <translation>Tänään</translation>
+    </message>
+    <message>
+        <source>Yesterday</source>
+        <translation>Eilen</translation>
+    </message>
+    <message>
+        <source>Last 7 days</source>
+        <translation>Edelliset 7 päivää</translation>
+    </message>
+    <message>
+        <source>This month</source>
+        <translation>Tässä kuussa</translation>
+    </message>
+    <message>
+        <source>Older than 6 Months</source>
+        <translation>Yli 6 kuukautta vanhat</translation>
+    </message>
+    <message>
+        <source>Never</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FriendRequestDialog</name>
     <message>
-        <location filename="../src/widget/tool/friendrequestdialog.cpp" line="31"/>
         <source>Friend request</source>
         <comment>Title of the window to aceept/deny a friend request</comment>
         <translation>Kontaktipyyntö</translation>
     </message>
     <message>
-        <location filename="../src/widget/tool/friendrequestdialog.cpp" line="33"/>
         <source>Someone wants to make friends with you</source>
         <translation>Sinulle on lähetetty kontaktipyyntö</translation>
     </message>
     <message>
-        <location filename="../src/widget/tool/friendrequestdialog.cpp" line="34"/>
         <source>User ID:</source>
         <translation>Käyttäjän ID:</translation>
     </message>
     <message>
-        <location filename="../src/widget/tool/friendrequestdialog.cpp" line="38"/>
         <source>Friend request message:</source>
         <translation>Kontaktipyynnön viesti:</translation>
     </message>
     <message>
-        <location filename="../src/widget/tool/friendrequestdialog.cpp" line="45"/>
         <source>Accept</source>
         <comment>Accept a friend request</comment>
         <translation>Hyväksy</translation>
     </message>
     <message>
-        <location filename="../src/widget/tool/friendrequestdialog.cpp" line="46"/>
         <source>Reject</source>
         <comment>Reject a friend request</comment>
         <translation>Hylkää</translation>
@@ -711,1577 +979,2106 @@ Disabling chat history now will leave the encrypted history intact (but not usab
 <context>
     <name>FriendWidget</name>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="56"/>
         <source>Invite to group</source>
         <comment>Menu to invite a friend to a groupchat</comment>
-        <translation type="unfinished"></translation>
+        <translation>Kutsu ryhmään</translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="57"/>
-        <source>Copy friend ID</source>
-        <comment>Menu to copy the Tox ID of that friend</comment>
-        <translation>Kopioi kontaktin ID</translation>
+        <source>Open chat in new window</source>
+        <translation>Avaa keskustelu uudessa ikkunassa</translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="69"/>
+        <source>Remove chat from this window</source>
+        <translation>Poista keskustelu tästä ikkunasta</translation>
+    </message>
+    <message>
+        <source>Move to circle...</source>
+        <comment>Menu to move a friend into a different circle</comment>
+        <translation>Siirrä kontakti piiriin...</translation>
+    </message>
+    <message>
+        <source>To new circle</source>
+        <translation>Uuteen piiriin</translation>
+    </message>
+    <message>
+        <source>Remove from circle &apos;%1&apos;</source>
+        <translation>Poista piiristä &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <source>Move  to circle &quot;%1&quot;</source>
+        <translation>Siirrä piiriin &quot;%1&quot;</translation>
+    </message>
+    <message>
         <source>Set alias...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="72"/>
         <source>Auto accept files from this friend</source>
         <comment>context menu entry</comment>
-        <translation type="unfinished"></translation>
+        <translation>Hyväksy tiedostot automaattisesti tältä kontaktilta</translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="110"/>
         <source>Choose an auto accept directory</source>
         <comment>popup title</comment>
-        <translation type="unfinished"></translation>
+        <translation>Valitse hakemisto automaattisesti hyväksyttäville tiedostoille</translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="249"/>
-        <source>User alias</source>
-        <translation type="unfinished"></translation>
+        <source>New message</source>
+        <translation>Uusi viesti</translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="249"/>
-        <source>You can also set this by clicking the chat form name.
-Alias:</source>
-        <translation type="unfinished"></translation>
+        <source>Online</source>
+        <translation>Paikalla</translation>
     </message>
     <message>
-        <source>Invite in group</source>
-        <comment>Menu to invite a friend in a groupchat</comment>
-        <translation type="obsolete">Kutsu ryhmään</translation>
+        <source>Away</source>
+        <translation>Poissa</translation>
     </message>
     <message>
-        <location filename="../src/widget/friendwidget.cpp" line="77"/>
+        <source>Busy</source>
+        <translation>Kiireinen</translation>
+    </message>
+    <message>
+        <source>Offline</source>
+        <translation>Yhteydetön</translation>
+    </message>
+    <message>
         <source>Remove friend</source>
         <comment>Menu to remove the friend from our friendlist</comment>
         <translation>Poista kontakti</translation>
     </message>
-</context>
-<context>
-    <name>GUI</name>
     <message>
-        <location filename="../src/widget/gui.cpp" line="249"/>
-        <source>Enter your password</source>
+        <source>Show details</source>
+        <translation>Näytä yksityiskohdat</translation>
+    </message>
+    <message>
+        <source>To new group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/gui.cpp" line="251"/>
-        <source>Decrypt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/gui.cpp" line="293"/>
-        <source>You must enter a non-empty password:</source>
+        <source>Invite to group &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>GeneralForm</name>
     <message>
-        <source>General Settings</source>
-        <translation type="obsolete">Yleiset asetukset</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalform.cpp" line="39"/>
         <source>General</source>
-        <translation type="unfinished">Yleiset</translation>
+        <translation>Yleiset</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalform.cpp" line="86"/>
-        <location filename="../src/widget/form/settings/generalform.cpp" line="92"/>
-        <source>None</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalform.cpp" line="250"/>
         <source>Choose an auto accept directory</source>
         <comment>popup title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalform.cpp" line="307"/>
-        <source>Call active</source>
-        <comment>popup title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalform.cpp" line="308"/>
-        <source>You can&apos;t disconnect while a call is active!</source>
-        <comment>popup text</comment>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>GeneralPage</name>
-    <message>
-        <source>General Settings</source>
-        <translation type="obsolete">Yleiset asetukset</translation>
-    </message>
-    <message>
-        <source>Enable IPv6 (recommended)</source>
-        <comment>Text on a checkbox to enable IPv6</comment>
-        <translation type="obsolete">Aktivoi IPv6 (suositeltu)</translation>
-    </message>
-    <message>
-        <source>Use translations</source>
-        <comment>Text on a checkbox to enable translations</comment>
-        <translation type="obsolete">Käytä käännöksiä</translation>
-    </message>
-    <message>
-        <source>Make Tox portable</source>
-        <comment>Text on a checkbox to make qTox a portable application</comment>
-        <translation type="obsolete">Tee ohjelmasta siirrettävä</translation>
-    </message>
-    <message>
-        <source>Save settings to the working directory instead of the usual conf dir</source>
-        <comment>describes makeToxPortable checkbox</comment>
-        <translation type="obsolete">Tallenna asetukset työhakemistoon normaalin asetushakemiston sijaan.</translation>
-    </message>
-    <message>
-        <source>Theme</source>
-        <translation type="obsolete">Teema</translation>
-    </message>
-    <message>
-        <source>Smiley Pack</source>
-        <translation type="obsolete">Hymiö-paketti</translation>
+        <translation>Valitse hakemisto automaattisesti hyväksyttäville tiedostoille</translation>
     </message>
 </context>
 <context>
     <name>GeneralSettings</name>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="56"/>
         <source>General Settings</source>
-        <translation type="unfinished">Yleiset asetukset</translation>
+        <translation>Yleiset asetukset</translation>
     </message>
     <message>
-        <source>Use translations</source>
-        <extracomment>Text on a checkbox to enable translations</extracomment>
-        <translation type="obsolete">Käytä käännöksiä</translation>
-    </message>
-    <message>
-        <source>Save settings to the working directory instead of the usual conf dir</source>
-        <extracomment>describes makeToxPortable checkbox</extracomment>
-        <translation type="obsolete">Tallenna asetukset työhakemistoon normaalin asetushakemiston sijaan.</translation>
-    </message>
-    <message>
-        <source>Make Tox portable</source>
-        <translation type="obsolete">Tee ohjelmasta siirrettävä</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="137"/>
         <source>Start in tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Käynnistä järjestelmän ilmoitusalueelle</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="312"/>
         <source>Show contacts&apos; status changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä kontaktien tilamuutokset</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="284"/>
         <source>Auto away after (0 to disable):</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaattisesti poissatilaan (0=pois käytöstä):</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="265"/>
-        <source> minutes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="64"/>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="80"/>
         <source>The translation may not load until qTox restarts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Käännökset eivät tule käyttöön ennen kuin qTox käynnistetään uudelleen.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="67"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kieli:</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="102"/>
-        <source>System tray</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="111"/>
         <source>Show system tray icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä kuvake järjestelmän ilmoitusalueella</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="118"/>
         <source>Enable light tray icon.</source>
         <comment>toolTip for light icon setting</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="121"/>
         <source>Light icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="134"/>
         <source>qTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation type="unfinished"></translation>
+        <translation>qTox käynnistyy pienennettynä ilmoitusalueelle.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="150"/>
         <source>After pressing close (X) qTox will minimize to tray,
 instead of closing itself.</source>
         <comment>toolTip for close to tray setting</comment>
-        <translation type="unfinished"></translation>
+        <translation>Kun painaa sulje-nappia (X), qTox pienentyy järjestelmän ilmoitusalueelle eikä sulkeudu.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="154"/>
         <source>Close to tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Sulje järjestelmän ilmoitusalueelle</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="167"/>
         <source>After pressing minimize (_) qTox will minimize itself to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
-        <translation type="unfinished"></translation>
+        <translation>Kun painaa pienennä-nappia (_), qTox pienentyy järjestelmän ilmoitusalueelle eikä tehtäväpalkkiin.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="171"/>
         <source>Minimize to tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Pienennä järjestelmän ilmoitusalueelle</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="196"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start qTox on operating system startup (current profile).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="199"/>
         <source>Autostart</source>
-        <translation type="unfinished"></translation>
+        <translation>Käynnistä automaattisesti</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="206"/>
-        <source>Check for updates on startup</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="220"/>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="246"/>
         <source>Set where files will be saved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse minne tiedoostot tallennetaan.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="223"/>
-        <source>Save to:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="230"/>
         <source>You can set this on a per-friend basis by right clicking them.</source>
         <comment>autoaccept cb tooltip</comment>
-        <translation type="unfinished"></translation>
+        <translation>Voit asettaa tämän kontakteillesi erikseen hiiren oikealla napilla.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="233"/>
         <source>Autoaccept files</source>
-        <translation type="unfinished"></translation>
+        <translation>Hyväksy tiedostot automaattisesti</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="259"/>
         <source>Set to 0 to disable</source>
-        <translation type="unfinished"></translation>
+        <translation>Aseta pois päältä asettamalla arvoksi 0</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="278"/>
         <source>Your status is changed to Away after set period of inactivity.</source>
+        <translation>Tilaksesi asetetaan Poissa kun olet ollut asetetun ajan toimettomana.</translation>
+    </message>
+    <message>
+        <source>Start qTox on operating system startup (current profile).</source>
+        <translation>Käynnistä qTox kun käyttöjärjestelmä käynnistyy (nykyinen profiili).</translation>
+    </message>
+    <message>
+        <source>Default directory to save files:</source>
+        <translation>Oletushakemisto tiedostoille:</translation>
+    </message>
+    <message>
+        <source>Check for updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="296"/>
-        <source>Chat</source>
+        <source>Spell checking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="302"/>
-        <source>Always notify about new messages in groupchats.</source>
-        <comment>toolTip for Group chat always notify</comment>
+        <source>Max autoaccept file size (0 to disable):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="305"/>
-        <source>Group chats always notify</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="319"/>
-        <source>On new message:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="331"/>
-        <source>Show qTox&apos;s window when you receive new message.</source>
-        <comment>tooltip for Show window setting</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="334"/>
-        <source>Show window</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="341"/>
-        <source>Focus qTox when you receive message.</source>
-        <comment>toolTip for Focus window setting</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="344"/>
-        <source>Focus window</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="366"/>
-        <source>Messages you are trying to send to your friends when they are not online
-will be sent to them when they will appear online to you.</source>
-        <comment>toolTip for Faux offline messaging setting</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="370"/>
-        <source>Faux offline messaging</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="377"/>
-        <source>Your contact list will be shown in compact mode.</source>
-        <comment>toolTip for compact layout setting</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="380"/>
-        <source>Compact contact list</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="396"/>
-        <source>Theme</source>
-        <translation type="unfinished">Teema</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="402"/>
-        <source>Use emoticons</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="420"/>
-        <source>Smiley Pack:</source>
-        <extracomment>Text on smiley pack label</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="494"/>
-        <source>Emoticon size:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="510"/>
-        <source> px</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="640"/>
-        <source>Proxy type:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="647"/>
-        <source>Address:</source>
-        <extracomment>Text on proxy addr label</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="671"/>
-        <source>None</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="676"/>
-        <source>SOCKS5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="681"/>
-        <source>HTTP</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="691"/>
-        <source>Reconnect</source>
-        <comment>reconnect button</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="526"/>
-        <source>Style:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="543"/>
-        <source>Theme color:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="560"/>
-        <source>Timestamp format:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="582"/>
-        <source>Connection Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="596"/>
-        <source>Disabling this allows, e.g., toxing over Tor. It adds load to the Tox network however, so uncheck only when necessary.</source>
-        <extracomment>force tcp checkbox tooltip</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="599"/>
-        <source>Enable UDP (recommended)</source>
-        <extracomment>Text on checkbox to disable UDP</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="606"/>
-        <source>Enable IPv6 (recommended)</source>
-        <extracomment>Text on a checkbox to enable IPv6</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/generalsettings.ui" line="657"/>
-        <source>Port</source>
-        <extracomment>Text on proxy port label</extracomment>
+        <source> MB</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>GenericChatForm</name>
     <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="73"/>
         <source>Send message</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähetä viesti</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="75"/>
         <source>Smileys</source>
-        <translation type="unfinished"></translation>
+        <translation>Hymiöt</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="79"/>
         <source>Send file(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähetä tiedosto(ja)</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="82"/>
-        <source>Audio call: RED means you&apos;re on a call</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="85"/>
-        <source>Video call: RED means you&apos;re on a call</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="88"/>
-        <source>Toggle speakers volume: RED is OFF</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="91"/>
-        <source>Toggle microphone: RED is OFF</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="165"/>
-        <location filename="../src/widget/form/genericchatform.cpp" line="282"/>
         <source>Save chat log</source>
         <translation>Tallenna keskustelu</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="166"/>
+        <source>Send a screenshot</source>
+        <translation>Lähetä kuvakaappaus</translation>
+    </message>
+    <message>
         <source>Clear displayed messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyhjennä näytetyt viestit</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="298"/>
-        <source>Not sent</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/genericchatform.cpp" line="331"/>
         <source>Cleared</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Quote selected text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy link address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Confirmation</source>
+        <translation type="unfinished">Vahvistus</translation>
+    </message>
+    <message>
+        <source>You are sure that you want to clear all displayed messages?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search in text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Go to current date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load chat history...</source>
+        <translation type="unfinished">Lataa keskusteluhistoria...</translation>
+    </message>
+    <message>
+        <source>Export to file</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>GenericNetCamView</name>
+    <message>
+        <source>Tox video</source>
+        <translation>Tox video</translation>
+    </message>
+    <message>
+        <source>Show Messages</source>
+        <translation>Näytä viestit</translation>
+    </message>
+    <message>
+        <source>Hide Messages</source>
+        <translation>Piilota viestit</translation>
+    </message>
+    <message>
+        <source>Full Screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Toggle video preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mute audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mute microphone</source>
+        <translation type="unfinished">Mykistä mikrofoni</translation>
+    </message>
+    <message>
+        <source>End video call</source>
+        <translation type="unfinished">Lopeta videopuhelu</translation>
+    </message>
+    <message>
+        <source>Exit full screen</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>GroupChatForm</name>
     <message>
-        <location filename="../src/widget/form/groupchatform.cpp" line="57"/>
-        <source>%1 users in chat</source>
+        <source>%1 has set the title to %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 has joined the group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 is now known as %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 has left the group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
-        <translation>%1 henkilö keskustelussa</translation>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <source>&lt;Unknown&gt;</source>
-        <translation type="obsolete">&lt;Tuntematon&gt;</translation>
+        <source>mute</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/groupchatform.cpp" line="108"/>
-        <source>%1 users in chat</source>
-        <translation>%1 henkilöä keskustelussa</translation>
+        <source>unmute</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>GroupInviteForm</name>
+    <message>
+        <source>Groups</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save chat log</source>
-        <translation type="obsolete">Chatverlauf speichern</translation>
+        <source>Create new group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group invites</source>
+        <translation>Ryhmäkutsut</translation>
+    </message>
+</context>
+<context>
+    <name>GroupInviteWidget</name>
+    <message>
+        <source>Invited by %1 on %2 at %3.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Join</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Decline</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>GroupWidget</name>
     <message>
-        <location filename="../src/widget/groupwidget.cpp" line="43"/>
-        <location filename="../src/widget/groupwidget.cpp" line="80"/>
-        <source>%1 users in chat</source>
-        <translation>%1 henkilöä keskustelussa</translation>
+        <source>Open chat in new window</source>
+        <translation>Avaa keskustelu uudessa ikkunassa</translation>
     </message>
     <message>
-        <location filename="../src/widget/groupwidget.cpp" line="45"/>
-        <location filename="../src/widget/groupwidget.cpp" line="82"/>
-        <source>0 users in chat</source>
-        <translation>0 henkilöä keskustelussa</translation>
+        <source>Remove chat from this window</source>
+        <translation>Poista keskustelu tästä ikkunasta</translation>
     </message>
     <message>
-        <location filename="../src/widget/groupwidget.cpp" line="54"/>
         <source>Set title...</source>
-        <translation type="unfinished"></translation>
+        <translation>Aseta otsikko...</translation>
     </message>
     <message>
-        <location filename="../src/widget/groupwidget.cpp" line="55"/>
         <source>Quit group</source>
         <comment>Menu to quit a groupchat</comment>
         <translation>Sulje ryhmä</translation>
     </message>
+    <message numerus="yes">
+        <source>%n user(s) in chat</source>
+        <comment>Number of users in chat</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location filename="../src/widget/groupwidget.cpp" line="67"/>
-        <source>Group title</source>
+        <source>New Message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/groupwidget.cpp" line="67"/>
-        <source>You can also set this by clicking the chat form name.
-Title:</source>
+        <source>Online</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>IdentityForm</name>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="35"/>
-        <source>Identity</source>
-        <translation type="unfinished">Identiteetti</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="136"/>
-        <source>Call active</source>
-        <comment>popup title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="137"/>
-        <source>You can&apos;t switch profiles while a call is active!</source>
-        <comment>popup text</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="147"/>
-        <source>Rename &quot;%1&quot;</source>
-        <comment>renaming a profile</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="155"/>
-        <source>Profile already exists</source>
-        <comment>rename confirm title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="156"/>
-        <source>A profile named &quot;%1&quot; already exists. Do you want to erase it?</source>
-        <comment>rename confirm text</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="175"/>
-        <source>Export profile</source>
-        <comment>save dialog title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="177"/>
-        <source>Tox save file (*.tox)</source>
-        <comment>save dialog filter</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="187"/>
-        <source>Failed to remove file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="187"/>
-        <source>The file you chose to overwrite could not be removed first.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="193"/>
-        <source>Failed to copy file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="193"/>
-        <source>The file you chose could not be written to.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="201"/>
-        <source>Profile currently loaded</source>
-        <comment>current profile deletion warning title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="201"/>
-        <source>This profile is currently in use. Please load a different profile before deleting this one.</source>
-        <comment>current profile deletion warning text</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="205"/>
-        <source>Deletion imminent!</source>
-        <comment>deletion confirmation title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="206"/>
-        <source>Are you sure you want to delete this profile?</source>
-        <comment>deletion confirmation text</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="225"/>
-        <source>Import profile</source>
-        <comment>import dialog title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="227"/>
-        <source>Tox save file (*.tox)</source>
-        <comment>import dialog filter</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="237"/>
-        <source>Ignoring non-Tox file</source>
-        <comment>popup title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="238"/>
-        <source>Warning: you&apos;ve chosen a file that is not a Tox save file; ignoring.</source>
-        <comment>popup text</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="244"/>
-        <source>Profile already exists</source>
-        <comment>import confirm title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identityform.cpp" line="245"/>
-        <source>A profile named &quot;%1&quot; already exists. Do you want to erase it?</source>
-        <comment>import confirm text</comment>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>IdentityPage</name>
-    <message>
-        <source>Public Information</source>
-        <translation type="obsolete">Julkiset tiedot</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <comment>Username/nick</comment>
-        <translation type="obsolete">Nimi</translation>
-    </message>
-    <message>
-        <source>Status</source>
-        <comment>Status message</comment>
-        <translation type="obsolete">Tila</translation>
-    </message>
-    <message>
-        <source>Tox ID</source>
-        <translation type="obsolete">Tox ID</translation>
-    </message>
-    <message>
-        <source>Your Tox ID</source>
-        <translation type="obsolete">Sinun Tox ID</translation>
     </message>
 </context>
 <context>
     <name>IdentitySettings</name>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="53"/>
         <source>Public Information</source>
-        <translation type="unfinished">Julkiset tiedot</translation>
+        <translation>Julkiset tiedot</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="59"/>
-        <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="69"/>
-        <source>Status</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="82"/>
         <source>Tox ID</source>
-        <translation type="unfinished">Tox ID</translation>
+        <translation>Tox ID</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="85"/>
         <source>This bunch of characters tells other Tox clients how to contact you.
 Share it with your friends to communicate.</source>
         <comment>Tox ID tooltip</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tämän merkkijonon avulla toiset Tox käyttäjät voivat ottaa yhteyttä sinuun. Jaa merkkijono ystävillesi.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="92"/>
         <source>Your Tox ID (click to copy)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sinun Tox ID (klikkaa kopioidaksesi)</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="102"/>
-        <source>Profiles</source>
-        <translation type="unfinished"></translation>
+        <source>This QR code contains your Tox ID. You may share this with your friends as well.</source>
+        <translation>Tämä QR-koodi sisältää Tox ID:si. Tämänkin voit jakaa ystävillesi.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="110"/>
-        <source>Available profiles:</source>
-        <translation type="unfinished"></translation>
+        <source>Save image</source>
+        <translation>Tallenna kuva</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="117"/>
-        <source>Currently selected profile.</source>
-        <comment>toolTip for currently set profile</comment>
-        <translation type="unfinished"></translation>
+        <source>Copy image</source>
+        <translation>Kopioi kuva</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="134"/>
-        <source>Load selected profile and switch to it.</source>
-        <comment>tooltip for loading profile button</comment>
-        <translation type="unfinished"></translation>
+        <source>Profile</source>
+        <translation>Profiili</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="137"/>
-        <source>Load</source>
-        <comment>load profile button</comment>
-        <translation type="unfinished"></translation>
+        <source>Rename profile.</source>
+        <comment>tooltip for renaming profile button</comment>
+        <translation>Uudelleennimeä profiili.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="144"/>
+        <source>Delete profile.</source>
+        <comment>delete profile button tooltip</comment>
+        <translation>Poista profiili.</translation>
+    </message>
+    <message>
+        <source>Go back to the login screen</source>
+        <comment>tooltip for logout button</comment>
+        <translation>Palaa sisäänkirjautumisruutuun</translation>
+    </message>
+    <message>
+        <source>Logout</source>
+        <comment>import profile button</comment>
+        <translation>Kirjaudu ulos</translation>
+    </message>
+    <message>
+        <source>Remove password</source>
+        <translation>Poista salasana</translation>
+    </message>
+    <message>
+        <source>Change password</source>
+        <translation>Vaihda salasana</translation>
+    </message>
+    <message>
         <source>Rename</source>
         <comment>rename profile button</comment>
-        <translation type="unfinished"></translation>
+        <translation>Uudelleennimeä</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="147"/>
-        <source>Rename selected profile.</source>
-        <comment>tooltip for renaming profile button</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="154"/>
         <source>Export</source>
         <comment>export profile button</comment>
-        <translation type="unfinished"></translation>
+        <translation>Vie</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="157"/>
         <source>Allows you to export your Tox profile to a file.
 Profile does not contain your history.</source>
         <comment>tooltip for profile exporting button</comment>
-        <translation type="unfinished"></translation>
+        <translation>Antaa sinun tallentaa Tox-profiilisi tiedostoon. Profiili ei sisällä historiaasi.</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="165"/>
-        <source>Delete selected profile.</source>
-        <comment>delete profile button tooltip</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="168"/>
         <source>Delete</source>
         <comment>delete profile button</comment>
+        <translation>Poista</translation>
+    </message>
+    <message>
+        <source>Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="182"/>
-        <source>Import Tox profile from a .tox file.</source>
-        <comment>tooltip for importing profile button</comment>
+        <source>Hide my name from the public list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="189"/>
-        <source>Create new Tox ID and switch to it.</source>
-        <comment>tooltip for creating new Tox ID button</comment>
+        <source>Register</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="192"/>
-        <source>New Tox ID</source>
-        <comment>new profile button</comment>
+        <source>Your password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/identitysettings.ui" line="179"/>
-        <source>Import a profile</source>
-        <comment>import profile button</comment>
+        <source>Update</source>
+        <translation>Päivitys</translation>
+    </message>
+    <message>
+        <source>Register on ToxMe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name for the ToxMe service.</source>
+        <comment>Tooltip for the `Username` ToxMe field.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Optional. Something about you. Or your cat.</source>
+        <comment>Tooltip for the Biography text.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Optional. Something about you. Or your cat.</source>
+        <comment>Tooltip for the Biography field.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ToxMe service to register on.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If not set, ToxMe entries are publicly visible.</source>
+        <comment>Tooltip for the `Hide my name from public list` ToxMe checkbox.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove your password and encryption from your profile.</source>
+        <comment>Tooltip for the `Remove password` button.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name visible to contacts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status message input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status message visible to contacts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your Tox ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save QR image as file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy QR image to clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ToxMe username to be shown on ToxMe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Optional ToxMe biography to be shown on ToxMe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ToxMe service address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Visibility on the ToxMe service</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update ToxMe entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rename profile.</source>
+        <translation>Nimeä profiili uudelleen.</translation>
+    </message>
+    <message>
+        <source>Delete profile.</source>
+        <translation>Poista profiili.</translation>
+    </message>
+    <message>
+        <source>Export profile</source>
+        <translation>Vie profiili</translation>
+    </message>
+    <message>
+        <source>Remove password from profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Change profile password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>My name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>My status:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>My username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>My biography</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>My profile</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>LoadHistoryDialog</name>
     <message>
-        <location filename="../src/widget/form/loadhistorydialog.ui" line="14"/>
         <source>Load History Dialog</source>
+        <translation>Lataa historia -dialogi</translation>
+    </message>
+    <message>
+        <source>Load history</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/loadhistorydialog.ui" line="23"/>
-        <source>Load history from:</source>
+        <source>from</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>(about 100 messages are loaded)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Date Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select a date</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LoginScreen</name>
+    <message>
+        <source>Username:</source>
+        <translation>Käyttäjänimi:</translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation>Salasana:</translation>
+    </message>
+    <message>
+        <source>Confirm:</source>
+        <translation>Vahvista:</translation>
+    </message>
+    <message>
+        <source>Password strength: %p%</source>
+        <translation>Salasanan vahvuus: %p%</translation>
+    </message>
+    <message>
+        <source>Create Profile</source>
+        <translation>Luo profiili</translation>
+    </message>
+    <message>
+        <source>If the profile does not have a password, qTox can skip the login screen</source>
+        <translation>Jos profiililla ei ole salasanaa, qTox voi ohittaa sisäänkirjautumisruudun</translation>
+    </message>
+    <message>
+        <source>Load automatically</source>
+        <translation>Lataa automaattisesti</translation>
+    </message>
+    <message>
+        <source>Load</source>
+        <translation>Lataa</translation>
+    </message>
+    <message>
+        <source>New Profile</source>
+        <translation>Uusi profiili</translation>
+    </message>
+    <message>
+        <source>Load Profile</source>
+        <translation>Lataa profiili</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t create a new profile</source>
+        <translation>Uuden profiilin luonti epäonnistui</translation>
+    </message>
+    <message>
+        <source>The username must not be empty.</source>
+        <translation>Käyttäjänimi ei voi olla tyhjä.</translation>
+    </message>
+    <message>
+        <source>The password must be at least 6 characters long.</source>
+        <translation>Salasanan täytyy olla vähintään 6 merkkiä.</translation>
+    </message>
+    <message>
+        <source>The passwords you&apos;ve entered are different.
+Please make sure to enter same password twice.</source>
+        <translation>Syöttämäsi salasanat eroavat toisistaan. Varmista, että salasanat täsmäävät.</translation>
+    </message>
+    <message>
+        <source>A profile with this name already exists.</source>
+        <translation>Tämän niminen profiili on jo olemassa.</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t load profile</source>
+        <translation>Ei voitu ladata profiilia</translation>
+    </message>
+    <message>
+        <source>There is no selected profile.
+
+You may want to create one.</source>
+        <translation>Mitään profiilia ei ole valittu.
+
+Haluat ehkä luoda sellaisen.</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t load this profile</source>
+        <translation>Ei voitu ladata tätä profiilia</translation>
+    </message>
+    <message>
+        <source>This profile is already in use.</source>
+        <translation>Tämä profiili on jo käytössä.</translation>
+    </message>
+    <message>
+        <source>Wrong password.</source>
+        <translation>Väärä salasana.</translation>
+    </message>
+    <message>
+        <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password protected profiles can&apos;t be automatically loaded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username input field</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password input field, you can leave it empty (no password), or type at least 6 characters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password confirmation field</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create a new profile button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Profile list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>List of profiles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load automatically checkbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load selected profile button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New profile creation page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Loading existing profile page</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/mainwindow.ui" line="859"/>
         <source>Your name</source>
         <translation>Sinun nimesi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="941"/>
         <source>Your status</source>
         <translation>Sinun tilasi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1096"/>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
+    <message>
         <source>Add friends</source>
         <translation>Lisää kontakti</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1134"/>
         <source>Create a group chat</source>
         <translation>Luo keskusteluryhmä</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1169"/>
         <source>View completed file transfers</source>
         <translation>Näytä valmiit tiedostojensiirrot</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1201"/>
         <source>Change your settings</source>
         <translation>Muuta asetuksiasi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1789"/>
         <source>Close</source>
         <translation>Sulje</translation>
     </message>
     <message>
-        <source>Ctrl+Q</source>
-        <translation type="obsolete">Ctrl+Q</translation>
+        <source>Open profile</source>
+        <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>NetCamView</name>
     <message>
-        <location filename="../src/widget/netcamview.cpp" line="28"/>
-        <source>Tox video</source>
+        <source>Open profile page when clicked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status message input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set your status message that will be shown to others</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set availability status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Contact search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Contact search input for known friends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sorting and visibility</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set friends sorting and visibility</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Add friends page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Groupchat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open groupchat management page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File transfers history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open File transfers history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Nexus</name>
     <message>
-        <location filename="../src/nexus.cpp" line="164"/>
-        <source>Images (%1)</source>
-        <comment>filetype filter</comment>
+        <source>View</source>
+        <comment>OS X Menu bar</comment>
+        <translation>Näytä</translation>
+    </message>
+    <message>
+        <source>Window</source>
+        <comment>OS X Menu bar</comment>
+        <translation>Ikkuna</translation>
+    </message>
+    <message>
+        <source>Minimize</source>
+        <comment>OS X Menu bar</comment>
+        <translation>Pienennä</translation>
+    </message>
+    <message>
+        <source>Bring All to Front</source>
+        <comment>OS X Menu bar</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Exit Fullscreen</source>
+        <translation>Sulje kokoruututila</translation>
+    </message>
+    <message>
+        <source>Enter Fullscreen</source>
+        <translation>Mene kokoruututilaan</translation>
+    </message>
+</context>
+<context>
+    <name>NotificationEdgeWidget</name>
+    <message numerus="yes">
+        <source>Unread message(s)</source>
+        <translation>
+            <numerusform>Lukematon viesti</numerusform>
+            <numerusform>Lukemattomat viestit</numerusform>
+        </translation>
+    </message>
+</context>
+<context>
+    <name>PasswordEdit</name>
+    <message>
+        <source>CAPS-LOCK ENABLED</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PrivacyForm</name>
     <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="31"/>
         <source>Privacy</source>
-        <translation type="unfinished">Yksityisyys</translation>
+        <translation>Yksityisyys</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="78"/>
-        <source>Please set your new chat history password.</source>
-        <translation type="unfinished"></translation>
+        <source>Confirmation</source>
+        <translation>Vahvistus</translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="80"/>
-        <source>It appears you have an unused encrypted chat history; if the password matches, it will be added to your current history.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="83"/>
-        <source>Use data file password</source>
-        <comment>pushbutton text</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="110"/>
-        <source>Successfully decrypted old chat history</source>
-        <comment>popup title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="110"/>
-        <source>You have succesfully decrypted the old chat history, and it has been added to your current history and re-encrypted.</source>
-        <comment>popup text</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="117"/>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="118"/>
-        <source>Old encrypted chat history</source>
-        <comment>popup title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="117"/>
-        <source>There is currently an unused encrypted chat history, but the password you just entered doesn&apos;t match.
-
-If you don&apos;t care about the old history, you may click Ok to delete it and use the password you just entered.
-Otherwise, hit cancel to try again.</source>
-        <comment>This happens when enabling encryption after previously &quot;Disabling History&quot;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="118"/>
-        <source>Are you absolutely sure you want to lose the unused encrypted chat history?</source>
-        <comment>secondary popup</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="147"/>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="164"/>
-        <source>Old encrypted chat history</source>
-        <comment>title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="148"/>
-        <source>Would you like to decrypt your chat history?
-Otherwise it will be deleted.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="165"/>
-        <source>Are you sure you want to lose your entire chat history?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="197"/>
-        <source>Please set your new data file password.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="199"/>
-        <source>Use chat history password</source>
-        <comment>pushbutton text</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="242"/>
-        <source>Decrypt your data file</source>
-        <comment>title</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacyform.cpp" line="242"/>
-        <source>Would you like to decrypt your data file?</source>
-        <translation type="unfinished"></translation>
+        <source>Do you want to permanently delete all chat history?</source>
+        <translation>Haluatko pysyvästi poistaa kaiken keskusteluhistorian?</translation>
     </message>
 </context>
 <context>
     <name>PrivacySettings</name>
     <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="47"/>
         <source>Your friends will be able to see when you are typing.</source>
         <comment>tooltip for typing notifications setting</comment>
+        <translation>Ystäväsi voivat nähdä milloin kirjoitat viestiäsi.</translation>
+    </message>
+    <message>
+        <source>Send typing notifications</source>
+        <translation>Lähetä tieto siitä että kirjoitat viestiä</translation>
+    </message>
+    <message>
+        <source>Keep chat history</source>
+        <translation>Säilytä keskusteluhistoria</translation>
+    </message>
+    <message>
+        <source>NoSpam is part of your Tox ID.
+If you are being spammed with friend requests, you should change your NoSpam.
+People will be unable to add you with your old ID, but you will keep your current friends.</source>
+        <comment>toolTip for nospam</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="50"/>
-        <source>Send Typing Notifications</source>
+        <source>NoSpam</source>
+        <translation>NoSpam</translation>
+    </message>
+    <message>
+        <source>NoSpam is a part of your ID that can be changed at will.
+If you are getting spammed with friend requests, change the NoSpam.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="57"/>
+        <source>Generate random NoSpam</source>
+        <translation>Luo satunnainen NoSpam</translation>
+    </message>
+    <message>
         <source>Chat history keeping is still in development.
 Save format changes are possible, which may result in data loss.</source>
         <comment>toolTip for Keep History setting</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="61"/>
-        <source>Keep chat history (mostly stable)</source>
+        <source>Privacy</source>
+        <translation>Yksityisyys</translation>
+    </message>
+    <message>
+        <source>BlackList</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="71"/>
-        <source>Local file encryption</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="77"/>
-        <source>All Tox communications over the internet are encrypted, and this cannot be disabled. However, you may optionally password protect your local Tox files.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="92"/>
-        <source>Encrypt Tox data file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="99"/>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="123"/>
-        <source>Change password</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="113"/>
-        <source>Encrypt chat history</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="135"/>
-        <source>Nospam</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="138"/>
-        <source>Nospam is part of your Tox ID.
-It is there to help you change your Tox ID when you feel like you are getting too much spam friend requests.
-When you change nospam, your current contacts still can communicate with you,
-but new contacts need to know your new Tox ID to be able to add you.</source>
-        <comment>toolTip for nospam</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/settings/privacysettings.ui" line="156"/>
-        <source>Generate random nospam</source>
+        <source>Filter group message by group member&apos;s public key. Put public key here, one per line.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>QObject</name>
+    <name>Profile</name>
     <message>
-        <location filename="../src/autoupdate.cpp" line="494"/>
+        <source>Failed to derive key from password, the profile won&apos;t use the new password.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t change password on the database, it might be corrupted or use the old password.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Toxing on qTox</source>
+        <translation type="unfinished">Toxaa qToxilla</translation>
+    </message>
+</context>
+<context>
+    <name>ProfileForm</name>
+    <message>
+        <source>Current profile: </source>
+        <translation>Nykyinen profiili: </translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Poista</translation>
+    </message>
+    <message>
+        <source>Choose a profile picture</source>
+        <translation>Valitse kuva profiilillesi</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Virhe</translation>
+    </message>
+    <message>
+        <source>Unable to open this file.</source>
+        <translation>Tiedostoa ei voi avata.</translation>
+    </message>
+    <message>
+        <source>Unable to read this image.</source>
+        <translation>Kuvaa ei voi lukea.</translation>
+    </message>
+    <message>
+        <source>The supplied image is too large.
+Please use another image.</source>
+        <translation>Valittu kuva on liian suuri. Valitse toinen kuva.</translation>
+    </message>
+    <message>
+        <source>Rename &quot;%1&quot;</source>
+        <comment>renaming a profile</comment>
+        <translation>Uudelleennimeä &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t rename the profile to &quot;%1&quot;</source>
+        <translation>Profiilille ei voit asettaa uutta nimeä &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <source>Location not writable</source>
+        <comment>Title of permissions popup</comment>
+        <translation>Kohteeseen ei voi kirjoittaa</translation>
+    </message>
+    <message>
+        <source>You do not have permission to write that location. Choose another, or cancel the save dialog.</source>
+        <comment>text of permissions popup</comment>
+        <translation>Käyttöoikeudet eivät riitä kohteeseen kirjoittamiseen. Valitse toinen kohde tai peru.</translation>
+    </message>
+    <message>
+        <source>Failed to copy file</source>
+        <translation>Tiedoston kopioiminen epäonnistui</translation>
+    </message>
+    <message>
+        <source>The file you chose could not be written to.</source>
+        <translation>Valitsemaasi tiedostoon ei voitu kirjoittaa.</translation>
+    </message>
+    <message>
+        <source>Really delete profile?</source>
+        <comment>deletion confirmation title</comment>
+        <translation>Haluatko varmasti poistaa profiilin?</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to delete this profile?</source>
+        <comment>deletion confirmation text</comment>
+        <translation>Haluatko varmasti poistaa tämän profiilin?</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <comment>save qr image</comment>
+        <translation>Tallenna</translation>
+    </message>
+    <message>
+        <source>Save QrCode (*.png)</source>
+        <comment>save dialog filter</comment>
+        <translation>Tallenna QR-koodi (*.png)</translation>
+    </message>
+    <message>
+        <source>Nothing to remove</source>
+        <translation>Ei mitään poistettavaa</translation>
+    </message>
+    <message>
+        <source>Your profile does not have a password!</source>
+        <translation>Profiilillasi ei ole salasanaa!</translation>
+    </message>
+    <message>
+        <source>Really delete password?</source>
+        <comment>deletion confirmation title</comment>
+        <translation>Haluatko varmasti poistaa salasanan?</translation>
+    </message>
+    <message>
+        <source>Please enter a new password.</source>
+        <translation>Syötä uusi salasana.</translation>
+    </message>
+    <message>
+        <source>Files could not be deleted!</source>
+        <comment>deletion failed title</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Register (processing)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update (processing)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Done!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Account %1@%2 updated successfully</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Successfully added %1@%2 to the database. Save your password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Toxme error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Register</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Update</source>
-        <comment>The title of a message box</comment>
+        <translation>Päivitys</translation>
+    </message>
+    <message>
+        <source>Change password</source>
+        <comment>button text</comment>
+        <translation>Vaihda salasanaa</translation>
+    </message>
+    <message>
+        <source>Set profile password</source>
+        <comment>button text</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/autoupdate.cpp" line="495"/>
-        <source>An update is available, do you want to download it now?
-It will be installed when qTox restarts.</source>
+        <source>Current profile location: %1</source>
+        <translation>Nykyisen profiilin sijainti: %1</translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t change password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/chatlog/chatmessage.cpp" line="126"/>
-        <source>Busy...</source>
+        <source>This bunch of characters tells other Tox clients how to contact you.
+Share it with your friends to communicate.
+
+This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="69"/>
-        <source>Tox URI to parse</source>
+        <source>Empty path is unavaliable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="70"/>
-        <source>Starts new instance and loads specified profile.</source>
+        <source>Failed to rename</source>
+        <translation type="unfinished">Uudelleennimeäminen epäonnistui</translation>
+    </message>
+    <message>
+        <source>Profile already exists</source>
+        <translation>Profiili on jo olemassa</translation>
+    </message>
+    <message>
+        <source>A profile named &quot;%1&quot; already exists.</source>
+        <translation type="unfinished">Profiili, jonka nimi on &quot;%1&quot; on jo olemassa.</translation>
+    </message>
+    <message>
+        <source>Empty name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="70"/>
-        <source>profile</source>
+        <source>Empty name is unavaliable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/misc/style.cpp" line="69"/>
-        <source>Default</source>
+        <source>Empty path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/misc/style.cpp" line="69"/>
-        <source>Blue</source>
+        <source>Couldn&apos;t change password on the database, it might be corrupted or use the old password.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/misc/style.cpp" line="69"/>
-        <source>Olive</source>
+        <source>Export profile</source>
+        <translation>Vie profiili</translation>
+    </message>
+    <message>
+        <source>Tox save file (*.tox)</source>
+        <extracomment>save dialog filter</extracomment>
+        <translation>Tox-tiedosto (*.tox)</translation>
+    </message>
+    <message>
+        <source>The following files could not be deleted:</source>
+        <extracomment>deletion failed text part 1</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/misc/style.cpp" line="69"/>
-        <source>Red</source>
+        <source>Please manually remove them.</source>
+        <extracomment>deletion failed text part 2</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/misc/style.cpp" line="69"/>
-        <source>Violet</source>
+        <source>Are you sure you want to delete your password?</source>
+        <extracomment>deletion confirmation text</extracomment>
+        <translation type="unfinished">Haluatko varmasti poistaa salasanasi?</translation>
+    </message>
+    <message>
+        <source>Images (%1)</source>
+        <comment>filetype filter</comment>
+        <translation type="unfinished">Kuvat (%1)</translation>
+    </message>
+</context>
+<context>
+    <name>ProfileImporter</name>
+    <message>
+        <source>Import profile</source>
+        <comment>import dialog title</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/callconfirmwidget.cpp" line="28"/>
-        <source>Incoming call...</source>
-        <translation type="unfinished"></translation>
+        <source>Tox save file (*.tox)</source>
+        <comment>import dialog filter</comment>
+        <translation>Tox-tiedosto (*.tox)</translation>
     </message>
     <message>
-        <location filename="../src/widget/toxsave.cpp" line="56"/>
         <source>Ignoring non-Tox file</source>
         <comment>popup title</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/toxsave.cpp" line="57"/>
-        <source>Warning: you&apos;ve chosen a file that is not a Tox save file; ignoring.</source>
+        <source>Warning: You have chosen a file that is not a Tox save file; ignoring.</source>
         <comment>popup text</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/toxsave.cpp" line="63"/>
         <source>Profile already exists</source>
         <comment>import confirm title</comment>
-        <translation type="unfinished"></translation>
+        <translation>Profiili on jo olemassa</translation>
     </message>
     <message>
-        <location filename="../src/widget/toxsave.cpp" line="64"/>
         <source>A profile named &quot;%1&quot; already exists. Do you want to erase it?</source>
         <comment>import confirm text</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/toxsave.cpp" line="70"/>
+        <source>File doesn&apos;t exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Profile doesn&apos;t exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Profile imported</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/toxsave.cpp" line="70"/>
         <source>%1.tox was successfully imported</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>QApplication</name>
     <message>
-        <location filename="../src/widget/toxuri.cpp" line="70"/>
-        <source>Tox me maybe?</source>
-        <comment>Default message in Tox URI friend requests. Write something appropriate!</comment>
-        <translation type="unfinished">Lisää kontakteihin?</translation>
+        <source>Ok</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Peru</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Kyllä</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Ei</translation>
+    </message>
+    <message>
+        <source>LTR</source>
+        <comment>Translate this string to the string &apos;RTL&apos; in right-to-left languages (for example Hebrew and Arabic) to get proper widget layout</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>SelfCamView</name>
+    <name>QMessageBox</name>
     <message>
-        <source>Tox video test</source>
-        <comment>Title of the window to test the video/webcam</comment>
-        <translation type="obsolete">Tox videotesti</translation>
+        <source>Couldn&apos;t add friend</source>
+        <translation>Kontaktin lisääminen epäonnistui</translation>
+    </message>
+    <message>
+        <source>%1 is not a valid Toxme address.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You can&apos;t add yourself as a friend!</source>
+        <comment>When trying to add your own Tox ID as friend</comment>
+        <translation>Et voi lisätä itseäsi kaveriksesi!</translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <source>Tox URI to parse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Starts new instance and loads specified profile.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Olive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Red</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Violet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Incoming call...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 here! Tox me maybe?</source>
+        <comment>Default message in Tox URI friend requests. Write something appropriate!</comment>
+        <translation>%1 täällä! Toxaa minun kanssa?</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <comment>No camera device set</comment>
+        <translation>Ei mitään</translation>
+    </message>
+    <message>
+        <source>Desktop</source>
+        <comment>Desktop as a camera input for screen sharing</comment>
+        <translation>Työpöytä</translation>
+    </message>
+    <message>
+        <source>Server doesn&apos;t support Toxme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You&apos;re making too many requests. Wait an hour and try again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This name is already in use</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This Tox ID is already registered under another name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please don&apos;t use a space in your name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password incorrect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You can&apos;t use this name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tox ID not sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>That user does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Virhe</translation>
+    </message>
+    <message>
+        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Problem with HTTPS connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Internal ToxMe error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reformatting text in progress..</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Starts new instance and opens the login screen.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dark blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dark olive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dark red</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dark violet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to load profile automatically.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>online</source>
+        <comment>contact status</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>away</source>
+        <comment>contact status</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>busy</source>
+        <comment>contact status</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>offline</source>
+        <comment>contact status</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>blocked</source>
+        <comment>contact status</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RemoveFriendDialog</name>
+    <message>
+        <source>Remove friend</source>
+        <translation>Poista kontakti</translation>
+    </message>
+    <message>
+        <source>Also remove chat history</source>
+        <translation>Poista myös keskusteluhistoria</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Poista</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to remove %1 from your contacts list?</source>
+        <translation>Oletko varma, että haluat poistaa kontaktin %1 kontaktilistastasi?</translation>
+    </message>
+    <message>
+        <source>Remove all chat history with the friend if set</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ScreenshotGrabber</name>
+    <message>
+        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <comment>Help text shown when no region has been selected yet</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Space</source>
+        <comment>[Space] key on the keyboard</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Escape</source>
+        <comment>[Escape] key on the keyboard</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <comment>Help text shown when a region has been selected</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter</source>
+        <comment>[Enter] key on the keyboard</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SearchForm</name>
+    <message>
+        <source>The text could not be found.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SearchSettingsForm</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start search:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>from the end</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>from the beginning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>after date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>before date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>00.00.0000</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Case sensitive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Whole words only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use regular expressions</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>SetPasswordDialog</name>
     <message>
-        <location filename="../src/widget/form/setpassworddialog.ui" line="14"/>
         <source>Set your password</source>
+        <translation>Aseta salasanasi</translation>
+    </message>
+    <message>
+        <source>Confirm:</source>
+        <translation>Vahvista:</translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation>Salasana:</translation>
+    </message>
+    <message>
+        <source>Password strength: %p%</source>
+        <translation>Salasanan vahvuus: %p%</translation>
+    </message>
+    <message>
+        <source>The password is too short</source>
+        <translation>Salasana on liian lyhyt</translation>
+    </message>
+    <message>
+        <source>The password doesn&apos;t match.</source>
+        <translation>Salasanat eivät täsmää.</translation>
+    </message>
+    <message>
+        <source>Confirm password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/setpassworddialog.ui" line="31"/>
-        <source>Repeat password</source>
+        <source>Confirm password input</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/setpassworddialog.ui" line="41"/>
-        <source>Type password</source>
+        <source>Password input</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/form/setpassworddialog.ui" line="65"/>
-        <source>Password strength</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/form/setpassworddialog.cpp" line="33"/>
-        <location filename="../src/widget/form/setpassworddialog.cpp" line="61"/>
-        <source>The passwords don&apos;t match.</source>
+        <source>Password input field, minimum 6 characters long</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Settings</name>
     <message>
-        <location filename="../src/misc/settings.cpp" line="124"/>
-        <source>Choose a profile</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/misc/settings.cpp" line="125"/>
-        <source>Please choose which identity to use</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>SettingsDialog</name>
-    <message>
-        <source>qTox – Settings</source>
-        <translation type="obsolete">qTox - Asetukset</translation>
-    </message>
-    <message>
-        <source>General</source>
-        <translation type="obsolete">Yleiset</translation>
-    </message>
-    <message>
-        <source>Identity</source>
-        <translation type="obsolete">Identiteetti</translation>
-    </message>
-    <message>
-        <source>Privacy</source>
-        <translation type="obsolete">Yksityisyys</translation>
-    </message>
-    <message>
-        <source>Audio/Video</source>
-        <translation type="obsolete">Audio/Video</translation>
-    </message>
-    <message>
-        <source>Ok</source>
-        <translation type="obsolete">Ok</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="obsolete">Peru</translation>
-    </message>
-    <message>
-        <source>Apply</source>
-        <translation type="obsolete">Ota käyttöön</translation>
-    </message>
-</context>
-<context>
-    <name>SettingsForm</name>
-    <message>
-        <source>User Settings</source>
-        <comment>&quot;Headline&quot; of the window</comment>
-        <translation type="obsolete">Einstellungen</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <comment>Username/nick</comment>
-        <translation type="obsolete">Benutzername</translation>
-    </message>
-    <message>
-        <source>Status</source>
-        <comment>Status message</comment>
-        <translation type="obsolete">Status</translation>
-    </message>
-    <message>
-        <source>Test video</source>
-        <comment>Text on a button to test the video/webcam</comment>
-        <translation type="obsolete">Video testen</translation>
-    </message>
-    <message>
-        <source>Enable IPv6 (recommended)</source>
-        <comment>Text on a checkbox to enable IPv6</comment>
-        <translation type="obsolete">IPv6 aktivieren (empfohlen)</translation>
-    </message>
-</context>
-<context>
-    <name>ToxDNS</name>
-    <message>
-        <location filename="../src/toxdns.cpp" line="64"/>
-        <source>The connection timed out</source>
-        <comment>The DNS gives the Tox ID associated to toxme.se addresses</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/toxdns.cpp" line="70"/>
-        <source>This address does not exist</source>
-        <comment>The DNS gives the Tox ID associated to toxme.se addresses</comment>
-        <translation type="unfinished">Osoitetta ei ole olemassa</translation>
-    </message>
-    <message>
-        <location filename="../src/toxdns.cpp" line="75"/>
-        <source>Error while looking up DNS</source>
-        <comment>The DNS gives the Tox ID associated to toxme.se addresses</comment>
-        <translation type="unfinished">Virhe DNS pyynnössä</translation>
-    </message>
-    <message>
-        <location filename="../src/toxdns.cpp" line="82"/>
-        <source>No text record found</source>
-        <comment>Error with the DNS</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/toxdns.cpp" line="89"/>
-        <source>Unexpected number of values in text record</source>
-        <comment>Error with the DNS</comment>
-        <translation type="unfinished">Odottamaton määrä tekstitietueita</translation>
-    </message>
-    <message>
-        <location filename="../src/toxdns.cpp" line="116"/>
-        <source>The version of Tox DNS used by this server is not supported</source>
-        <comment>Error with the DNS</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/toxdns.cpp" line="126"/>
-        <source>The DNS lookup does not contain any Tox ID</source>
-        <comment>Error with the DNS</comment>
-        <translation type="unfinished">DNS vastaus ei sisällä Tox ID:tä</translation>
-    </message>
-    <message>
-        <location filename="../src/toxdns.cpp" line="133"/>
-        <location filename="../src/toxdns.cpp" line="140"/>
-        <source>The DNS lookup does not contain a valid Tox ID</source>
-        <comment>Error with the DNS</comment>
-        <translation type="unfinished">DNS vastaus ei sisällä kelvollista Tox ID:tä</translation>
-    </message>
-    <message>
-        <location filename="../src/toxdns.cpp" line="223"/>
-        <location filename="../src/toxdns.cpp" line="269"/>
-        <source>It appears that qTox has to use the old tox1 protocol to access DNS record of your friend&apos;s Tox ID.
-Unfortunately tox1 is not secure, and you are at risk of someone hijacking what is sent between you and ToxDNS service.
-Should tox1 be used anyway?
-If unsure, press âNoâ, so that request to ToxDNS service will not be made using unsecure protocol.</source>
-        <translation type="unfinished"></translation>
+        <source>Circle #%1</source>
+        <translation>Piiri #%1</translation>
     </message>
 </context>
 <context>
     <name>ToxURIDialog</name>
     <message>
-        <location filename="../src/widget/toxuri.cpp" line="80"/>
         <source>Add a friend</source>
         <comment>Title of the window to add a friend through Tox URI</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/toxuri.cpp" line="82"/>
         <source>Do you want to add %1 as a friend?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/toxuri.cpp" line="83"/>
         <source>User ID:</source>
-        <translation type="unfinished">Käyttäjän ID:</translation>
+        <translation>Käyttäjän ID:</translation>
     </message>
     <message>
-        <location filename="../src/widget/toxuri.cpp" line="87"/>
         <source>Friend request message:</source>
-        <translation type="unfinished">Kontaktipyynnön viesti:</translation>
+        <translation>Kontaktipyynnön viesti:</translation>
     </message>
     <message>
-        <location filename="../src/widget/toxuri.cpp" line="92"/>
         <source>Send</source>
         <comment>Send a friend request</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/toxuri.cpp" line="93"/>
         <source>Cancel</source>
         <comment>Don&apos;t send a friend request</comment>
-        <translation type="unfinished">Peru</translation>
+        <translation>Peru</translation>
+    </message>
+</context>
+<context>
+    <name>UserInterfaceForm</name>
+    <message>
+        <source>None</source>
+        <translation>Ei mitään</translation>
+    </message>
+    <message>
+        <source>User Interface</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>UserInterfaceSettings</name>
+    <message>
+        <source>Chat</source>
+        <translation>Keskustelu</translation>
+    </message>
+    <message>
+        <source>Base font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>px</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New text styling preference may not load until qTox restarts.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text Style format:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select text styling preference.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plaintext</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show formatting characters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Don&apos;t show formatting characters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New message</source>
+        <translation>Uusi viesti</translation>
+    </message>
+    <message>
+        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <comment>tooltip for Show window setting</comment>
+        <translation>Avaa qTox-ikkuna kun saat uuden viestin eikä mikään ikkuna ole vielä auki.</translation>
+    </message>
+    <message>
+        <source>Open window</source>
+        <translation>Avaa ikkuna</translation>
+    </message>
+    <message>
+        <source>Contact list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If checked, groupchats will be placed at the top of the friends list, otherwise, they&apos;ll be placed below online friends.</source>
+        <comment>toolTip for groupchat positioning</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place groupchats at top of friend list</source>
+        <translation>Näytä ryhmäkeskustelut kontaktilistan yläpäässä</translation>
+    </message>
+    <message>
+        <source>Your contact list will be shown in compact mode.</source>
+        <comment>toolTip for compact layout setting</comment>
+        <translation>Kontaktilistasi näytetään pienenä.</translation>
+    </message>
+    <message>
+        <source>Compact contact list</source>
+        <translation type="unfinished">Pieni kontaktilista</translation>
+    </message>
+    <message>
+        <source>Multiple windows mode</source>
+        <translation type="unfinished">Useamman ikkunan käytäntö</translation>
+    </message>
+    <message>
+        <source>Open each chat in an individual window</source>
+        <translation type="unfinished">Avaa kukin keskustelu omaan ikkunaansa</translation>
+    </message>
+    <message>
+        <source>Emoticons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use emoticons</source>
+        <translation>Käytä hymiöitä</translation>
+    </message>
+    <message>
+        <source>Smiley Pack:</source>
+        <extracomment>Text on smiley pack label</extracomment>
+        <translation>Hymiöpaketti:</translation>
+    </message>
+    <message>
+        <source>Emoticon size:</source>
+        <translation>Hymiöiden koko:</translation>
+    </message>
+    <message>
+        <source> px</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Theme</source>
+        <translation>Teema</translation>
+    </message>
+    <message>
+        <source>Style:</source>
+        <translation>Tyyli:</translation>
+    </message>
+    <message>
+        <source>Theme color:</source>
+        <translation>Teeman väri:</translation>
+    </message>
+    <message>
+        <source>Timestamp format:</source>
+        <translation>Aikaleiman muoto:</translation>
+    </message>
+    <message>
+        <source>Date format:</source>
+        <translation>Päivämäärän muoto:</translation>
+    </message>
+    <message>
+        <source>If enabled every contact without an avatar set will have a generated avatar based on their Tox ID instead of a default picture. Requires restart to apply.</source>
+        <comment>toolTip for show identicons</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use identicons instead of empty avatars</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use colored nicknames in chats</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show a notification when you receive a new message and the window is not selected.</source>
+        <comment>tooltip for Notify setting</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Notify</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Onlys notify about new messages in groupchats when mentioned.</source>
+        <comment>toolTip for Group chats only notify when mentioned</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group chats only notify when mentioned</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Play sound</source>
+        <translation type="unfinished">Toista ääni</translation>
+    </message>
+    <message>
+        <source>Play sound while Busy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Notify via desktop notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hide message sender and contents</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Widget</name>
     <message>
-        <source>Tox</source>
-        <translation type="obsolete">Tox</translation>
-    </message>
-    <message>
         <source>Your name</source>
-        <translation type="obsolete">Dein Name</translation>
+        <translation>Nimesi</translation>
     </message>
     <message>
-        <source>Your status</source>
-        <translation type="obsolete">Dein Status</translation>
-    </message>
-    <message>
-        <source>Close</source>
-        <translation type="obsolete">Schließen</translation>
-    </message>
-    <message>
-        <source>Ctrl+Q</source>
-        <translation type="obsolete">Strg+Q</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="105"/>
         <source>Online</source>
         <comment>Button to set your status to &apos;Online&apos;</comment>
         <translation>Online</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="108"/>
         <source>Away</source>
         <comment>Button to set your status to &apos;Away&apos;</comment>
         <translation>Poissa</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="111"/>
         <source>Busy</source>
         <comment>Button to set your status to &apos;Busy&apos;</comment>
         <translation>Kiireinen</translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="121"/>
-        <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="353"/>
-        <source>Choose a profile picture</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="362"/>
-        <location filename="../src/widget/widget.cpp" line="369"/>
-        <location filename="../src/widget/widget.cpp" line="390"/>
-        <source>Error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="362"/>
-        <source>Unable to open this file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="369"/>
-        <source>Unable to read this image</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="390"/>
-        <source>This image is too big</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="430"/>
-        <source>Toxcore failed to start, the application will terminate after you close this message.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="439"/>
         <source>toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="488"/>
-        <source>Add friend</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="500"/>
-        <source>File transfers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="545"/>
-        <source>Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="654"/>
         <source>Couldn&apos;t request friendship</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="682"/>
-        <source>away</source>
-        <comment>contact status</comment>
+        <source>Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="684"/>
-        <source>busy</source>
-        <comment>contact status</comment>
+        <source>toxcore failed to start, the application will terminate after you close this message.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="686"/>
-        <source>offline</source>
-        <comment>contact status</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="688"/>
-        <source>online</source>
-        <comment>contact status</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="691"/>
-        <source>%1 is now %2</source>
-        <comment>e.g. &quot;Dubslow is now online&quot;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="867"/>
-        <source>Group invite</source>
+        <source>Executable file</source>
         <comment>popup title</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="867"/>
-        <source>%1 has invited you to a groupchat. Would you like to join?</source>
+        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="922"/>
-        <source>&lt;Unknown&gt;</source>
-        <comment>Placeholder when we don&apos;t know someone&apos;s name in a group chat</comment>
-        <translation>&lt;tuntematon&gt;</translation>
-    </message>
-    <message>
-        <location filename="../src/widget/widget.cpp" line="948"/>
-        <source>%1 has set the title to %2</source>
+        <source>Message failed to send</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/widget/widget.cpp" line="1105"/>
-        <source>Message failed to send</source>
+        <source>Add new circle...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>By Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>By Activity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Online</source>
+        <translation type="unfinished">Online</translation>
+    </message>
+    <message>
+        <source>Offline</source>
+        <translation type="unfinished">Yhteydetön</translation>
+    </message>
+    <message>
+        <source>Friends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Groups</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search Contacts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logout</source>
+        <comment>Tray action menu to logout user</comment>
+        <translation>Kirjaudu ulos</translation>
+    </message>
+    <message>
+        <source>Exit</source>
+        <comment>Tray action menu to exit tox</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Change Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit Profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add Contact...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next Conversation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Previous Conversation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Groupchat #%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create new group...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n New Friend Request(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>%n New Group Invite(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Show</source>
+        <comment>Tray action menu to show qTox window</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add friend</source>
+        <comment>title of the window</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group invites</source>
+        <comment>title of the window</comment>
+        <translation type="unfinished">Ryhmäkutsut</translation>
+    </message>
+    <message>
+        <source>File transfers</source>
+        <comment>title of the window</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <comment>title of the window</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>My profile</source>
+        <comment>title of the window</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to send file &quot;%1&quot;</source>
+        <translation type="unfinished">Tiedoston %1 lähettäminen epäonnistui</translation>
+    </message>
+    <message>
+        <source>File sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> sent you a friend request.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> invites you to join a group.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

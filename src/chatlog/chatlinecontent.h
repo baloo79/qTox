@@ -1,17 +1,20 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #ifndef CHATLINECONTENT_H
@@ -21,8 +24,11 @@
 
 class ChatLine;
 
-class ChatLineContent : public QGraphicsItem
+class ChatLineContent : public QObject, public QGraphicsItem
 {
+    Q_OBJECT
+    Q_INTERFACES(QGraphicsItem)
+
 public:
     enum GraphicsItemType
     {
@@ -33,15 +39,17 @@ public:
     int getRow() const;
 
     virtual void setWidth(qreal width) = 0;
-    virtual int type() const final;
+    int type() const final;
 
     virtual void selectionMouseMove(QPointF scenePos);
     virtual void selectionStarted(QPointF scenePos);
     virtual void selectionCleared();
     virtual void selectionDoubleClick(QPointF scenePos);
+    virtual void selectionTripleClick(QPointF scenePos);
     virtual void selectionFocusChanged(bool focusIn);
     virtual bool isOverSelection(QPointF scenePos) const;
     virtual QString getSelectedText() const;
+    virtual void fontChanged(const QFont& font);
 
     virtual QString getText() const;
 
@@ -51,6 +59,7 @@ public:
     virtual void paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) = 0;
 
     virtual void visibilityChanged(bool visible);
+    virtual void reloadTheme();
 
 private:
     friend class ChatLine;

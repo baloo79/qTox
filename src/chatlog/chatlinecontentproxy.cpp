@@ -1,39 +1,66 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "chatlinecontentproxy.h"
-#include <QLayout>
-#include <QWidget>
-#include <QPainter>
+#include "src/chatlog/content/filetransferwidget.h"
 #include <QDebug>
+#include <QLayout>
+#include <QPainter>
+#include <QWidget>
 
-ChatLineContentProxy::ChatLineContentProxy(QWidget* widget, int minWidth, float widthInPercent)
-    : widthMin(minWidth)
-    , widthPercent(widthInPercent)
+/**
+ * @enum ChatLineContentProxy::ChatLineContentProxyType
+ * @brief Type tag to avoid dynamic_cast of contained QWidget*
+ *
+ * @value GenericType
+ * @value FileTransferWidgetType = 0
+ */
+
+ChatLineContentProxy::ChatLineContentProxy(QWidget* widget, ChatLineContentProxyType type,
+                                           int minWidth, float widthInPercent)
+    : widthPercent(widthInPercent)
+    , widthMin(minWidth)
+    , widgetType{type}
 {
     proxy = new QGraphicsProxyWidget(this);
     proxy->setWidget(widget);
 }
 
-QRectF ChatLineContentProxy::boundingRect() const
+ChatLineContentProxy::ChatLineContentProxy(QWidget* widget, int minWidth, float widthInPercent)
+    : ChatLineContentProxy(widget, GenericType, minWidth, widthInPercent)
 {
-    return proxy->boundingRect();
 }
 
-void ChatLineContentProxy::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+ChatLineContentProxy::ChatLineContentProxy(FileTransferWidget* widget, int minWidth, float widthInPercent)
+    : ChatLineContentProxy(widget, FileTransferWidgetType, minWidth, widthInPercent)
+{
+}
+
+QRectF ChatLineContentProxy::boundingRect() const
+{
+    QRectF result = proxy->boundingRect();
+    result.setHeight(result.height() + 5);
+    return result;
+}
+
+void ChatLineContentProxy::paint(QPainter* painter, const QStyleOptionGraphicsItem* option,
+                                 QWidget* widget)
 {
     painter->setClipRect(boundingRect());
     proxy->paint(painter, option, widget);
@@ -41,15 +68,21 @@ void ChatLineContentProxy::paint(QPainter *painter, const QStyleOptionGraphicsIt
 
 qreal ChatLineContentProxy::getAscent() const
 {
-    return 0;
+    return 7.0;
 }
 
-QWidget *ChatLineContentProxy::getWidget() const
+QWidget* ChatLineContentProxy::getWidget() const
 {
     return proxy->widget();
 }
 
 void ChatLineContentProxy::setWidth(qreal width)
 {
-    proxy->widget()->setFixedWidth(qMax(static_cast<int>(width*widthPercent), widthMin));
+    prepareGeometryChange();
+    proxy->widget()->setFixedWidth(qMax(static_cast<int>(width * widthPercent), widthMin));
+}
+
+ChatLineContentProxy::ChatLineContentProxyType ChatLineContentProxy::getWidgetType() const
+{
+    return widgetType;
 }

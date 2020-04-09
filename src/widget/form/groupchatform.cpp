@@ -1,246 +1,351 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "groupchatform.h"
-#include "tabcompleter.h"
-#include "src/group.h"
-#include "src/widget/groupwidget.h"
-#include "src/widget/tool/chattextedit.h"
-#include "src/widget/croppinglabel.h"
-#include "src/widget/maskablepixmapwidget.h"
-#include "src/core.h"
-#include "src/misc/style.h"
-#include <QPushButton>
-#include <QMimeData>
-#include <QDragEnterEvent>
-#include "src/historykeeper.h"
-#include "src/misc/flowlayout.h"
-#include <QDebug>
 
-GroupChatForm::GroupChatForm(Group* chatGroup)
-    : group(chatGroup), inCall{false}
+#include "tabcompleter.h"
+#include "src/core/core.h"
+#include "src/core/coreav.h"
+#include "src/core/groupid.h"
+#include "src/chatlog/chatlog.h"
+#include "src/chatlog/content/text.h"
+#include "src/model/friend.h"
+#include "src/friendlist.h"
+#include "src/model/group.h"
+#include "src/widget/chatformheader.h"
+#include "src/widget/flowlayout.h"
+#include "src/widget/form/chatform.h"
+#include "src/widget/groupwidget.h"
+#include "src/widget/maskablepixmapwidget.h"
+#include "src/widget/style.h"
+#include "src/widget/tool/croppinglabel.h"
+#include "src/widget/translator.h"
+#include "src/persistence/settings.h"
+
+#include <QDragEnterEvent>
+#include <QMimeData>
+#include <QRegularExpression>
+#include <QTimer>
+#include <QToolButton>
+#include <QPushButton>
+
+namespace
+{
+const auto LABEL_PEER_TYPE_OUR = QVariant(QStringLiteral("our"));
+const auto LABEL_PEER_TYPE_MUTED = QVariant(QStringLiteral("muted"));
+const auto LABEL_PEER_PLAYING_AUDIO = QVariant(QStringLiteral("true"));
+const auto LABEL_PEER_NOT_PLAYING_AUDIO = QVariant(QStringLiteral("false"));
+const auto PEER_LABEL_STYLE_SHEET_PATH = QStringLiteral("chatArea/chatHead.css");
+}
+
+/**
+ * @brief Edit name for correct representation if it is needed
+ * @param name Editing string
+ * @return Source name if it does not contain any newline character, otherwise it chops characters
+ * starting with first newline character and appends "..."
+ */
+QString editName(const QString& name)
+{
+    const int pos = name.indexOf(QRegularExpression(QStringLiteral("[\n\r]")));
+    if (pos == -1) {
+        return name;
+    }
+
+    QString result = name;
+    const int len = result.length();
+    result.chop(len - pos);
+    result.append(QStringLiteral("…")); // \u2026 Unicode symbol, not just three separate dots
+    return result;
+}
+
+/**
+ * @var QList<QLabel*> GroupChatForm::peerLabels
+ * @brief Maps peernumbers to the QLabels in namesListLayout.
+ *
+ * @var QMap<int, QTimer*> GroupChatForm::peerAudioTimers
+ * @brief Timeout = peer stopped sending audio.
+ */
+
+GroupChatForm::GroupChatForm(Group* chatGroup, IChatLog& chatLog, IMessageDispatcher& messageDispatcher)
+    : GenericChatForm(chatGroup, chatLog, messageDispatcher)
+    , group(chatGroup)
+    , inCall(false)
 {
     nusersLabel = new QLabel();
 
     tabber = new TabCompleter(msgEdit, group);
 
     fileButton->setEnabled(false);
-    if (group->isAvGroupchat())
-    {
-        videoButton->setEnabled(false);
-        videoButton->setObjectName("grey");
-    }
-    else
-    {
-        videoButton->setVisible(false);
-        callButton->setVisible(false);
-        volButton->setVisible(false);
-        micButton->setVisible(false);
+    fileButton->setProperty("state", "");
+    ChatFormHeader::Mode mode = ChatFormHeader::Mode::None;
+    if (group->isAvGroupchat()) {
+        mode = ChatFormHeader::Mode::Audio;
     }
 
-    nameLabel->setText(group->getGroupWidget()->getName());
+    headWidget->setMode(mode);
+    setName(group->getName());
 
     nusersLabel->setFont(Style::getFont(Style::Medium));
-    nusersLabel->setText(GroupChatForm::tr("%1 users in chat","Number of users in chat").arg(group->getPeersCount()));
     nusersLabel->setObjectName("statusLabel");
+    retranslateUi();
 
-    avatar->setPixmap(QPixmap(":/img/group_dark.png"), Qt::transparent);
+    const QSize& size = headWidget->getAvatarSize();
+    headWidget->setAvatar(Style::scaleSvgImage(":/img/group_dark.svg", size.width(), size.height()));
 
     msgEdit->setObjectName("group");
 
-    namesListLayout = new FlowLayout(0,5,0);
-    QStringList names(group->getPeerList());
-    QLabel *l;
-    
-    for (const QString& name : names)
-    {
-        l = new QLabel(name);
-        l->setTextFormat(Qt::PlainText);
-        namesListLayout->addWidget(l);
-    }
-    
-    headTextLayout->addWidget(nusersLabel);
-    headTextLayout->addLayout(namesListLayout);
-    headTextLayout->addStretch();
+    namesListLayout = new FlowLayout(0, 5, 0);
+    headWidget->addWidget(nusersLabel);
+    headWidget->addLayout(namesListLayout);
+    headWidget->addStretch();
 
-    nameLabel->setMinimumHeight(12);
+    //nameLabel->setMinimumHeight(12);
     nusersLabel->setMinimumHeight(12);
 
-    connect(sendButton, SIGNAL(clicked()), this, SLOT(onSendTriggered()));
-    connect(msgEdit, SIGNAL(enterPressed()), this, SLOT(onSendTriggered()));
     connect(msgEdit, &ChatTextEdit::tabPressed, tabber, &TabCompleter::complete);
     connect(msgEdit, &ChatTextEdit::keyPressed, tabber, &TabCompleter::reset);
-    connect(callButton, &QPushButton::clicked, this, &GroupChatForm::onCallClicked);
-    connect(micButton, SIGNAL(clicked()), this, SLOT(onMicMuteToggle()));
-    connect(volButton, SIGNAL(clicked()), this, SLOT(onVolMuteToggle()));
-    connect(nameLabel, &CroppingLabel::textChanged, this, [=](QString text, QString orig)
-        {if (text != orig) emit groupTitleChanged(group->getGroupId(), text.left(128));} );
+    connect(headWidget, &ChatFormHeader::callTriggered, this, &GroupChatForm::onCallClicked);
+    connect(headWidget, &ChatFormHeader::micMuteToggle, this, &GroupChatForm::onMicMuteToggle);
+    connect(headWidget, &ChatFormHeader::volMuteToggle, this, &GroupChatForm::onVolMuteToggle);
+    connect(headWidget, &ChatFormHeader::nameChanged, chatGroup, &Group::setName);
+    connect(group, &Group::titleChanged, this, &GroupChatForm::onTitleChanged);
+    connect(group, &Group::userJoined, this, &GroupChatForm::onUserJoined);
+    connect(group, &Group::userLeft, this, &GroupChatForm::onUserLeft);
+    connect(group, &Group::peerNameChanged, this, &GroupChatForm::onPeerNameChanged);
+    connect(group, &Group::numPeersChanged, this, &GroupChatForm::updateUserCount);
+    connect(&Settings::getInstance(), &Settings::blackListChanged, this, &GroupChatForm::updateUserNames);
 
+    updateUserNames();
     setAcceptDrops(true);
+    Translator::registerHandler(std::bind(&GroupChatForm::retranslateUi, this), this);
 }
 
-void GroupChatForm::onSendTriggered()
+GroupChatForm::~GroupChatForm()
 {
-    QString msg = msgEdit->toPlainText();
-    if (msg.isEmpty())
+    Translator::unregister(this);
+}
+
+void GroupChatForm::onTitleChanged(const QString& author, const QString& title)
+{
+    if (author.isEmpty()) {
         return;
-
-    msgEdit->clear();
-
-    if (msg.startsWith("/me "))
-    {
-        msg = msg.right(msg.length() - 4);
-        emit sendAction(group->getGroupId(), msg);
-    } else {
-        emit sendMessage(group->getGroupId(), msg);
     }
+
+    const QString message = tr("%1 has set the title to %2").arg(author, title);
+    const QDateTime curTime = QDateTime::currentDateTime();
+    addSystemInfoMessage(message, ChatMessage::INFO, curTime);
 }
 
-void GroupChatForm::onUserListChanged()
+void GroupChatForm::onScreenshotClicked()
 {
-    nusersLabel->setText(tr("%1 users in chat").arg(group->getPeersCount()));
+    // Unsupported
+}
 
-    QLayoutItem *child;
-    while ((child = namesListLayout->takeAt(0)))
-    {
+void GroupChatForm::onAttachClicked()
+{
+    // Unsupported
+}
+
+/**
+ * @brief Updates user names' labels at the top of group chat
+ */
+void GroupChatForm::updateUserNames()
+{
+    QLayoutItem* child;
+    while ((child = namesListLayout->takeAt(0))) {
         child->widget()->hide();
         delete child->widget();
         delete child;
     }
 
-    QStringList names(group->getPeerList());
-    unsigned nNames = names.size();
-    for (unsigned i=0; i<nNames; ++i)
+    peerLabels.clear();
+    const auto peers = group->getPeerList();
+
+    // no need to do anything without any peers
+    if (peers.isEmpty()) {
+        return;
+    }
+
+    /* we store the peer labels by their ToxPk, but the namelist layout
+     * needs it in alphabetical order, so we first create and store the labels
+     * and then sort them by their text and add them to the layout in that order */
+    const auto selfPk = Core::getInstance()->getSelfPublicKey();
+    for (const auto& peerPk : peers.keys()) {
+        const QString peerName = peers.value(peerPk);
+        const QString editedName = editName(peerName);
+        QLabel* const label = new QLabel(editedName + QLatin1String(", "));
+        if (editedName != peerName) {
+            label->setToolTip(peerName + " (" + peerPk.toString() + ")");
+        } else if (peerName != peerPk.toString()) {
+            label->setToolTip(peerPk.toString());
+        } // else their name is just their Pk, no tooltip needed
+        label->setTextFormat(Qt::PlainText);
+        label->setContextMenuPolicy(Qt::CustomContextMenu);
+
+        const Settings& s = Settings::getInstance();
+        connect(label, &QLabel::customContextMenuRequested, this, &GroupChatForm::onLabelContextMenuRequested);
+
+        if (peerPk == selfPk) {
+            label->setProperty("peerType", LABEL_PEER_TYPE_OUR);
+        } else if (s.getBlackList().contains(peerPk.toString())) {
+            label->setProperty("peerType", LABEL_PEER_TYPE_MUTED);
+        }
+
+        label->setStyleSheet(Style::getStylesheet(PEER_LABEL_STYLE_SHEET_PATH));
+        peerLabels.insert(peerPk, label);
+    }
+
+    // add the labels in alphabetical order into the layout
+    auto nickLabelList = peerLabels.values();
+
+    std::sort(nickLabelList.begin(), nickLabelList.end(), [](const QLabel* a, const QLabel* b)
     {
-        QString nameStr = names[i];
-        if (i!=nNames-1)
-            nameStr+=", ";
-        QLabel* nameLabel = new QLabel(nameStr);
-        nameLabel->setObjectName("peersLabel");
-        nameLabel->setTextFormat(Qt::PlainText);
-        namesListLayout->addWidget(nameLabel);
+        return a->text().toLower() < b->text().toLower();
+    });
+
+    // remove comma from last sorted label
+    QLabel* const lastLabel = nickLabelList.last();
+    QString labelText = lastLabel->text();
+    labelText.chop(2);
+    lastLabel->setText(labelText);
+    for (QLabel* l : nickLabelList) {
+        namesListLayout->addWidget(l);
     }
 }
 
-void GroupChatForm::dragEnterEvent(QDragEnterEvent *ev)
+void GroupChatForm::onUserJoined(const ToxPk& user, const QString& name)
 {
-    if (ev->mimeData()->hasFormat("friend"))
+    addSystemInfoMessage(tr("%1 has joined the group").arg(name), ChatMessage::INFO, QDateTime::currentDateTime());
+    updateUserNames();
+}
+
+void GroupChatForm::onUserLeft(const ToxPk& user, const QString& name)
+{
+    addSystemInfoMessage(tr("%1 has left the group").arg(name), ChatMessage::INFO, QDateTime::currentDateTime());
+    updateUserNames();
+}
+
+void GroupChatForm::onPeerNameChanged(const ToxPk& peer, const QString& oldName, const QString& newName)
+{
+    addSystemInfoMessage(tr("%1 is now known as %2").arg(oldName, newName), ChatMessage::INFO, QDateTime::currentDateTime());
+    updateUserNames();
+}
+
+void GroupChatForm::peerAudioPlaying(ToxPk peerPk)
+{
+    peerLabels[peerPk]->setProperty("playingAudio", LABEL_PEER_PLAYING_AUDIO);
+    peerLabels[peerPk]->style()->unpolish(peerLabels[peerPk]);
+    peerLabels[peerPk]->style()->polish(peerLabels[peerPk]);
+    // TODO(sudden6): check if this can ever be false, cause [] default constructs
+    if (!peerAudioTimers[peerPk]) {
+        peerAudioTimers[peerPk] = new QTimer(this);
+        peerAudioTimers[peerPk]->setSingleShot(true);
+        connect(peerAudioTimers[peerPk], &QTimer::timeout, [this, peerPk] {
+            auto it = peerLabels.find(peerPk);
+            if (it != peerLabels.end()) {
+                peerLabels[peerPk]->setProperty("playingAudio", LABEL_PEER_NOT_PLAYING_AUDIO);
+                peerLabels[peerPk]->style()->unpolish(peerLabels[peerPk]);
+                peerLabels[peerPk]->style()->polish(peerLabels[peerPk]);
+            }
+            delete peerAudioTimers[peerPk];
+            peerAudioTimers[peerPk] = nullptr;
+        });
+    }
+
+    peerLabels[peerPk]->setStyleSheet(Style::getStylesheet(PEER_LABEL_STYLE_SHEET_PATH));
+    peerAudioTimers[peerPk]->start(500);
+}
+
+void GroupChatForm::dragEnterEvent(QDragEnterEvent* ev)
+{
+    if (!ev->mimeData()->hasFormat("toxPk")) {
+        return;
+    }
+    ToxPk toxPk{ev->mimeData()->data("toxPk")};
+    Friend* frnd = FriendList::findFriend(toxPk);
+    if (frnd)
         ev->acceptProposedAction();
 }
 
-void GroupChatForm::dropEvent(QDropEvent *ev)
+void GroupChatForm::dropEvent(QDropEvent* ev)
 {
-    if (ev->mimeData()->hasFormat("friend"))
-    {
-        int friendId = ev->mimeData()->data("friend").toInt();
-        Core::getInstance()->groupInviteFriend(friendId, group->getGroupId());
+    if (!ev->mimeData()->hasFormat("toxPk")) {
+        return;
+    }
+    ToxPk toxPk{ev->mimeData()->data("toxPk")};
+    Friend* frnd = FriendList::findFriend(toxPk);
+    if (!frnd)
+        return;
+
+    int friendId = frnd->getId();
+    int groupId = group->getId();
+    if (Status::isOnline(frnd->getStatus())) {
+        Core::getInstance()->groupInviteFriend(friendId, groupId);
     }
 }
 
 void GroupChatForm::onMicMuteToggle()
 {
-    if (audioInputFlag == true)
-    {
-        if (micButton->objectName() == "red")
-        {
-            Core::getInstance()->enableGroupCallMic(group->getGroupId());
-            micButton->setObjectName("green");
-            micButton->setToolTip(tr("Mute microphone"));
-        }
-        else
-        {
-            Core::getInstance()->disableGroupCallMic(group->getGroupId());
-            micButton->setObjectName("red");
-            micButton->setToolTip(tr("Unmute microphone"));
-        }
-
-        Style::repolish(micButton);
+    if (audioInputFlag) {
+        CoreAV* av = Core::getInstance()->getAv();
+        const bool oldMuteState = av->isGroupCallInputMuted(group);
+        const bool newMute = !oldMuteState;
+        av->muteCallInput(group, newMute);
+        headWidget->updateMuteMicButton(inCall, newMute);
     }
 }
 
 void GroupChatForm::onVolMuteToggle()
 {
-    if (audioOutputFlag == true)
-    {
-        if (volButton->objectName() == "red")
-        {
-            Core::getInstance()->enableGroupCallVol(group->getGroupId());
-            volButton->setObjectName("green");
-            volButton->setToolTip(tr("Mute call"));
-        }
-        else
-        {
-            Core::getInstance()->disableGroupCallVol(group->getGroupId());
-            volButton->setObjectName("red");
-            volButton->setToolTip(tr("Unmute call"));
-        }
-
-        Style::repolish(volButton);
+    if (audioOutputFlag) {
+        CoreAV* av = Core::getInstance()->getAv();
+        const bool oldMuteState = av->isGroupCallOutputMuted(group);
+        const bool newMute = !oldMuteState;
+        av->muteCallOutput(group, newMute);
+        headWidget->updateMuteVolButton(inCall, newMute);
     }
 }
 
 void GroupChatForm::onCallClicked()
 {
-    if (!inCall)
-    {
-        Core::getInstance()->joinGroupCall(group->getGroupId());
-        audioInputFlag = true;
-        audioOutputFlag = true;
-        callButton->setObjectName("red");
-        callButton->style()->polish(callButton);
-        callButton->setToolTip(tr("End audio call"));
-        micButton->setObjectName("green");
-        micButton->style()->polish(micButton);
-        micButton->setToolTip(tr("Mute microphone"));
-        volButton->setObjectName("green");
-        volButton->style()->polish(volButton);
-        volButton->setToolTip(tr("Mute call"));
-        inCall = true;
+    CoreAV* av = Core::getInstance()->getAv();
+
+    if (!inCall) {
+        joinGroupCall();
+    } else {
+        leaveGroupCall();
     }
-    else
-    {
-        Core::getInstance()->leaveGroupCall(group->getGroupId());
-        audioInputFlag = false;
-        audioOutputFlag = false;
-        callButton->setObjectName("green");
-        callButton->style()->polish(callButton);
-        callButton->setToolTip(tr("Start audio call"));
-        micButton->setObjectName("grey");
-        micButton->style()->polish(micButton);
-        micButton->setToolTip("");
-        volButton->setObjectName("grey");
-        volButton->style()->polish(volButton);
-        volButton->setToolTip("");
-        inCall = false;
-    }
+
+    headWidget->updateCallButtons(true, inCall);
+
+    const bool inMute = av->isGroupCallInputMuted(group);
+    headWidget->updateMuteMicButton(inCall, inMute);
+
+    const bool outMute = av->isGroupCallOutputMuted(group);
+    headWidget->updateMuteVolButton(inCall, outMute);
 }
 
 void GroupChatForm::keyPressEvent(QKeyEvent* ev)
 {
     // Push to talk (CTRL+P)
-    if (ev->key() == Qt::Key_P && (ev->modifiers() & Qt::ControlModifier) && inCall)
-    {
-        Core* core = Core::getInstance();
-        if (!core->isGroupCallMicEnabled(group->getGroupId()))
-        {
-            core->enableGroupCallMic(group->getGroupId());
-            micButton->setObjectName("green");
-            micButton->style()->polish(micButton);
-            Style::repolish(micButton);
-        }
+    if (ev->key() == Qt::Key_P && (ev->modifiers() & Qt::ControlModifier) && inCall) {
+        onMicMuteToggle();
     }
 
     if (msgEdit->hasFocus())
@@ -250,18 +355,99 @@ void GroupChatForm::keyPressEvent(QKeyEvent* ev)
 void GroupChatForm::keyReleaseEvent(QKeyEvent* ev)
 {
     // Push to talk (CTRL+P)
-    if (ev->key() == Qt::Key_P && (ev->modifiers() & Qt::ControlModifier) && inCall)
-    {
-        Core* core = Core::getInstance();
-        if (core->isGroupCallMicEnabled(group->getGroupId()))
-        {
-            core->disableGroupCallMic(group->getGroupId());
-            micButton->setObjectName("red");
-            micButton->style()->polish(micButton);
-            Style::repolish(micButton);
-        }
+    if (ev->key() == Qt::Key_P && (ev->modifiers() & Qt::ControlModifier) && inCall) {
+        onMicMuteToggle();
     }
 
     if (msgEdit->hasFocus())
         return;
+}
+
+/**
+ * @brief Updates users' count label text
+ */
+void GroupChatForm::updateUserCount(int numPeers)
+{
+    nusersLabel->setText(tr("%n user(s) in chat", "Number of users in chat", numPeers));
+    headWidget->updateCallButtons(true, inCall);
+}
+
+void GroupChatForm::retranslateUi()
+{
+    updateUserCount(group->getPeersCount());
+}
+
+void GroupChatForm::onLabelContextMenuRequested(const QPoint& localPos)
+{
+    QLabel* label = static_cast<QLabel*>(QObject::sender());
+
+    if (label == nullptr) {
+        return;
+    }
+
+    const QPoint pos = label->mapToGlobal(localPos);
+    const QString muteString = tr("mute");
+    const QString unmuteString = tr("unmute");
+    Settings& s = Settings::getInstance();
+    QStringList blackList = s.getBlackList();
+    QMenu* const contextMenu = new QMenu(this);
+    const ToxPk selfPk = Core::getInstance()->getSelfPublicKey();
+    ToxPk peerPk;
+
+    // delete menu after it stops being used
+    connect(contextMenu, &QMenu::aboutToHide, contextMenu, &QObject::deleteLater);
+
+    peerPk = peerLabels.key(label);
+    if (peerPk.isEmpty() || peerPk == selfPk) {
+        return;
+    }
+
+    const bool isPeerBlocked = blackList.contains(peerPk.toString());
+    QString menuTitle = label->text();
+    if (menuTitle.endsWith(QLatin1String(", "))) {
+        menuTitle.chop(2);
+    }
+    QAction* menuTitleAction = contextMenu->addAction(menuTitle);
+    menuTitleAction->setEnabled(false); // make sure the title is not clickable
+    contextMenu->addSeparator();
+
+    const QAction* toggleMuteAction;
+    if (isPeerBlocked) {
+        toggleMuteAction = contextMenu->addAction(unmuteString);
+    } else {
+        toggleMuteAction = contextMenu->addAction(muteString);
+    }
+    contextMenu->setStyleSheet(Style::getStylesheet(PEER_LABEL_STYLE_SHEET_PATH));
+
+    const QAction* selectedItem = contextMenu->exec(pos);
+    if (selectedItem == toggleMuteAction) {
+        if (isPeerBlocked) {
+            const int index = blackList.indexOf(peerPk.toString());
+            if (index != -1) {
+                blackList.removeAt(index);
+            }
+        } else {
+            blackList << peerPk.toString();
+        }
+
+        s.setBlackList(blackList);
+    }
+}
+
+void GroupChatForm::joinGroupCall()
+{
+    CoreAV* av = Core::getInstance()->getAv();
+    av->joinGroupCall(*group);
+    audioInputFlag = true;
+    audioOutputFlag = true;
+    inCall = true;
+}
+
+void GroupChatForm::leaveGroupCall()
+{
+    CoreAV* av = Core::getInstance()->getAv();
+    av->leaveGroupCall(group->getId());
+    audioInputFlag = false;
+    audioOutputFlag = false;
+    inCall = false;
 }

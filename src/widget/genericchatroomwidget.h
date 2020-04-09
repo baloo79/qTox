@@ -1,79 +1,90 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #ifndef GENERICCHATROOMWIDGET_H
 #define GENERICCHATROOMWIDGET_H
 
-#include <QFrame>
-#include <QHBoxLayout>
-#include <QVBoxLayout>
-#include <QLabel>
+#include "genericchatitemwidget.h"
 
 class CroppingLabel;
 class MaskablePixmapWidget;
-
-namespace Ui {
-    class MainWindow;
-}
-
-class GenericChatroomWidget : public QFrame
+class QVBoxLayout;
+class QHBoxLayout;
+class ContentLayout;
+class Friend;
+class Group;
+class Contact;
+class GenericChatroomWidget : public GenericChatItemWidget
 {
     Q_OBJECT
 public:
-    GenericChatroomWidget(QWidget *parent = 0);
-    void mouseReleaseEvent (QMouseEvent* event);
+    explicit GenericChatroomWidget(bool compact, QWidget* parent = nullptr);
 
-    virtual void setAsActiveChatroom(){;}
-    virtual void setAsInactiveChatroom(){;}
-    virtual void updateStatusLight(){;}
-    virtual void setChatForm(Ui::MainWindow &){;}
-    virtual void resetEventFlags(){;}
+public slots:
+    virtual void setAsActiveChatroom() = 0;
+    virtual void setAsInactiveChatroom() = 0;
+    virtual void updateStatusLight() = 0;
+    virtual void resetEventFlags() = 0;
+    virtual QString getStatusString() const = 0;
+    virtual const Contact* getContact() const = 0;
+    virtual const Friend* getFriend() const
+    {
+        return nullptr;
+    }
+    virtual Group* getGroup() const
+    {
+        return nullptr;
+    }
+
+    bool eventFilter(QObject*, QEvent*) final;
 
     bool isActive();
-    void setActive(bool active);
 
     void setName(const QString& name);
     void setStatusMsg(const QString& status);
-
-    QString getName() const;
     QString getStatusMsg() const;
+    QString getTitle() const;
 
     void reloadTheme();
 
-    bool isCompact() const;
-    void setCompact(bool compact);
-
-    Q_PROPERTY(bool compact READ isCompact WRITE setCompact)
+    void activate();
+    void compactChange(bool compact);
 
 signals:
     void chatroomWidgetClicked(GenericChatroomWidget* widget);
-
-public slots:
-    void onCompactChanged(bool compact);
+    void newWindowOpened(GenericChatroomWidget* widget);
+    void middleMouseClicked();
 
 protected:
+    void mouseReleaseEvent(QMouseEvent* event) override;
+    void enterEvent(QEvent* e) override;
+    void leaveEvent(QEvent* e) override;
+    void setActive(bool active);
+
+protected:
+    QPoint dragStartPos;
     QColor lastColor;
-    QHBoxLayout* layout = nullptr;
+    QHBoxLayout* mainLayout = nullptr;
     QVBoxLayout* textLayout = nullptr;
     MaskablePixmapWidget* avatar;
-    QLabel statusPic;
-    CroppingLabel* nameLabel, * statusMessageLabel;
-    bool compact;
-
-    friend class Style; ///< To update our stylesheets
+    CroppingLabel* statusMessageLabel;
+    bool active;
 };
 
 #endif // GENERICCHATROOMWIDGET_H

@@ -1,135 +1,146 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "genericchatroomwidget.h"
-#include "src/misc/style.h"
-#include "src/misc/settings.h"
 #include "maskablepixmapwidget.h"
-#include "croppinglabel.h"
+#include "src/persistence/settings.h"
+#include "src/widget/style.h"
+#include "src/widget/tool/croppinglabel.h"
+#include <QBoxLayout>
 #include <QMouseEvent>
-#include <QStyle>
 
-GenericChatroomWidget::GenericChatroomWidget(QWidget *parent)
-    : QFrame(parent)
+GenericChatroomWidget::GenericChatroomWidget(bool compact, QWidget* parent)
+    : GenericChatItemWidget(compact, parent)
+    , active{false}
 {
-    setProperty("compact", Settings::getInstance().getCompactLayout());
-
     // avatar
-    if (property("compact").toBool())
-    {
-        avatar = new MaskablePixmapWidget(this, QSize(20,20), ":/img/avatar_mask.png");
-    }
+    QSize size;
+    if (isCompact())
+        size = QSize(20, 20);
     else
-    {
-        avatar = new MaskablePixmapWidget(this, QSize(40,40), ":/img/avatar_mask.png");
-    }
+        size = QSize(40, 40);
+
+    avatar = new MaskablePixmapWidget(this, size, ":/img/avatar_mask.svg");
 
     // status text
     statusMessageLabel = new CroppingLabel(this);
-    statusMessageLabel->setObjectName("status");
-
-    // name text
-    nameLabel = new CroppingLabel(this);
-    nameLabel->setObjectName("name");
-    nameLabel->setTextFormat(Qt::PlainText);
     statusMessageLabel->setTextFormat(Qt::PlainText);
+    statusMessageLabel->setForegroundRole(QPalette::WindowText);
 
-    onCompactChanged(property("compact").toBool());
+    nameLabel->setForegroundRole(QPalette::WindowText);
 
-    setProperty("active", false);
-    setStyleSheet(Style::getStylesheet(":/ui/chatroomWidgets/genericChatroomWidget.css"));
+    Settings& s = Settings::getInstance();
+    connect(&s, &Settings::compactLayoutChanged, this, &GenericChatroomWidget::compactChange);
+
+    setAutoFillBackground(true);
+    reloadTheme();
+
+    compactChange(isCompact());
 }
 
-void GenericChatroomWidget::onCompactChanged(bool _compact)
+bool GenericChatroomWidget::eventFilter(QObject*, QEvent*)
 {
-    delete textLayout; // has to be first, deleted by layout
-    delete layout;
+    return true; // Disable all events.
+}
 
-    setProperty("compact", _compact);
+void GenericChatroomWidget::compactChange(bool _compact)
+{
+    if (!isCompact())
+        delete textLayout; // has to be first, deleted by layout
 
-    layout = new QHBoxLayout;
+    setCompact(_compact);
+
+    delete mainLayout;
+
+    mainLayout = new QHBoxLayout;
     textLayout = new QVBoxLayout;
 
-    setLayout(layout);
-    layout->setSpacing(0);
-    layout->setMargin(0);
+    setLayout(mainLayout);
+    mainLayout->setSpacing(0);
+    mainLayout->setMargin(0);
     textLayout->setSpacing(0);
     textLayout->setMargin(0);
     setLayoutDirection(Qt::LeftToRight); // parent might have set Qt::RightToLeft
 
     // avatar
-    if (property("compact").toBool())
-    {
+    if (isCompact()) {
+        delete textLayout; // Not needed
         setFixedHeight(25);
-        avatar->setSize(QSize(20,20));
-        layout->addSpacing(18);
-        layout->addWidget(avatar);
-        layout->addSpacing(5);
-        layout->addWidget(nameLabel);
-        layout->addWidget(statusMessageLabel);
-        layout->addSpacing(5);
-        layout->addWidget(&statusPic);
-        layout->addSpacing(5);
-        layout->activate();
-    }
-    else
-    {
+        avatar->setSize(QSize(20, 20));
+        mainLayout->addSpacing(18);
+        mainLayout->addWidget(avatar);
+        mainLayout->addSpacing(5);
+        mainLayout->addWidget(nameLabel);
+        mainLayout->addWidget(statusMessageLabel);
+        mainLayout->addSpacing(5);
+        mainLayout->addWidget(&statusPic);
+        mainLayout->addSpacing(5);
+        mainLayout->activate();
+        statusMessageLabel->setFont(Style::getFont(Style::Small));
+        nameLabel->setFont(Style::getFont(Style::Medium));
+    } else {
         setFixedHeight(55);
-        avatar->setSize(QSize(40,40));
+        avatar->setSize(QSize(40, 40));
         textLayout->addStretch();
         textLayout->addWidget(nameLabel);
         textLayout->addWidget(statusMessageLabel);
         textLayout->addStretch();
-        layout->addSpacing(20);
-        layout->addWidget(avatar);
-        layout->addSpacing(10);
-        layout->addLayout(textLayout);
-        layout->addSpacing(10);
-        layout->addWidget(&statusPic);
-        layout->addSpacing(10);
-        layout->activate();
+        mainLayout->addSpacing(20);
+        mainLayout->addWidget(avatar);
+        mainLayout->addSpacing(10);
+        mainLayout->addLayout(textLayout);
+        mainLayout->addSpacing(10);
+        mainLayout->addWidget(&statusPic);
+        mainLayout->addSpacing(10);
+        mainLayout->activate();
+        statusMessageLabel->setFont(Style::getFont(Style::Medium));
+        nameLabel->setFont(Style::getFont(Style::Big));
     }
-
-    Style::repolish(this);
 }
 
 bool GenericChatroomWidget::isActive()
 {
-    return property("active").toBool();
+    return active;
 }
 
-void GenericChatroomWidget::setActive(bool active)
+void GenericChatroomWidget::setActive(bool _active)
 {
-    setProperty("active", active);
-    Style::repolish(this);
+    active = _active;
+    if (active) {
+        setBackgroundRole(QPalette::Light);
+        statusMessageLabel->setForegroundRole(QPalette::HighlightedText);
+        nameLabel->setForegroundRole(QPalette::HighlightedText);
+    } else {
+        setBackgroundRole(QPalette::Window);
+        statusMessageLabel->setForegroundRole(QPalette::WindowText);
+        nameLabel->setForegroundRole(QPalette::WindowText);
+    }
 }
 
-void GenericChatroomWidget::setName(const QString &name)
+void GenericChatroomWidget::setName(const QString& name)
 {
     nameLabel->setText(name);
 }
 
-void GenericChatroomWidget::setStatusMsg(const QString &status)
+void GenericChatroomWidget::setStatusMsg(const QString& status)
 {
     statusMessageLabel->setText(status);
-}
-
-QString GenericChatroomWidget::getName() const
-{
-    return nameLabel->fullText();
 }
 
 QString GenericChatroomWidget::getStatusMsg() const
@@ -137,23 +148,62 @@ QString GenericChatroomWidget::getStatusMsg() const
     return statusMessageLabel->text();
 }
 
-void GenericChatroomWidget::mouseReleaseEvent(QMouseEvent*)
+QString GenericChatroomWidget::getTitle() const
 {
-    emit chatroomWidgetClicked(this);
+    QString title = getName();
+
+    if (!getStatusString().isNull())
+        title += QStringLiteral(" (") + getStatusString() + QStringLiteral(")");
+
+    return title;
 }
 
 void GenericChatroomWidget::reloadTheme()
 {
-    setStyleSheet(Style::getStylesheet(":/ui/chatroomWidgets/genericChatroomWidget.css"));
+    QPalette p;
+
+    p = statusMessageLabel->palette();
+    p.setColor(QPalette::WindowText, Style::getColor(Style::GroundExtra));       // Base color
+    p.setColor(QPalette::HighlightedText, Style::getColor(Style::StatusActive)); // Color when active
+    statusMessageLabel->setPalette(p);
+
+    p = nameLabel->palette();
+    p.setColor(QPalette::WindowText, Style::getColor(Style::GroundBase));           // Base color
+    p.setColor(QPalette::HighlightedText, Style::getColor(Style::NameActive)); // Color when active
+    nameLabel->setPalette(p);
+
+    p = palette();
+    p.setColor(QPalette::Window, Style::getColor(Style::ThemeMedium));   // Base background color
+    p.setColor(QPalette::Highlight, Style::getColor(Style::ThemeLight)); // On mouse over
+    p.setColor(QPalette::Light, Style::getColor(Style::GroundBase));          // When active
+    setPalette(p);
 }
 
-bool GenericChatroomWidget::isCompact() const
+void GenericChatroomWidget::activate()
 {
-    return compact;
+    emit chatroomWidgetClicked(this);
 }
 
-void GenericChatroomWidget::setCompact(bool compact)
+void GenericChatroomWidget::mouseReleaseEvent(QMouseEvent* event)
 {
-    this->compact = compact;
-    Style::repolish(this);
+    if (event->button() == Qt::LeftButton) {
+        emit chatroomWidgetClicked(this);
+    } else if (event->button() == Qt::MiddleButton) {
+        emit middleMouseClicked();
+    } else {
+        event->ignore();
+    }
+}
+
+void GenericChatroomWidget::enterEvent(QEvent*)
+{
+    if (!active)
+        setBackgroundRole(QPalette::Highlight);
+}
+
+void GenericChatroomWidget::leaveEvent(QEvent* event)
+{
+    if (!active)
+        setBackgroundRole(QPalette::Window);
+    QWidget::leaveEvent(event);
 }

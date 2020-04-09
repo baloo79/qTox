@@ -1,58 +1,70 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "friend.h"
 #include "friendlist.h"
-#include "src/misc/settings.h"
-#include <QMenu>
+#include "src/model/friend.h"
+#include "src/persistence/settings.h"
+#include "src/core/contactid.h"
+#include "src/core/toxpk.h"
 #include <QDebug>
 #include <QHash>
+#include <QMenu>
 
-QHash<int, Friend*> FriendList::friendList;
-QHash<QString, int> FriendList::tox2id;
+QHash<ToxPk, Friend*> FriendList::friendList;
+QHash<uint32_t, ToxPk> FriendList::id2key;
 
-Friend* FriendList::addFriend(int friendId, const ToxID& userId)
+Friend* FriendList::addFriend(uint32_t friendId, const ToxPk& friendPk)
 {
-    auto friendChecker = friendList.find(friendId);
-    if (friendChecker != friendList.end())
-        qWarning() << "FriendList::addFriend: friendId already taken";
+    auto friendChecker = friendList.find(friendPk);
+    if (friendChecker != friendList.end()) {
+        qWarning() << "addFriend: friendPk already taken";
+    }
 
-    Friend* newfriend = new Friend(friendId, userId);
-    friendList[friendId] = newfriend;
-    tox2id[userId.publicKey] = friendId;
+    QString alias = Settings::getInstance().getFriendAlias(friendPk);
+    Friend* newfriend = new Friend(friendId, friendPk, alias);
+    friendList[friendPk] = newfriend;
+    id2key[friendId] = friendPk;
 
     return newfriend;
 }
 
-Friend* FriendList::findFriend(int friendId)
+Friend* FriendList::findFriend(const ToxPk& friendPk)
 {
-    auto f_it = friendList.find(friendId);
-    if (f_it != friendList.end())
+    auto f_it = friendList.find(friendPk);
+    if (f_it != friendList.end()) {
         return *f_it;
+    }
 
     return nullptr;
 }
 
-void FriendList::removeFriend(int friendId, bool fake)
+const ToxPk& FriendList::id2Key(uint32_t friendId)
 {
-    auto f_it = friendList.find(friendId);
-    if (f_it != friendList.end())
-    {
+    return id2key[friendId];
+}
+
+void FriendList::removeFriend(const ToxPk& friendPk, bool fake)
+{
+    auto f_it = friendList.find(friendPk);
+    if (f_it != friendList.end()) {
         if (!fake)
-            Settings::getInstance().removeFriendSettings(f_it.value()->getToxID());
+            Settings::getInstance().removeFriendSettings(f_it.value()->getPublicKey());
         friendList.erase(f_it);
     }
 }
@@ -64,22 +76,19 @@ void FriendList::clear()
     friendList.clear();
 }
 
-Friend* FriendList::findFriend(const ToxID& userId)
-{
-    auto id = tox2id.find(userId.publicKey);
-    if (id != tox2id.end())
-    {
-        Friend *f = findFriend(*id);
-        if (!f)
-            return nullptr;
-        if (f->getToxID() == userId)
-            return f;
-    }
-
-    return nullptr;
-}
-
 QList<Friend*> FriendList::getAllFriends()
 {
     return friendList.values();
+}
+
+QString FriendList::decideNickname(const ToxPk& friendPk, const QString& origName)
+{
+    Friend* f = FriendList::findFriend(friendPk);
+    if (f != nullptr) {
+        return f->getDisplayedName();
+    } else if (!origName.isEmpty()) {
+        return origName;
+    } else {
+        return friendPk.toString();
+    }
 }

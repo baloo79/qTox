@@ -1,17 +1,20 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "chatlinecontent.h"
@@ -39,27 +42,26 @@ int ChatLineContent::type() const
 
 void ChatLineContent::selectionMouseMove(QPointF)
 {
-
 }
 
 void ChatLineContent::selectionStarted(QPointF)
 {
-
 }
 
 void ChatLineContent::selectionCleared()
 {
-
 }
 
 void ChatLineContent::selectionDoubleClick(QPointF)
 {
+}
 
+void ChatLineContent::selectionTripleClick(QPointF)
+{
 }
 
 void ChatLineContent::selectionFocusChanged(bool)
 {
-
 }
 
 bool ChatLineContent::isOverSelection(QPointF) const
@@ -72,6 +74,11 @@ QString ChatLineContent::getSelectedText() const
     return QString();
 }
 
+void ChatLineContent::fontChanged(const QFont& font)
+{
+    Q_UNUSED(font);
+}
+
 qreal ChatLineContent::getAscent() const
 {
     return 0.0;
@@ -79,7 +86,10 @@ qreal ChatLineContent::getAscent() const
 
 void ChatLineContent::visibilityChanged(bool)
 {
+}
 
+void ChatLineContent::reloadTheme()
+{
 }
 
 QString ChatLineContent::getText() const

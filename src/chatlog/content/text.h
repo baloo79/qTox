@@ -1,79 +1,104 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #ifndef TEXT_H
 #define TEXT_H
 
 #include "../chatlinecontent.h"
+#include "src/widget/style.h"
 
 #include <QFont>
+#include <QTextCursor>
 
 class QTextDocument;
 
 class Text : public ChatLineContent
 {
+    Q_OBJECT
+
 public:
-    // txt: may contain html code
-    // rawText: does not contain html code
-    Text(const QString& txt = "", QFont font = QFont(), bool enableElide = false, const QString& rawText = QString(), const QColor c = Qt::black);
+    enum TextType
+    {
+        NORMAL,
+        ACTION,
+        CUSTOM
+    };
+
+    Text(const QString& txt = "", const QFont& font = QFont(), bool enableElide = false,
+         const QString& rawText = QString(), const TextType& type = NORMAL, const QColor& custom = Style::getColor(Style::MainText));
     virtual ~Text();
 
     void setText(const QString& txt);
+    void selectText(const QString& txt, const std::pair<int, int>& point);
+    void selectText(const QRegularExpression& exp, const std::pair<int, int>& point);
+    void deselectText();
 
-    virtual void setWidth(qreal width) override;
+    void setWidth(qreal width) final;
 
-    virtual void selectionMouseMove(QPointF scenePos) override;
-    virtual void selectionStarted(QPointF scenePos) override;
-    virtual void selectionCleared() override;
-    virtual void selectionDoubleClick(QPointF scenePos) override;
-    virtual void selectionFocusChanged(bool focusIn) override;
-    virtual bool isOverSelection(QPointF scenePos) const override;
-    virtual QString getSelectedText() const override;
+    void selectionMouseMove(QPointF scenePos) final;
+    void selectionStarted(QPointF scenePos) final;
+    void selectionCleared() final;
+    void selectionDoubleClick(QPointF scenePos) final;
+    void selectionTripleClick(QPointF scenePos) final;
+    void selectionFocusChanged(bool focusIn) final;
+    bool isOverSelection(QPointF scenePos) const final;
+    QString getSelectedText() const final;
+    void fontChanged(const QFont& font) final;
 
-    virtual QRectF boundingRect() const override;
-    virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
+    QRectF boundingRect() const final;
+    void paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) final;
 
-    virtual void visibilityChanged(bool keepInMemory) override;
+    void visibilityChanged(bool keepInMemory) final;
+    void reloadTheme() final;
 
-    virtual qreal getAscent() const override;
-    virtual void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
-    virtual void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
-    virtual void hoverMoveEvent(QGraphicsSceneHoverEvent* event) override;
+    qreal getAscent() const final;
+    void mousePressEvent(QGraphicsSceneMouseEvent* event) final;
+    void mouseReleaseEvent(QGraphicsSceneMouseEvent* event) final;
+    void hoverMoveEvent(QGraphicsSceneHoverEvent* event) final;
 
-    virtual QString getText() const override;
+    QString getText() const final;
+    QString getLinkAt(QPointF scenePos) const;
 
 protected:
     // dynamic resource management
     void regenerate();
     void freeResources();
 
-    QSizeF idealSize();
-    int cursorFromPos(QPointF scenePos) const;
+    virtual QSizeF idealSize();
+    int cursorFromPos(QPointF scenePos, bool fuzzy = true) const;
     int getSelectionEnd() const;
     int getSelectionStart() const;
     bool hasSelection() const;
     QString extractSanitizedText(int from, int to) const;
+    QString extractImgTooltip(int pos) const;
+
+    QTextDocument* doc = nullptr;
+    QSizeF size;
+    qreal width = 0.0;
 
 private:
-    QTextDocument* doc = nullptr;
+    void selectText(QTextCursor& cursor, const std::pair<int, int>& point);
+    QColor textColor() const;
+
     QString text;
     QString rawText;
-    QString elidedText;
     QString selectedText;
-    QSizeF size;
     bool keepInMemory = false;
     bool elide = false;
     bool dirty = false;
@@ -81,10 +106,14 @@ private:
     int selectionEnd = -1;
     int selectionAnchor = -1;
     qreal ascent = 0.0;
-    qreal width = 0.0;
     QFont defFont;
+    QString defStyleSheet;
+    TextType textType;
     QColor color;
+    QColor customColor;
 
+    QTextCursor selectCursor;
+    std::pair<int, int> selectPoint{0, 0};
 };
 
 #endif // TEXT_H

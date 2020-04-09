@@ -1,51 +1,60 @@
 /*
-    Copyright (C) 2014 by Project Tox <https://tox.im>
+    Copyright © 2014-2019 by The qTox Project Contributors
 
     This file is part of qTox, a Qt-based graphical interface for Tox.
 
-    This program is libre software: you can redistribute it and/or modify
+    qTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    See the COPYING file for more details.
+    qTox is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #ifndef CHATLINE_H
 #define CHATLINE_H
 
-#include <memory>
-#include <vector>
 #include <QPointF>
 #include <QRectF>
+#include <QVector>
+#include <memory>
 
 class ChatLog;
 class ChatLineContent;
 class QGraphicsScene;
 class QStyleOptionGraphicsItem;
+class QFont;
 
 struct ColumnFormat
 {
-    enum Policy {
+    enum Policy
+    {
         FixedSize,
         VariableSize,
     };
 
-    enum Align {
+    enum Align
+    {
         Left,
         Center,
         Right,
     };
 
-    ColumnFormat() {}
+    ColumnFormat()
+    {
+    }
     ColumnFormat(qreal s, Policy p, Align halign = Left)
         : size(s)
         , policy(p)
         , hAlign(halign)
-    {}
+    {
+    }
 
     qreal size = 1.0;
     Policy policy = VariableSize;
@@ -72,6 +81,8 @@ public:
     void setVisible(bool visible);
     void selectionCleared();
     void selectionFocusChanged(bool focusIn);
+    void fontChanged(const QFont& font);
+    void reloadTheme();
 
     int getColumnCount();
     int getRow() const;
@@ -81,10 +92,10 @@ public:
 
     bool isOverSelection(QPointF scenePos);
 
-    //comparators
-    static bool lessThanBSRectTop(const ChatLine::Ptr lhs, const qreal rhs);
-    static bool lessThanBSRectBottom(const ChatLine::Ptr lhs, const qreal rhs);
-    static bool lessThanRowIndex(const ChatLine::Ptr lhs, const ChatLine::Ptr rhs);
+    // comparators
+    static bool lessThanBSRectTop(const ChatLine::Ptr& lhs, const qreal& rhs);
+    static bool lessThanBSRectBottom(const ChatLine::Ptr& lhs, const qreal& rhs);
+    static bool lessThanRowIndex(const ChatLine::Ptr& lhs, const ChatLine::Ptr& rhs);
 
 protected:
     friend class ChatLog;
@@ -98,13 +109,12 @@ protected:
 
 private:
     int row = -1;
-    std::vector<ChatLineContent*> content;
-    std::vector<ColumnFormat> format;
+    QVector<ChatLineContent*> content;
+    QVector<ColumnFormat> format;
     qreal width = 100.0;
     qreal columnSpacing = 15.0;
     QRectF bbox;
     bool isVisible = false;
-
 };
 
 #endif // CHATLINE_H
